@@ -1,0 +1,195 @@
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\SistemaMysql.exe.config
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\SistemaMysql.exe
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\SistemaMysql.pdb
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\MySql.Data.dll
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\MySql.Data.xml
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.exe
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.pdb
+C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\WindowsBase.dll
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe.config
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\MySql.Data.xml
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.Editar.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\bin\Debug\SistemaMysql.exe.config
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\bin\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\bin\Debug\SistemaMysql.pdb
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\bin\Debug\MySql.Data.dll
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\bin\Debug\MySql.Data.xml
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.View.Editar.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe.config
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\MySql.Data.dll
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\MySql.Data.xml
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.Editar.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe.config
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\bin\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\bin\Debug\MySql.Data.xml
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.Editar.resources
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Desktop\Projeto Controle de Materiais\obj\Debug\SistemaMysql.pdb
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.FormPrincipal.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.Properties.Resources.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaInicial.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.exe
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.pdb
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe.config
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\SistemaMysql.pdb
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\MySql.Data.dll
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\MySql.Data.xml
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CopyComplete
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe.config
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\SistemaMysql.pdb
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\MySql.Data.xml
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.FormPrincipal.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.Properties.Resources.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaInicial.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CopyComplete
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.exe
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.pdb
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.CadastrarComputador.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.Login.resources
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+F:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.Login.resources
+D:\Programação\MeusProjetos\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.CadastrarVtr.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe.config
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\SistemaMysql.pdb
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\MySql.Data.dll
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\bin\Debug\MySql.Data.xml
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.CadastrarVtr.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.Login.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Área de Trabalho\Projeto Controle de Materiais\obj\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.View.CadastrarVtr.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.View.Login.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\SAD\bin\Debug\SistemaMysql.exe.config
+C:\Users\Telemática-PC\Documents\GitHub\SAD\bin\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\SAD\bin\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\SAD\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Telemática-PC\Documents\GitHub\SAD\bin\Debug\MySql.Data.xml
+C:\Users\Telemática-PC\Documents\GitHub\SAD\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\bin\Debug\SistemaMysql.exe.config
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\bin\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\bin\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\bin\Debug\MySql.Data.xml
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.View.CadastrarVtr.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.View.Login.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\SAD\obj\Debug\SistemaMysql.pdb
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\SistemaMysql.exe.config
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\SistemaMysql.exe
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\SistemaMysql.pdb
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\MySql.Data.dll
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+F:\Programação\MeusProjetos\SAD(GITHUB)\bin\Debug\MySql.Data.xml
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.Properties.Resources.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.View.CadastrarVtr.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.View.Login.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.View.TelaInicial.resources
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.csproj.CopyComplete
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.exe
+F:\Programação\MeusProjetos\SAD(GITHUB)\obj\Debug\SistemaMysql.pdb
