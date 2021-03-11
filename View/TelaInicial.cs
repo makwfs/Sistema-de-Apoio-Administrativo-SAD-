@@ -56,7 +56,7 @@ namespace SistemaMysql.View
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja mesmo Sair ?", "                        CUIDADO !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja mesmo Sair ?", "                        ATENÇÃO !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
         }
 

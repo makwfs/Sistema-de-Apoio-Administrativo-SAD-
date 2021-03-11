@@ -17,7 +17,7 @@ namespace SistemaMysql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastrarMaterialBelico());
+            Application.Run(new TelaInicial());
         }
     }
 }

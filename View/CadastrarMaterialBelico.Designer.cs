@@ -37,8 +37,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbSituacao = new System.Windows.Forms.ComboBox();
+            this.cmbFabricante = new System.Windows.Forms.ComboBox();
             this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
@@ -48,9 +48,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txbObservacao = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
             this.txbPatrimonioPm = new System.Windows.Forms.TextBox();
-            this.txbModelo = new System.Windows.Forms.TextBox();
+            this.txbRE = new System.Windows.Forms.TextBox();
             this.txbSerial = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -60,6 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbTmd = new System.Windows.Forms.PictureBox();
             this.SrcFoto = new System.Windows.Forms.TextBox();
+            this.OpenFileDialogMatBel = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,8 +76,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 50);
+            this.panel1.Size = new System.Drawing.Size(1033, 50);
             this.panel1.TabIndex = 22;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
@@ -89,26 +91,29 @@
             this.label1.Size = new System.Drawing.Size(312, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "CADASTRAR MATERIAL BÉLICO:";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(887, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(986, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(15, 15);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(908, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1007, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(15, 15);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBoxTmd
             // 
@@ -116,8 +121,8 @@
             this.groupBoxTmd.Controls.Add(this.label12);
             this.groupBoxTmd.Controls.Add(this.label11);
             this.groupBoxTmd.Controls.Add(this.label10);
-            this.groupBoxTmd.Controls.Add(this.comboBox3);
-            this.groupBoxTmd.Controls.Add(this.comboBox2);
+            this.groupBoxTmd.Controls.Add(this.cmbSituacao);
+            this.groupBoxTmd.Controls.Add(this.cmbFabricante);
             this.groupBoxTmd.Controls.Add(this.cmbModelo);
             this.groupBoxTmd.Controls.Add(this.label9);
             this.groupBoxTmd.Controls.Add(this.cmbTipo);
@@ -127,9 +132,9 @@
             this.groupBoxTmd.Controls.Add(this.label6);
             this.groupBoxTmd.Controls.Add(this.label5);
             this.groupBoxTmd.Controls.Add(this.txbObservacao);
-            this.groupBoxTmd.Controls.Add(this.textBox1);
+            this.groupBoxTmd.Controls.Add(this.txbNome);
             this.groupBoxTmd.Controls.Add(this.txbPatrimonioPm);
-            this.groupBoxTmd.Controls.Add(this.txbModelo);
+            this.groupBoxTmd.Controls.Add(this.txbRE);
             this.groupBoxTmd.Controls.Add(this.txbSerial);
             this.groupBoxTmd.Controls.Add(this.label4);
             this.groupBoxTmd.Controls.Add(this.label8);
@@ -153,9 +158,9 @@
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(18, 223);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 17);
+            this.label12.Size = new System.Drawing.Size(64, 17);
             this.label12.TabIndex = 20;
-            this.label12.Text = "Estado:";
+            this.label12.Text = "Situação:";
             // 
             // label11
             // 
@@ -179,28 +184,34 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "Modelo:";
             // 
-            // comboBox3
+            // cmbSituacao
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "CARGA PESSOAL"});
-            this.comboBox3.Location = new System.Drawing.Point(21, 243);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(482, 24);
-            this.comboBox3.TabIndex = 19;
+            this.cmbSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSituacao.FormattingEnabled = true;
+            this.cmbSituacao.Items.AddRange(new object[] {
+            "APREENDIDO",
+            "CARGA PESSOAL",
+            "RESERVA"});
+            this.cmbSituacao.Location = new System.Drawing.Point(21, 243);
+            this.cmbSituacao.Name = "cmbSituacao";
+            this.cmbSituacao.Size = new System.Drawing.Size(482, 24);
+            this.cmbSituacao.TabIndex = 19;
             // 
-            // comboBox2
+            // cmbFabricante
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbFabricante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFabricante.FormattingEnabled = true;
+            this.cmbFabricante.Items.AddRange(new object[] {
+            "CBC",
+            "IMBEL",
+            "INBRATERRESTRE",
             "GLOCK",
+            "TASER",
             "TAURUS"});
-            this.comboBox2.Location = new System.Drawing.Point(21, 148);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(482, 24);
-            this.comboBox2.TabIndex = 19;
+            this.cmbFabricante.Location = new System.Drawing.Point(21, 148);
+            this.cmbFabricante.Name = "cmbFabricante";
+            this.cmbFabricante.Size = new System.Drawing.Size(482, 24);
+            this.cmbFabricante.TabIndex = 19;
             // 
             // cmbModelo
             // 
@@ -210,7 +221,6 @@
             this.cmbModelo.Name = "cmbModelo";
             this.cmbModelo.Size = new System.Drawing.Size(482, 24);
             this.cmbModelo.TabIndex = 19;
-            this.cmbModelo.SelectedIndexChanged += new System.EventHandler(this.cmbModelo_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -250,6 +260,7 @@
             this.btnLimpar.TabStop = false;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
@@ -262,6 +273,7 @@
             this.btnCadastrar.TabStop = false;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // textBox2
             // 
@@ -302,13 +314,13 @@
             this.txbObservacao.Size = new System.Drawing.Size(603, 174);
             this.txbObservacao.TabIndex = 7;
             // 
-            // textBox1
+            // txbNome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 289);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 22);
-            this.textBox1.TabIndex = 5;
+            this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNome.Location = new System.Drawing.Point(144, 289);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(359, 22);
+            this.txbNome.TabIndex = 5;
             // 
             // txbPatrimonioPm
             // 
@@ -318,13 +330,13 @@
             this.txbPatrimonioPm.Size = new System.Drawing.Size(226, 22);
             this.txbPatrimonioPm.TabIndex = 5;
             // 
-            // txbModelo
+            // txbRE
             // 
-            this.txbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbModelo.Location = new System.Drawing.Point(21, 289);
-            this.txbModelo.Name = "txbModelo";
-            this.txbModelo.Size = new System.Drawing.Size(106, 22);
-            this.txbModelo.TabIndex = 4;
+            this.txbRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRE.Location = new System.Drawing.Point(21, 289);
+            this.txbRE.Name = "txbRE";
+            this.txbRE.Size = new System.Drawing.Size(106, 22);
+            this.txbRE.TabIndex = 4;
             // 
             // txbSerial
             // 
@@ -404,26 +416,31 @@
             this.pbTmd.Image = global::SistemaMysql.Properties.Resources.Inserir_imagem;
             this.pbTmd.Location = new System.Drawing.Point(659, 85);
             this.pbTmd.Name = "pbTmd";
-            this.pbTmd.Size = new System.Drawing.Size(263, 286);
+            this.pbTmd.Size = new System.Drawing.Size(357, 470);
             this.pbTmd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTmd.TabIndex = 24;
             this.pbTmd.TabStop = false;
+            this.pbTmd.Click += new System.EventHandler(this.pbTmd_Click);
             // 
             // SrcFoto
             // 
             this.SrcFoto.Enabled = false;
             this.SrcFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SrcFoto.Location = new System.Drawing.Point(659, 376);
+            this.SrcFoto.Location = new System.Drawing.Point(659, 561);
             this.SrcFoto.Name = "SrcFoto";
-            this.SrcFoto.Size = new System.Drawing.Size(263, 22);
+            this.SrcFoto.Size = new System.Drawing.Size(357, 22);
             this.SrcFoto.TabIndex = 25;
+            // 
+            // OpenFileDialogMatBel
+            // 
+            this.OpenFileDialogMatBel.FileName = "OpenFileDialog1";
             // 
             // CadastrarMaterialBelico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(935, 610);
+            this.ClientSize = new System.Drawing.Size(1028, 610);
             this.Controls.Add(this.SrcFoto);
             this.Controls.Add(this.pbTmd);
             this.Controls.Add(this.groupBoxTmd);
@@ -433,6 +450,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarMaterialBelico";
             this.Load += new System.EventHandler(this.CadastrarMaterialBelico_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CadastrarMaterialBelico_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -461,7 +479,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbObservacao;
         private System.Windows.Forms.TextBox txbPatrimonioPm;
-        private System.Windows.Forms.TextBox txbModelo;
+        private System.Windows.Forms.TextBox txbRE;
         private System.Windows.Forms.TextBox txbSerial;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
@@ -474,9 +492,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbSituacao;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialogMatBel;
     }
 }

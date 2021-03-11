@@ -413,6 +413,44 @@ namespace SistemaMysql.DAO
             }
         }
 
+
+        public void CadastroMatBel(Pessoas dados)
+        {
+
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO controlematbel ( Patrimônio, Tipo, Modelo, Fabricante, Serial, PatrimônioPm, Situacao, RE, Nome, Observação,Foto) values ( @Patrimônio, @Tipo, @Modelo," +
+                    " @Fabricante, @Serial, @PatrimônioPm, @Situacao, @RE, @Nome, @Observação, @Foto )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@Patrimônio", dados.PatrimonioInfo);
+                sql.Parameters.AddWithValue("@Tipo", dados.Tipo);
+                sql.Parameters.AddWithValue("@Modelo", dados.ModeloInfo);
+                sql.Parameters.AddWithValue("@Fabricante", dados.Fabricante);
+                sql.Parameters.AddWithValue("@Serial", dados.Serial);
+                sql.Parameters.AddWithValue("@PatrimônioPm", dados.PatrimonioPMInfo);
+                sql.Parameters.AddWithValue("@Situacao", dados.Situacao);
+                sql.Parameters.AddWithValue("@RE", dados.RE);
+                sql.Parameters.AddWithValue("@Nome", dados.Nome);
+                sql.Parameters.AddWithValue("@Observação", dados.Observacao);
+                sql.Parameters.AddWithValue("@Foto", dados.SrcFotoInfo);
+                sql.ExecuteNonQuery();
+
+
+
+
+               
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
+
         public DataTable PesquisarTmd(Pessoas dados)
         {
             try                                                                                                                                // Usar o try para caso ocorra algum erro

@@ -11,7 +11,12 @@ namespace SistemaMysql.Entidades
         int id;
         public string Patrimonio, Modelo, Serial, Local, Observacao, PatrimonioPM, pbTmd, SrcFoto, SrcEditarFoto;
         public string placa, prefixo;
-       
+        public string tipo;
+        public string fabricante;
+        public string situacao;
+        public string rE;
+        public string nome;
+
 
 
 
@@ -30,6 +35,10 @@ namespace SistemaMysql.Entidades
         public string SrcEditarFotoInfo { get => SrcEditarFoto; set => SrcEditarFoto = value; }
         public string Placa { get => placa; set => placa = value; }
         public string Prefixo { get => prefixo; set => prefixo = value; }
-        
+        public string Tipo { get => tipo; set => tipo = value; }
+        public string Fabricante { get => fabricante; set => fabricante = value; }
+        public string Situacao { get => situacao; set => situacao = value; }
+        public string RE { get => rE; set => rE = value; }
+        public string Nome { get => nome; set => nome = value; }
     }
 }

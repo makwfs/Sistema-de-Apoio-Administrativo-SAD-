@@ -232,6 +232,21 @@ namespace SistemaMysql.Model
             }
         }
 
+        public void CadastroMatBel(Pessoas dados)
+        {
+
+            try
+            {
+                dao.CadastroMatBel(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
+
 
         public void EditarDadosTmd(Pessoas dados)
         {

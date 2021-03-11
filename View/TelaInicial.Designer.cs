@@ -47,7 +47,6 @@
             this.editarItensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmdToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viaturaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reciboToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AbaGuarda = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AbaReservaArmas = new System.Windows.Forms.ToolStripMenuItem();
@@ -136,8 +135,7 @@
             this.AbaP4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarItensToolStripMenuItem,
             this.consultarItensToolStripMenuItem,
-            this.editarItensToolStripMenuItem,
-            this.reciboToolStripMenuItem});
+            this.editarItensToolStripMenuItem});
             this.AbaP4.Name = "AbaP4";
             this.AbaP4.Size = new System.Drawing.Size(32, 20);
             this.AbaP4.Text = "P4";
@@ -218,12 +216,6 @@
             this.viaturaToolStripMenuItem2.Size = new System.Drawing.Size(135, 22);
             this.viaturaToolStripMenuItem2.Text = "Viatura";
             this.viaturaToolStripMenuItem2.Click += new System.EventHandler(this.viaturaToolStripMenuItem2_Click);
-            // 
-            // reciboToolStripMenuItem
-            // 
-            this.reciboToolStripMenuItem.Name = "reciboToolStripMenuItem";
-            this.reciboToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reciboToolStripMenuItem.Text = "Recibo";
             // 
             // AbaGuarda
             // 
@@ -464,7 +456,6 @@
         private System.Windows.Forms.ToolStripMenuItem numeradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem numeradorToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem controleDeIPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reciboToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reciboToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem materialBélicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viaturaToolStripMenuItem;
