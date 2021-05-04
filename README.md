@@ -1,6 +1,5 @@
 <h1 align="center"> Sistema de Apoio a Administração (SAD) </h1>
-<h4 align="center"> 
-	🚧  Projeto em andamento  🚧</h4>
+<h4 align="center"> 🚧  Projeto em andamento  🚧</h4>
 	
 	
 <p align="center">Projeto desenvolvido em C# para controle de materiais do 47 Batalhão de policiamento do interior</p>
@@ -13,3 +12,11 @@
     do 47 Batalhão de policiamento do interior, tal sistema é de suma importância
     tendo em vista que atualmente o controle é feito de forma manual ou através 
     inumeras planilhas diferentes que acabam por ficarem desatualizadas.</p>
+    
+    <h2>👨‍🏫 Demonstração da aplicação</h2>
+<h4 align="center"> 🚧  Em andamento  🚧</h4>
+
+<h2>⚙️ Tecnologias e ferramentas utilizadas: </h2>
+
+- C#
+- MySql
