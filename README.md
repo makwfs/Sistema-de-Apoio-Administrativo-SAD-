@@ -13,7 +13,7 @@
     tendo em vista que atualmente o controle é feito de forma manual ou através 
     inumeras planilhas diferentes que acabam por ficarem desatualizadas.</p>
     
-    <h2>👨‍🏫 Demonstração da aplicação</h2>
+<h2>👨‍🏫 Demonstração da aplicação</h2>
 <h4 align="center"> 🚧  Em andamento  🚧</h4>
 
 <h2>⚙️ Tecnologias e ferramentas utilizadas: </h2>
