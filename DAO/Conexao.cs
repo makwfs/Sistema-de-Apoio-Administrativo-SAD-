@@ -10,7 +10,7 @@ namespace SistemaMysql
 {
     public  class Conexao
     {
-        private string conexao = "server=localhost; database=sad; uid=root; pwd=;"; // endereço  BD LOCAL HOST
+        private string conexao = "server=localhost; database=sad; uid=root; pwd=;"; //  BD LOCAL HOST   conexão de principal
         public MySqlConnection con = null;
        
 

@@ -125,7 +125,7 @@ namespace SistemaMysql.View
 
             try
             {
-                dado.PatrimonioInfo = txbPesquisar.Text;
+                dado.Placa = txbPesquisar.Text;
                 grid.DataSource = model.PesquisarVtr(dado);
 
             }

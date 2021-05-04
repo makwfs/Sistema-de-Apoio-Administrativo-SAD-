@@ -518,8 +518,8 @@ namespace SistemaMysql.DAO
             try                                                                                                                                // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from controlevtr where  Patrimônio LIKE @Patrimônio", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio + "%");                                                          // % necessário para busca aproximada funcionar
+                sql = new MySqlCommand("select * from controlevtr where  Placa LIKE @Placa", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+                sql.Parameters.AddWithValue("@Placa", dados.Placa + "%");                                                          // % necessário para busca aproximada funcionar
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
                 DataTable dt = new DataTable();
@@ -624,7 +624,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("UPDATE controlevtr SET Patrimônio = @Patrimonio, Modelo = @Modelo, Local = @Local, " +
-                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE Patrimônio = @Patrimonio", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@Patrimonio", dados.Patrimonio);
@@ -638,9 +638,9 @@ namespace SistemaMysql.DAO
                 MessageBox.Show("Salvo com Sucesso!");
 
 
-
+                
                 sql = new MySqlCommand("UPDATE controletodos SET Patrimônio = @Patrimonio, Modelo = @Modelo, Local = @Local, " +
-                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE Patrimônio = @Patrimonio", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@Patrimonio", dados.Patrimonio);
