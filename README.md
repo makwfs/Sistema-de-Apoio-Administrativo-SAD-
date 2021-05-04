@@ -5,7 +5,7 @@
 	
 <p align="center">Projeto desenvolvido em C# para controle de materiais do 47 Batalhão de policiamento do interior</p>
 
-<span style:"align-items:center"><img width="500"  height="auto" alt="ImgReadme" title="ImgReadme"  src="https://github.com/makwfs/Sistema-de-Apoio-Administrativo-SAD-/blob/main/tela-login.PNG" ></span>
+<span style:"align:center"><img width="500"  height="auto" alt="ImgReadme" title="ImgReadme"  src="https://github.com/makwfs/Sistema-de-Apoio-Administrativo-SAD-/blob/main/tela-login.PNG" ></span>
 <p align="center">Tela de login</p>
 	
 <h2> 👨‍💻  O que foi desenvolvido?</h2>
