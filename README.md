@@ -14,7 +14,8 @@
     inumeras planilhas diferentes que acabam por ficarem desatualizadas.</p>
     
 <h2>👨‍🏫 Demonstração da aplicação</h2>
-<h4 align="center"> 🚧  Em andamento  🚧</h4>
+<p align="center"><img width="500"  height="auto" alt="ImgReadme" title="ImgReadme"  src="https://media.giphy.com/media/JHvNEwGB2jnIqx6MNZ/giphy.gif" ></p>
+<p align="center">Amostra de telas</p>
 
 <h2>⚙️ Tecnologias e ferramentas utilizadas: </h2>
 
