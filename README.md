@@ -21,6 +21,9 @@
 - C#
 - MySql
 
+<h2>👨 Autor: </h2>
+<img width="150" height="150" alt="ImgReadme" title="ImgReadme"  src="https://github.com/makwfs.png" >
+
 <p>Por Mak Wercoutter 
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fagnerpsantos/)](https://www.linkedin.com/in/mak-wercoutter-025b401a2/)
