@@ -105,29 +105,36 @@ namespace SistemaMysql.View
         public void CadastroMatBel(Pessoas dados)     // capturando dados dos textbox
         {
 
-
-            try
+            if (txbPatrimonio.Text != "")
             {
-                dados.PatrimonioInfo = txbPatrimonio.Text;
-                dados.Tipo = cmbTipo.Text;
-                dados.Modelo = cmbModelo.Text;
-                dados.Fabricante = cmbFabricante.Text;
-                dados.Serial = txbSerial.Text;
-                dados.PatrimonioPM = txbPatrimonioPm.Text;
-                dados.Situacao = cmbSituacao.Text;
-                dados.RE = txbRE.Text;
-                dados.Nome = txbNome.Text;
-                dados.ObservacaoInfo = txbObservacao.Text;
-                dados.SrcFotoInfo = SrcFoto.Text;
+
+                try
+                {
+                    dados.PatrimonioInfo = txbPatrimonio.Text;
+                    dados.Tipo = cmbTipo.Text;
+                    dados.Modelo = cmbModelo.Text;
+                    dados.Fabricante = cmbFabricante.Text;
+                    dados.Serial = txbSerial.Text;
+                    dados.PatrimonioPM = txbPatrimonioPm.Text;
+                    dados.Situacao = cmbSituacao.Text;
+                    dados.RE = txbRE.Text;
+                    dados.Nome = txbNome.Text;
+                    dados.ObservacaoInfo = txbObservacao.Text;
+                    dados.SrcFotoInfo = SrcFoto.Text;
 
 
-                model.CadastroMatBel(dados);
-                MessageBox.Show("Cadastrado com Sucesso!");
+                    model.CadastroMatBel(dados);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Erro ao Salvar " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show("Erro ao Salvar " + ex.Message);
+                MessageBox.Show("Insira um número de patrimônio !", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

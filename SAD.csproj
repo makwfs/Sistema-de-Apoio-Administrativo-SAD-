@@ -110,6 +110,12 @@
     <Compile Include="View\EditarInformatica.Designer.cs">
       <DependentUpon>EditarInformatica.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditarMaterialBelico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditarMaterialBelico.Designer.cs">
+      <DependentUpon>EditarMaterialBelico.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarInformatica.resx">
       <DependentUpon>EditarInformatica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditarMaterialBelico.resx">
+      <DependentUpon>EditarMaterialBelico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarUsuario.resx">
       <DependentUpon>EditarUsuario.cs</DependentUpon>

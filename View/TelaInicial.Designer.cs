@@ -66,6 +66,7 @@
             this.Função = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.lbFunção = new System.Windows.Forms.Label();
+            this.materialBélicoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox47bpmi)).BeginInit();
@@ -198,6 +199,7 @@
             // 
             this.editarItensToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmdToolStripMenuItem1,
+            this.materialBélicoToolStripMenuItem1,
             this.viaturaToolStripMenuItem2});
             this.editarItensToolStripMenuItem.Name = "editarItensToolStripMenuItem";
             this.editarItensToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -206,14 +208,14 @@
             // tmdToolStripMenuItem1
             // 
             this.tmdToolStripMenuItem1.Name = "tmdToolStripMenuItem1";
-            this.tmdToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.tmdToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.tmdToolStripMenuItem1.Text = "Informática";
             this.tmdToolStripMenuItem1.Click += new System.EventHandler(this.tmdToolStripMenuItem1_Click);
             // 
             // viaturaToolStripMenuItem2
             // 
             this.viaturaToolStripMenuItem2.Name = "viaturaToolStripMenuItem2";
-            this.viaturaToolStripMenuItem2.Size = new System.Drawing.Size(135, 22);
+            this.viaturaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.viaturaToolStripMenuItem2.Text = "Viatura";
             this.viaturaToolStripMenuItem2.Click += new System.EventHandler(this.viaturaToolStripMenuItem2_Click);
             // 
@@ -228,7 +230,7 @@
             // controleDeAcessoToolStripMenuItem
             // 
             this.controleDeAcessoToolStripMenuItem.Name = "controleDeAcessoToolStripMenuItem";
-            this.controleDeAcessoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.controleDeAcessoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.controleDeAcessoToolStripMenuItem.Text = "Controle de Acesso";
             // 
             // AbaReservaArmas
@@ -399,6 +401,13 @@
             this.lbFunção.TabIndex = 15;
             this.lbFunção.Text = "Função não Cadastrada !";
             // 
+            // materialBélicoToolStripMenuItem1
+            // 
+            this.materialBélicoToolStripMenuItem1.Name = "materialBélicoToolStripMenuItem1";
+            this.materialBélicoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.materialBélicoToolStripMenuItem1.Text = "Material Bélico";
+            this.materialBélicoToolStripMenuItem1.Click += new System.EventHandler(this.materialBélicoToolStripMenuItem1_Click);
+            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,5 +481,6 @@
         private System.Windows.Forms.ToolStripMenuItem viaturaToolStripMenuItem2;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbFunção;
+        private System.Windows.Forms.ToolStripMenuItem materialBélicoToolStripMenuItem1;
     }
 }

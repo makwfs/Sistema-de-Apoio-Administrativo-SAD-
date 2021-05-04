@@ -215,6 +215,12 @@ namespace SistemaMysql.View
             CadastrarMaterialBelico form = new CadastrarMaterialBelico();
             form.Show();
         }
+
+        private void materialBélicoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EditarMaterialBelico form = new EditarMaterialBelico();
+            form.Show();
+        }
     }
     }
 

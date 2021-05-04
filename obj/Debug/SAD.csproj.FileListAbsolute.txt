@@ -112,3 +112,4 @@ C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\obj\Debug\SAD.csproj.CoreCompil
 C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\obj\Debug\SAD.csproj.CopyComplete
 C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\obj\Debug\SistemaMysql.exe
 C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\obj\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\SAD\SAD\obj\Debug\SistemaMysql.View.EditarMaterialBelico.resources
