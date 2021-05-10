@@ -471,14 +471,14 @@ namespace SistemaMysql.View
             txbObservacaoTmd.Text = gridEditarTmd.CurrentRow.Cells[6].Value.ToString();
             SrcFoto.Text = gridEditarTmd.CurrentRow.Cells[7].Value.ToString();
 
-            if (SrcFoto.Text == "")
+           /* if (SrcFoto.Text == "")
             {
                 MessageBox.Show("Se possivel cadastre uma imagem para o produto !");
             }
             else
             {
                 pbEditar.Load(gridEditarTmd.CurrentRow.Cells[7].Value.ToString());
-            }
+            }*/
 
 
 

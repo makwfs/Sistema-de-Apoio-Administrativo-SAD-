@@ -267,14 +267,14 @@ namespace SistemaMysql.View
 
                        
 
-            if (SrcConsultar.Text == "")
+            /*if (SrcConsultar.Text == "")
             {
                 MessageBox.Show("Material sem Imagem, Favor cadastrar atraves da aba editar !");
             }
             else
             {
                 pbConsultar.Load(grid.CurrentRow.Cells[7].Value.ToString());
-            }
+            }*/
             
 
 

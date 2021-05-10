@@ -232,7 +232,8 @@
             "6ª CIA",
             "FORÇA TÁTICA",
             "EM",
-            "TELEMÁTICA"});
+            "TELEMÁTICA",
+            "DTIC"});
             this.cmbLocal.Location = new System.Drawing.Point(203, 145);
             this.cmbLocal.Name = "cmbLocal";
             this.cmbLocal.Size = new System.Drawing.Size(300, 24);
