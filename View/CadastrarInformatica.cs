@@ -45,8 +45,6 @@ namespace SistemaMysql.View
             pbTmd.Image = null;
             
         }
-
-
      
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -253,6 +251,11 @@ namespace SistemaMysql.View
         }
 
         private void SrcFoto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

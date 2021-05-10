@@ -34,6 +34,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxTmd = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.cmbFabricante = new System.Windows.Forms.ComboBox();
+            this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -42,8 +48,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txbObservacao = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
             this.txbPatrimonioPm = new System.Windows.Forms.TextBox();
-            this.txbModelo = new System.Windows.Forms.TextBox();
+            this.txbRE = new System.Windows.Forms.TextBox();
             this.txbSerial = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,13 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbTmd = new System.Windows.Forms.PictureBox();
             this.SrcFoto = new System.Windows.Forms.TextBox();
-            this.cmbModelo = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,6 +78,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(935, 50);
             this.panel1.TabIndex = 22;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
@@ -89,6 +91,7 @@
             this.label1.Size = new System.Drawing.Size(312, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "CADASTRAR MATERIAL BÉLICO:";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // pictureBox2
             // 
@@ -99,6 +102,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -109,6 +113,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBoxTmd
             // 
@@ -116,8 +121,8 @@
             this.groupBoxTmd.Controls.Add(this.label12);
             this.groupBoxTmd.Controls.Add(this.label11);
             this.groupBoxTmd.Controls.Add(this.label10);
-            this.groupBoxTmd.Controls.Add(this.comboBox3);
-            this.groupBoxTmd.Controls.Add(this.comboBox2);
+            this.groupBoxTmd.Controls.Add(this.cmbEstado);
+            this.groupBoxTmd.Controls.Add(this.cmbFabricante);
             this.groupBoxTmd.Controls.Add(this.cmbModelo);
             this.groupBoxTmd.Controls.Add(this.label9);
             this.groupBoxTmd.Controls.Add(this.cmbTipo);
@@ -127,9 +132,9 @@
             this.groupBoxTmd.Controls.Add(this.label6);
             this.groupBoxTmd.Controls.Add(this.label5);
             this.groupBoxTmd.Controls.Add(this.txbObservacao);
-            this.groupBoxTmd.Controls.Add(this.textBox1);
+            this.groupBoxTmd.Controls.Add(this.txbNome);
             this.groupBoxTmd.Controls.Add(this.txbPatrimonioPm);
-            this.groupBoxTmd.Controls.Add(this.txbModelo);
+            this.groupBoxTmd.Controls.Add(this.txbRE);
             this.groupBoxTmd.Controls.Add(this.txbSerial);
             this.groupBoxTmd.Controls.Add(this.label4);
             this.groupBoxTmd.Controls.Add(this.label8);
@@ -145,6 +150,69 @@
             this.groupBoxTmd.TabIndex = 23;
             this.groupBoxTmd.TabStop = false;
             this.groupBoxTmd.Text = "MATERIAL BÉLICO";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(18, 223);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 17);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Estado:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(18, 128);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 17);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Fabricante:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(18, 81);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 17);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Modelo:";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "CARGA PESSOAL"});
+            this.cmbEstado.Location = new System.Drawing.Point(21, 243);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(482, 24);
+            this.cmbEstado.TabIndex = 19;
+            // 
+            // cmbFabricante
+            // 
+            this.cmbFabricante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFabricante.FormattingEnabled = true;
+            this.cmbFabricante.Location = new System.Drawing.Point(21, 148);
+            this.cmbFabricante.Name = "cmbFabricante";
+            this.cmbFabricante.Size = new System.Drawing.Size(482, 24);
+            this.cmbFabricante.TabIndex = 19;
+            // 
+            // cmbModelo
+            // 
+            this.cmbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbModelo.FormattingEnabled = true;
+            this.cmbModelo.Location = new System.Drawing.Point(21, 101);
+            this.cmbModelo.Name = "cmbModelo";
+            this.cmbModelo.Size = new System.Drawing.Size(482, 24);
+            this.cmbModelo.TabIndex = 19;
+            this.cmbModelo.SelectedIndexChanged += new System.EventHandler(this.cmbModelo_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -184,6 +252,7 @@
             this.btnLimpar.TabStop = false;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
@@ -196,6 +265,7 @@
             this.btnCadastrar.TabStop = false;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // textBox2
             // 
@@ -236,6 +306,14 @@
             this.txbObservacao.Size = new System.Drawing.Size(603, 174);
             this.txbObservacao.TabIndex = 7;
             // 
+            // txbNome
+            // 
+            this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNome.Location = new System.Drawing.Point(144, 289);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(359, 22);
+            this.txbNome.TabIndex = 5;
+            // 
             // txbPatrimonioPm
             // 
             this.txbPatrimonioPm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,13 +322,13 @@
             this.txbPatrimonioPm.Size = new System.Drawing.Size(226, 22);
             this.txbPatrimonioPm.TabIndex = 5;
             // 
-            // txbModelo
+            // txbRE
             // 
-            this.txbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbModelo.Location = new System.Drawing.Point(21, 289);
-            this.txbModelo.Name = "txbModelo";
-            this.txbModelo.Size = new System.Drawing.Size(106, 22);
-            this.txbModelo.TabIndex = 4;
+            this.txbRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRE.Location = new System.Drawing.Point(21, 289);
+            this.txbRE.Name = "txbRE";
+            this.txbRE.Size = new System.Drawing.Size(106, 22);
+            this.txbRE.TabIndex = 4;
             // 
             // txbSerial
             // 
@@ -334,6 +412,7 @@
             this.pbTmd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTmd.TabIndex = 24;
             this.pbTmd.TabStop = false;
+            this.pbTmd.Click += new System.EventHandler(this.pbTmd_Click);
             // 
             // SrcFoto
             // 
@@ -344,79 +423,9 @@
             this.SrcFoto.Size = new System.Drawing.Size(263, 22);
             this.SrcFoto.TabIndex = 25;
             // 
-            // cmbModelo
+            // OpenFileDialog
             // 
-            this.cmbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbModelo.FormattingEnabled = true;
-            this.cmbModelo.Location = new System.Drawing.Point(21, 101);
-            this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(482, 24);
-            this.cmbModelo.TabIndex = 19;
-            this.cmbModelo.SelectedIndexChanged += new System.EventHandler(this.cmbModelo_SelectedIndexChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 81);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 17);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Modelo:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "GLOCK",
-            "TAURUS"});
-            this.comboBox2.Location = new System.Drawing.Point(21, 148);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(482, 24);
-            this.comboBox2.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(18, 128);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 17);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Fabricante:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "CARGA PESSOAL"});
-            this.comboBox3.Location = new System.Drawing.Point(21, 243);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(482, 24);
-            this.comboBox3.TabIndex = 19;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 223);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 17);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Estado:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 289);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 22);
-            this.textBox1.TabIndex = 5;
+            this.OpenFileDialog.FileName = "openFileDialog1";
             // 
             // CadastrarMaterialBelico
             // 
@@ -460,7 +469,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbObservacao;
         private System.Windows.Forms.TextBox txbPatrimonioPm;
-        private System.Windows.Forms.TextBox txbModelo;
+        private System.Windows.Forms.TextBox txbRE;
         private System.Windows.Forms.TextBox txbSerial;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
@@ -473,9 +482,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialog;
     }
 }

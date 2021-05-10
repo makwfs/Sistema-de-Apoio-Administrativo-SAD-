@@ -413,6 +413,48 @@ namespace SistemaMysql.DAO
             }
         }
 
+        public void CadastroMaterialBelico(Pessoas dados) // TERMINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR 
+        {
+
+            /*try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO controlevtr ( Patrimônio, Modelo, Placa, Local, Prefixo, Observação,Foto) values ( @Patrimônio, @Modelo, @Placa, @Local, @Prefixo, @Observação, @Foto )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@Patrimônio", dados.PatrimonioInfo);
+                sql.Parameters.AddWithValue("@Modelo", dados.ModeloInfo);
+                sql.Parameters.AddWithValue("@Placa", dados.SerialInfo);
+                sql.Parameters.AddWithValue("@Local", dados.LocalInfo);
+                sql.Parameters.AddWithValue("@Prefixo", dados.PatrimonioPMInfo);
+                sql.Parameters.AddWithValue("@Observação", dados.ObservacaoInfo);
+                sql.Parameters.AddWithValue("@Foto", dados.SrcFotoInfo);
+                sql.ExecuteNonQuery();
+
+
+
+
+
+                sql = new MySqlCommand("INSERT INTO controletodos (Patrimônio, Modelo, Local, Observação, Foto, Placa, Prefixo) values ( @Patrimônio, @Modelo,  @Local, @Observação, @Foto, @Placa,  @Prefixo)", con.con);
+
+                sql.Parameters.AddWithValue("@Patrimônio", dados.PatrimonioInfo);
+                sql.Parameters.AddWithValue("@Modelo", dados.ModeloInfo);
+                sql.Parameters.AddWithValue("@Placa", dados.SerialInfo);
+                sql.Parameters.AddWithValue("@Local", dados.LocalInfo);
+                sql.Parameters.AddWithValue("@Prefixo", dados.PatrimonioPMInfo);
+                sql.Parameters.AddWithValue("@Observação", dados.ObservacaoInfo);
+                sql.Parameters.AddWithValue("@Foto", dados.SrcFotoInfo);
+
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }*/
+        }
+
         public DataTable PesquisarTmd(Pessoas dados)
         {
             try                                                                                                                                // Usar o try para caso ocorra algum erro

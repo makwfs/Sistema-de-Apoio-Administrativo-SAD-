@@ -232,6 +232,21 @@ namespace SistemaMysql.Model
             }
         }
 
+        public void CadastroMaterialBelico(Pessoas dados)
+        {
+
+            try
+            {
+                dao.CadastroMaterialBelico(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
+
 
         public void EditarDadosTmd(Pessoas dados)
         {
