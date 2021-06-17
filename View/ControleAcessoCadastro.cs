@@ -84,5 +84,15 @@ namespace SistemaMysql.View
         {
             HORAATUAL.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+
+        private void DATAATUAL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HORAATUAL_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

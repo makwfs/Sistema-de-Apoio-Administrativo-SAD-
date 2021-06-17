@@ -21,6 +21,8 @@ namespace SistemaMysql.View
     public partial class ControleAcesso : Form
     {
         Model.Model model = new Model.Model();
+        MySqlCommand sql;
+        Conexao con = new Conexao();
         public ControleAcesso()
         {
             InitializeComponent();
@@ -68,33 +70,24 @@ namespace SistemaMysql.View
 
         private void RE_TextChanged(object sender, EventArgs e)
         {
-            if (TXBRE.Text != "")
-            {
+           
 
-                ListarTmd();
-
-            }
         }
-        public void ListarTmd()
+
+        public void RetornoDadosAcesso(Pessoas dados)
         {
-            try
-            {
-               // grid.DataSource = model.ListarTmd(); // alimentar o grid 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro com os dados" + ex.Message);
-
-            }
+           
         }
+
 
         private void RE_Enter(object sender, EventArgs e)
         {
-            //PESQUISAR AO APERTAR ENTER
+            
+
         }
 
-        
+
 
         public void ENTRADAControleAcesso(Pessoas dados)     // capturando dados dos textbox
         {
@@ -121,7 +114,7 @@ namespace SistemaMysql.View
 
 
                 model.ENTRADAControleAcesso(dados);
-                
+
             }
             catch (Exception ex)
             {
@@ -132,8 +125,83 @@ namespace SistemaMysql.View
 
         private void btnEntrada_Click(object sender, EventArgs e)
         {
-            Pessoas dado = new Pessoas();
-            ENTRADAControleAcesso(dado);
+            if (ID.Text == "")
+            {
+                MessageBox.Show("ERRO: DIGITE UMA IDENTIFICAÇÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                Pessoas dado = new Pessoas();
+                ENTRADAControleAcesso(dado);
+            }
+
+        }
+
+        private void ControleAcesso_Load(object sender, EventArgs e)
+        {
+            DATAATUAL.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            HORAATUAL.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnPESQUISAR_Click(object sender, EventArgs e)
+        {
+            ControleAcessoPesquisar form = new ControleAcessoPesquisar();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO FROM entradacontroleacessoteste WHERE RE = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr;
+                dr = sql.ExecuteReader();
+                dr.Read();
+
+                NOME.Text = dr.GetString(1);
+
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        public void TESTE(Pessoas dados)     // capturando dados dos textbox
+        {
+
+
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from entradacontroleacessoteste where  RE LIKE @RE", con.con);
+                sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1 + "%");
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@entradacontroleacessoteste", MySqlDbType.Int32).Value = ID.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr;
+                dr = sql.ExecuteReader();
+                dr.Read();
+
+                NOME.Text = dr.GetString(1);
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
     

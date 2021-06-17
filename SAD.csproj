@@ -110,6 +110,12 @@
     <Compile Include="View\ControleAcessoCadastro.Designer.cs">
       <DependentUpon>ControleAcessoCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ControleAcessoPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ControleAcessoPesquisar.Designer.cs">
+      <DependentUpon>ControleAcessoPesquisar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EditarInformatica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ControleAcessoCadastro.resx">
       <DependentUpon>ControleAcessoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ControleAcessoPesquisar.resx">
+      <DependentUpon>ControleAcessoPesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarInformatica.resx">
       <DependentUpon>EditarInformatica.cs</DependentUpon>

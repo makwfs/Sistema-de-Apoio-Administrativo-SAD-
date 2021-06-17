@@ -204,6 +204,32 @@ namespace SistemaMysql.DAO
             }
         }
 
+        public DataTable ListarControle()
+        {
+
+
+            try                                                                                                               // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from entradacontroleacessoteste", con.con);                                                    // comando para buscar dados no BD
+
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+         
+        
+
+
         public void CadastroTmd(Pessoas dados)
         {
             
@@ -592,7 +618,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("select * from controlevtr where  Patrimônio LIKE @Patrimônio", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio + "%");                                                          // % necessário para busca aproximada funcionar
+                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio + "%");                                                              // % necessário para busca aproximada funcionar
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
                 DataTable dt = new DataTable();

@@ -82,21 +82,25 @@ namespace SistemaMysql.View
             this.RE = new System.Windows.Forms.TextBox();
             this.RG = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnEDITAR = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSAIDA = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.versão = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnPESQUISAR = new System.Windows.Forms.Button();
+            this.HORAATUAL = new System.Windows.Forms.Label();
+            this.DATAATUAL = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -162,6 +166,7 @@ namespace SistemaMysql.View
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.VEICULOPARTICULAR);
@@ -246,7 +251,9 @@ namespace SistemaMysql.View
             // 
             // CBPOSTOGRAD
             // 
+            this.CBPOSTOGRAD.Enabled = false;
             this.CBPOSTOGRAD.FormattingEnabled = true;
+            this.CBPOSTOGRAD.IntegralHeight = false;
             this.CBPOSTOGRAD.Items.AddRange(new object[] {
             "CIVIL",
             "SD PM",
@@ -269,7 +276,6 @@ namespace SistemaMysql.View
             // 
             // ID
             // 
-            this.ID.Enabled = false;
             this.ID.Location = new System.Drawing.Point(6, 40);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(47, 25);
@@ -342,6 +348,7 @@ namespace SistemaMysql.View
             // 
             // NOME
             // 
+            this.NOME.Enabled = false;
             this.NOME.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NOME.Location = new System.Drawing.Point(59, 40);
             this.NOME.Name = "NOME";
@@ -398,6 +405,7 @@ namespace SistemaMysql.View
             // 
             // TXBRE
             // 
+            this.TXBRE.Enabled = false;
             this.TXBRE.Location = new System.Drawing.Point(516, 40);
             this.TXBRE.Name = "TXBRE";
             this.TXBRE.Size = new System.Drawing.Size(223, 25);
@@ -719,15 +727,15 @@ namespace SistemaMysql.View
             this.label30.TabIndex = 1;
             this.label30.Text = "RE";
             // 
-            // button4
+            // btnEDITAR
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaShell;
-            this.button4.Location = new System.Drawing.Point(1074, 483);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(225, 47);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "EDITAR";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnEDITAR.BackColor = System.Drawing.Color.SeaShell;
+            this.btnEDITAR.Location = new System.Drawing.Point(1074, 483);
+            this.btnEDITAR.Name = "btnEDITAR";
+            this.btnEDITAR.Size = new System.Drawing.Size(225, 47);
+            this.btnEDITAR.TabIndex = 8;
+            this.btnEDITAR.Text = "EDITAR";
+            this.btnEDITAR.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -740,15 +748,15 @@ namespace SistemaMysql.View
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnSAIDA
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaShell;
-            this.button2.Location = new System.Drawing.Point(1074, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 47);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "SAÍDA";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSAIDA.BackColor = System.Drawing.Color.SeaShell;
+            this.btnSAIDA.Location = new System.Drawing.Point(1074, 377);
+            this.btnSAIDA.Name = "btnSAIDA";
+            this.btnSAIDA.Size = new System.Drawing.Size(225, 47);
+            this.btnSAIDA.TabIndex = 6;
+            this.btnSAIDA.Text = "SAÍDA";
+            this.btnSAIDA.UseVisualStyleBackColor = false;
             // 
             // btnEntrada
             // 
@@ -804,15 +812,46 @@ namespace SistemaMysql.View
             this.label7.Text = "Desenvolvido pela Telemática do 47º BPM/I";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // btnPESQUISAR
             // 
-            this.button5.BackColor = System.Drawing.Color.SeaShell;
-            this.button5.Location = new System.Drawing.Point(1073, 536);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(225, 47);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "PESQUISAR";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnPESQUISAR.BackColor = System.Drawing.Color.SeaShell;
+            this.btnPESQUISAR.Location = new System.Drawing.Point(1073, 536);
+            this.btnPESQUISAR.Name = "btnPESQUISAR";
+            this.btnPESQUISAR.Size = new System.Drawing.Size(225, 47);
+            this.btnPESQUISAR.TabIndex = 8;
+            this.btnPESQUISAR.Text = "PESQUISAR";
+            this.btnPESQUISAR.UseVisualStyleBackColor = false;
+            this.btnPESQUISAR.Click += new System.EventHandler(this.btnPESQUISAR_Click);
+            // 
+            // HORAATUAL
+            // 
+            this.HORAATUAL.AutoSize = true;
+            this.HORAATUAL.BackColor = System.Drawing.Color.Transparent;
+            this.HORAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HORAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.HORAATUAL.Location = new System.Drawing.Point(1162, 637);
+            this.HORAATUAL.Name = "HORAATUAL";
+            this.HORAATUAL.Size = new System.Drawing.Size(45, 17);
+            this.HORAATUAL.TabIndex = 57;
+            this.HORAATUAL.Text = "HORA";
+            // 
+            // DATAATUAL
+            // 
+            this.DATAATUAL.AutoSize = true;
+            this.DATAATUAL.BackColor = System.Drawing.Color.Transparent;
+            this.DATAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DATAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.DATAATUAL.Location = new System.Drawing.Point(1162, 610);
+            this.DATAATUAL.Name = "DATAATUAL";
+            this.DATAATUAL.Size = new System.Drawing.Size(42, 17);
+            this.DATAATUAL.TabIndex = 58;
+            this.DATAATUAL.Text = "DATA";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox5
             // 
@@ -869,6 +908,16 @@ namespace SistemaMysql.View
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(489, 562);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 67;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ControleAcesso
             // 
             this.AllowDrop = true;
@@ -876,6 +925,8 @@ namespace SistemaMysql.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1331, 799);
+            this.Controls.Add(this.HORAATUAL);
+            this.Controls.Add(this.DATAATUAL);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox7);
@@ -885,16 +936,17 @@ namespace SistemaMysql.View
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEntrada);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSAIDA);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnPESQUISAR);
+            this.Controls.Add(this.btnEDITAR);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ControleAcesso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControleAcesso";
+            this.Load += new System.EventHandler(this.ControleAcesso_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -954,9 +1006,9 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnEDITAR;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSAIDA;
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -978,7 +1030,7 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox DATA;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPESQUISAR;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -988,5 +1040,9 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CBCIA;
         private System.Windows.Forms.ComboBox CBSECAO;
+        private System.Windows.Forms.Label HORAATUAL;
+        private System.Windows.Forms.Label DATAATUAL;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -54,8 +54,10 @@ namespace SistemaMysql.View
             this.label20 = new System.Windows.Forms.Label();
             this.TXBRE = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.HORA = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.DATA = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DATAVENCIMENTO = new System.Windows.Forms.TextBox();
             this.COR = new System.Windows.Forms.TextBox();
@@ -89,8 +91,6 @@ namespace SistemaMysql.View
             this.DATAATUAL = new System.Windows.Forms.Label();
             this.HORAATUAL = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.HORA = new System.Windows.Forms.TextBox();
-            this.DATA = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -400,6 +400,15 @@ namespace SistemaMysql.View
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "ENTRADA/SAÍDA";
             // 
+            // HORA
+            // 
+            this.HORA.Enabled = false;
+            this.HORA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HORA.Location = new System.Drawing.Point(480, 46);
+            this.HORA.Name = "HORA";
+            this.HORA.Size = new System.Drawing.Size(238, 25);
+            this.HORA.TabIndex = 61;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -423,6 +432,16 @@ namespace SistemaMysql.View
             this.label9.Size = new System.Drawing.Size(45, 17);
             this.label9.TabIndex = 56;
             this.label9.Text = "HORA";
+            // 
+            // DATA
+            // 
+            this.DATA.Enabled = false;
+            this.DATA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DATA.Location = new System.Drawing.Point(274, 46);
+            this.DATA.Name = "DATA";
+            this.DATA.Size = new System.Drawing.Size(200, 25);
+            this.DATA.TabIndex = 61;
+            this.DATA.TextChanged += new System.EventHandler(this.DATA_TextChanged);
             // 
             // groupBox3
             // 
@@ -752,6 +771,7 @@ namespace SistemaMysql.View
             this.DATAATUAL.Size = new System.Drawing.Size(42, 17);
             this.DATAATUAL.TabIndex = 56;
             this.DATAATUAL.Text = "DATA";
+            this.DATAATUAL.Click += new System.EventHandler(this.DATAATUAL_Click);
             // 
             // HORAATUAL
             // 
@@ -764,31 +784,13 @@ namespace SistemaMysql.View
             this.HORAATUAL.Size = new System.Drawing.Size(45, 17);
             this.HORAATUAL.TabIndex = 56;
             this.HORAATUAL.Text = "HORA";
+            this.HORAATUAL.Click += new System.EventHandler(this.HORAATUAL_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // HORA
-            // 
-            this.HORA.Enabled = false;
-            this.HORA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORA.Location = new System.Drawing.Point(480, 46);
-            this.HORA.Name = "HORA";
-            this.HORA.Size = new System.Drawing.Size(238, 25);
-            this.HORA.TabIndex = 61;
-            // 
-            // DATA
-            // 
-            this.DATA.Enabled = false;
-            this.DATA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DATA.Location = new System.Drawing.Point(274, 46);
-            this.DATA.Name = "DATA";
-            this.DATA.Size = new System.Drawing.Size(200, 25);
-            this.DATA.TabIndex = 61;
-            this.DATA.TextChanged += new System.EventHandler(this.DATA_TextChanged);
             // 
             // ControleAcessoCadastro
             // 

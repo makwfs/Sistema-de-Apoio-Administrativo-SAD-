@@ -37,6 +37,23 @@ namespace SistemaMysql.Model
 			}
 		}
 
+        public DataTable ListarControle()
+        {
+
+            try                                       // Utilizar o try pra caso ocorra o erro ele retorne
+            {
+
+                DataTable dt = new DataTable();
+                dt = dao.ListarControle();
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public DataTable ListarTmd()
         {
 
