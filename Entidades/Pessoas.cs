@@ -11,11 +11,9 @@ namespace SistemaMysql.Entidades
         int id;
         public string Patrimonio, Modelo, Serial, Local, Observacao, PatrimonioPM, pbTmd, SrcFoto, SrcEditarFoto;
         public string placa, prefixo;
-        public string tipo;
-        public string fabricante;
-        public string estado;
-        public string rE;
-        public string nome;
+        private string nomeControleAcesso, REControleAcesso, POSTOGRADControleAcesso, TXBRGControleAcesso, UNIDADEControleAcesso,
+            CIAControleAcesso, SECAOControleAcesso, NCARTAOontroleAcesso, VENCIMENTOControleAcesso, MARCAControleAcesso,
+            MODELOControleAcesso, EMPLACAMENTOControleAcesso, CIDADEControleAcesso, CORControleAcesso, DATA, HORA;
 
 
 
@@ -35,10 +33,23 @@ namespace SistemaMysql.Entidades
         public string SrcEditarFotoInfo { get => SrcEditarFoto; set => SrcEditarFoto = value; }
         public string Placa { get => placa; set => placa = value; }
         public string Prefixo { get => prefixo; set => prefixo = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
-        public string Fabricante { get => fabricante; set => fabricante = value; }
-        public string Estado { get => estado; set => estado = value; }
-        public string RE { get => rE; set => rE = value; }
-        public string Nome { get => nome; set => nome = value; }
+
+        //CONTROLE DE ACESSO
+        public string NomeControleAcesso { get => nomeControleAcesso; set => nomeControleAcesso = value; }
+        public string REControleAcesso1 { get => REControleAcesso; set => REControleAcesso = value; }
+        public string POSTOGRADControleAcesso1 { get => POSTOGRADControleAcesso; set => POSTOGRADControleAcesso = value; }
+        public string TXBRGControleAcesso1 { get => TXBRGControleAcesso; set => TXBRGControleAcesso = value; }
+        public string UNIDADEControleAcesso1 { get => UNIDADEControleAcesso; set => UNIDADEControleAcesso = value; }
+        public string CIAControleAcesso1 { get => CIAControleAcesso; set => CIAControleAcesso = value; }
+        public string SECAOControleAcesso1 { get => SECAOControleAcesso; set => SECAOControleAcesso = value; }
+        public string NCARTAOontroleAcesso1 { get => NCARTAOontroleAcesso; set => NCARTAOontroleAcesso = value; }
+        public string VENCIMENTOControleAcesso1 { get => VENCIMENTOControleAcesso; set => VENCIMENTOControleAcesso = value; }
+        public string MARCAControleAcesso1 { get => MARCAControleAcesso; set => MARCAControleAcesso = value; }
+        public string MODELOControleAcesso1 { get => MODELOControleAcesso; set => MODELOControleAcesso = value; }
+        public string EMPLACAMENTOControleAcesso1 { get => EMPLACAMENTOControleAcesso; set => EMPLACAMENTOControleAcesso = value; }
+        public string CIDADEControleAcesso1 { get => CIDADEControleAcesso; set => CIDADEControleAcesso = value; }
+        public string CORControleAcesso1 { get => CORControleAcesso; set => CORControleAcesso = value; }
+        public string DATA1 { get => DATA; set => DATA = value; }
+        public string HORA1 { get => HORA; set => HORA = value; }
     }
 }

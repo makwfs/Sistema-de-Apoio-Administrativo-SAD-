@@ -232,8 +232,7 @@
             "6ª CIA",
             "FORÇA TÁTICA",
             "EM",
-            "TELEMÁTICA",
-            "DTIC"});
+            "TELEMÁTICA"});
             this.cmbLocal.Location = new System.Drawing.Point(203, 145);
             this.cmbLocal.Name = "cmbLocal";
             this.cmbLocal.Size = new System.Drawing.Size(300, 24);
@@ -344,7 +343,7 @@
             this.pbTmd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbTmd.ErrorImage = global::SistemaMysql.Properties.Resources._47bpmi__1_3;
             this.pbTmd.Image = global::SistemaMysql.Properties.Resources.Inserir_imagem;
-            this.pbTmd.Location = new System.Drawing.Point(659, 85);
+            this.pbTmd.Location = new System.Drawing.Point(659, 84);
             this.pbTmd.Name = "pbTmd";
             this.pbTmd.Size = new System.Drawing.Size(263, 286);
             this.pbTmd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -360,9 +359,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 50);
+            this.panel1.Size = new System.Drawing.Size(935, 48);
             this.panel1.TabIndex = 21;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // CadastrarInformatica
             // 
@@ -376,6 +374,7 @@
             this.Controls.Add(this.SrcFoto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastrarInformatica";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRAR MATERIAL DE INFORMÁTICA";
             this.Load += new System.EventHandler(this.CadastrarTmd_Load);

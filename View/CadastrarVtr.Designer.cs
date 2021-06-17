@@ -343,6 +343,7 @@
             this.Controls.Add(this.groupBoxViatura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastrarVtr";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarVtr";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CadastrarVtr_MouseDown);

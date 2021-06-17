@@ -413,48 +413,6 @@ namespace SistemaMysql.DAO
             }
         }
 
-        public void CadastroMaterialBelico(Pessoas dados) // TERMINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR 
-        {
-
-            /*try
-            {
-                con.Conectar();
-                sql = new MySqlCommand("INSERT INTO controlevtr ( Patrimônio, Modelo, Placa, Local, Prefixo, Observação,Foto) values ( @Patrimônio, @Modelo, @Placa, @Local, @Prefixo, @Observação, @Foto )", con.con);  // inclusão de dados no BD pessoa
-
-                sql.Parameters.AddWithValue("@Patrimônio", dados.PatrimonioInfo);
-                sql.Parameters.AddWithValue("@Modelo", dados.ModeloInfo);
-                sql.Parameters.AddWithValue("@Placa", dados.SerialInfo);
-                sql.Parameters.AddWithValue("@Local", dados.LocalInfo);
-                sql.Parameters.AddWithValue("@Prefixo", dados.PatrimonioPMInfo);
-                sql.Parameters.AddWithValue("@Observação", dados.ObservacaoInfo);
-                sql.Parameters.AddWithValue("@Foto", dados.SrcFotoInfo);
-                sql.ExecuteNonQuery();
-
-
-
-
-
-                sql = new MySqlCommand("INSERT INTO controletodos (Patrimônio, Modelo, Local, Observação, Foto, Placa, Prefixo) values ( @Patrimônio, @Modelo,  @Local, @Observação, @Foto, @Placa,  @Prefixo)", con.con);
-
-                sql.Parameters.AddWithValue("@Patrimônio", dados.PatrimonioInfo);
-                sql.Parameters.AddWithValue("@Modelo", dados.ModeloInfo);
-                sql.Parameters.AddWithValue("@Placa", dados.SerialInfo);
-                sql.Parameters.AddWithValue("@Local", dados.LocalInfo);
-                sql.Parameters.AddWithValue("@Prefixo", dados.PatrimonioPMInfo);
-                sql.Parameters.AddWithValue("@Observação", dados.ObservacaoInfo);
-                sql.Parameters.AddWithValue("@Foto", dados.SrcFotoInfo);
-
-                sql.ExecuteNonQuery();
-                con.FecharConexao();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao cadastrar" + ex);
-                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                con.FecharConexao();
-            }*/
-        }
-
         public DataTable PesquisarTmd(Pessoas dados)
         {
             try                                                                                                                                // Usar o try para caso ocorra algum erro
@@ -560,8 +518,8 @@ namespace SistemaMysql.DAO
             try                                                                                                                                // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from controlevtr where  Placa LIKE @Placa", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
-                sql.Parameters.AddWithValue("@Placa", dados.Placa + "%");                                                          // % necessário para busca aproximada funcionar
+                sql = new MySqlCommand("select * from controlevtr where  Patrimônio LIKE @Patrimônio", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio + "%");                                                          // % necessário para busca aproximada funcionar
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
                 DataTable dt = new DataTable();
@@ -581,9 +539,9 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("UPDATE controletmd SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
                 
-             
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
                 sql.Parameters.AddWithValue("@SerialTmd", dados.Serial);
                 sql.Parameters.AddWithValue("@PatrimonioTmdPM", dados.PatrimonioPM);
@@ -596,9 +554,9 @@ namespace SistemaMysql.DAO
 
 
                 sql = new MySqlCommand("UPDATE controletodos SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
-            
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
                 sql.Parameters.AddWithValue("@SerialTmd", dados.Serial);
                 sql.Parameters.AddWithValue("@PatrimonioTmdPM", dados.PatrimonioPM);
@@ -623,7 +581,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("UPDATE controleimpressora SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
@@ -638,7 +596,7 @@ namespace SistemaMysql.DAO
 
 
                 sql = new MySqlCommand("UPDATE controletodos SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
@@ -666,7 +624,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("UPDATE controlevtr SET Patrimônio = @Patrimonio, Modelo = @Modelo, Local = @Local, " +
-                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE Patrimônio = @Patrimonio", con.con);   // comando para editar dados no BD
+                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@Patrimonio", dados.Patrimonio);
@@ -680,9 +638,9 @@ namespace SistemaMysql.DAO
                 MessageBox.Show("Salvo com Sucesso!");
 
 
-                
+
                 sql = new MySqlCommand("UPDATE controletodos SET Patrimônio = @Patrimonio, Modelo = @Modelo, Local = @Local, " +
-                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE Patrimônio = @Patrimonio", con.con);   // comando para editar dados no BD
+                    "Observação = @Observação, Foto = @SrcEditarFoto, Placa = @Placa, Prefixo = @Prefixo  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@Patrimonio", dados.Patrimonio);
@@ -709,7 +667,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("UPDATE controlepc SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
@@ -724,7 +682,7 @@ namespace SistemaMysql.DAO
 
 
                 sql = new MySqlCommand("UPDATE controletodos SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
@@ -752,7 +710,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("UPDATE controleradio SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
@@ -767,7 +725,7 @@ namespace SistemaMysql.DAO
 
 
                 sql = new MySqlCommand("UPDATE controletodos SET Patrimônio = @PatrimonioTmd, Modelo = @ModeloTmd, Serial = @SerialTmd, " +
-                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE Patrimônio = @PatrimonioTmd", con.con);   // comando para editar dados no BD
+                    "Local = @LocalTmd, PatrimônioPm = @PatrimonioTmdPM, Observação = @ObservacaoTmd, Foto = @SrcEditarFoto  WHERE id = @id", con.con);   // comando para editar dados no BD
 
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.Parameters.AddWithValue("@PatrimonioTmd", dados.Patrimonio);
@@ -818,8 +776,8 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("DELETE FROM controletmd WHERE  Patrimônio= @Patrimônio", con.con);  // Comando para exclusão de dados no BD
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio);
+                sql = new MySqlCommand("DELETE FROM controletmd WHERE id = @id", con.con);  // Comando para exclusão de dados no BD
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();
 
@@ -837,8 +795,8 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("DELETE FROM controlepc WHERE Patrimônio= @Patrimônio", con.con);  // Comando para exclusão de dados no BD
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio);
+                sql = new MySqlCommand("DELETE FROM controlepc WHERE id = @id", con.con);  // Comando para exclusão de dados no BD
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();
 
@@ -877,8 +835,8 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("DELETE FROM controlevtr WHERE Patrimônio= @Patrimônio", con.con);  // Comando para exclusão de dados no BD
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio);
+                sql = new MySqlCommand("DELETE FROM controlevtr WHERE id = @id", con.con);  // Comando para exclusão de dados no BD
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
                 MessageBox.Show("Excluido com Sucesso!");
                 con.FecharConexao();
@@ -897,8 +855,8 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("DELETE FROM controleradio WHERE Patrimônio= @Patrimônio", con.con);  // Comando para exclusão de dados no BD
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio);
+                sql = new MySqlCommand("DELETE FROM controleradio WHERE id = @id", con.con);  // Comando para exclusão de dados no BD
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
                 MessageBox.Show("Excluido com Sucesso!");
                 con.FecharConexao();
@@ -917,8 +875,8 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("DELETE FROM controletodos WHERE Patrimônio = @Patrimônio", con.con);  // Comando para exclusão de dados no BD
-                sql.Parameters.AddWithValue("@Patrimônio", dados.Patrimonio);
+                sql = new MySqlCommand("DELETE FROM controletodos WHERE id = @id", con.con);  // Comando para exclusão de dados no BD
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();
 

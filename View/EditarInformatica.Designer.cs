@@ -200,8 +200,7 @@
             "6ª CIA",
             "FORÇA TÁTICA",
             "EM",
-            "TELEMÁTICA",
-            "DTIC"});
+            "TELEMÁTICA"});
             this.cmbLocal.Location = new System.Drawing.Point(207, 191);
             this.cmbLocal.Name = "cmbLocal";
             this.cmbLocal.Size = new System.Drawing.Size(300, 25);
@@ -477,6 +476,7 @@
             this.Controls.Add(this.groupBoxTmd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditarInformatica";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EDITAR TMD";
             this.Load += new System.EventHandler(this.Editar_Load);

@@ -266,11 +266,11 @@ namespace SistemaMysql.View
         {
             try
             {
-                dados.Patrimonio = txbPatrimonio.Text;
-
+                dados.Id = Convert.ToInt32(txbId.Text);
+                
 
                 model.ExcluirTmd(dados);
-               
+                MessageBox.Show("Excluido com Sucesso!");
             }
             catch (Exception ex)
             {
@@ -283,7 +283,7 @@ namespace SistemaMysql.View
         {
             try
             {
-                dados.Patrimonio = txbPatrimonio.Text;
+                dados.Id = Convert.ToInt32(txbId.Text);
 
 
                 model.ExcluirPc(dados);
@@ -300,7 +300,7 @@ namespace SistemaMysql.View
         {
             try
             {
-                dados.Patrimonio = txbPatrimonio.Text;
+                dados.Id = Convert.ToInt32(txbId.Text);
 
 
                 model.ExcluirRadio(dados);
@@ -317,7 +317,7 @@ namespace SistemaMysql.View
         {
             try
             {
-                dados.Patrimonio = txbPatrimonio.Text;
+                dados.Id = Convert.ToInt32(txbId.Text);
 
 
                 model.ExcluirTodos(dados);
@@ -471,14 +471,14 @@ namespace SistemaMysql.View
             txbObservacaoTmd.Text = gridEditarTmd.CurrentRow.Cells[6].Value.ToString();
             SrcFoto.Text = gridEditarTmd.CurrentRow.Cells[7].Value.ToString();
 
-           /* if (SrcFoto.Text == "")
+            if (SrcFoto.Text == "")
             {
                 MessageBox.Show("Se possivel cadastre uma imagem para o produto !");
             }
             else
             {
                 pbEditar.Load(gridEditarTmd.CurrentRow.Cells[7].Value.ToString());
-            }*/
+            }
 
 
 

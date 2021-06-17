@@ -198,21 +198,15 @@ namespace SistemaMysql.View
 
         }
 
+        private void controleDeAcessoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ControleAcesso form = new ControleAcesso();
+            form.Show();
+        }
+
         private void controleDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarUsuario form = new EditarUsuario();
-            form.Show();
-        }
-
-        private void viaturaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            TelaConsultarVtr form = new TelaConsultarVtr();
-            form.Show();
-        }
-
-        private void materialBélicoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CadastrarMaterialBelico form = new CadastrarMaterialBelico();
             form.Show();
         }
     }

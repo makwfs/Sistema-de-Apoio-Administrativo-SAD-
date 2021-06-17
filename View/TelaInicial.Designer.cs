@@ -149,27 +149,26 @@
             this.materialBélicoToolStripMenuItem,
             this.viaturaToolStripMenuItem});
             this.cadastrarItensToolStripMenuItem.Name = "cadastrarItensToolStripMenuItem";
-            this.cadastrarItensToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarItensToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.cadastrarItensToolStripMenuItem.Text = "Cadastrar Itens";
             // 
             // tmdToolStripMenuItem
             // 
             this.tmdToolStripMenuItem.Name = "tmdToolStripMenuItem";
-            this.tmdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tmdToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tmdToolStripMenuItem.Text = "Informática";
             this.tmdToolStripMenuItem.Click += new System.EventHandler(this.tmdToolStripMenuItem_Click);
             // 
             // materialBélicoToolStripMenuItem
             // 
             this.materialBélicoToolStripMenuItem.Name = "materialBélicoToolStripMenuItem";
-            this.materialBélicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.materialBélicoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.materialBélicoToolStripMenuItem.Text = "Material Bélico";
-            this.materialBélicoToolStripMenuItem.Click += new System.EventHandler(this.materialBélicoToolStripMenuItem_Click);
             // 
             // viaturaToolStripMenuItem
             // 
             this.viaturaToolStripMenuItem.Name = "viaturaToolStripMenuItem";
-            this.viaturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viaturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viaturaToolStripMenuItem.Text = "Viatura";
             this.viaturaToolStripMenuItem.Click += new System.EventHandler(this.viaturaToolStripMenuItem_Click);
             // 
@@ -179,7 +178,7 @@
             this.informáticaToolStripMenuItem,
             this.viaturaToolStripMenuItem1});
             this.consultarItensToolStripMenuItem.Name = "consultarItensToolStripMenuItem";
-            this.consultarItensToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarItensToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.consultarItensToolStripMenuItem.Text = "Consultar Itens";
             // 
             // informáticaToolStripMenuItem
@@ -194,7 +193,6 @@
             this.viaturaToolStripMenuItem1.Name = "viaturaToolStripMenuItem1";
             this.viaturaToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.viaturaToolStripMenuItem1.Text = "Viatura";
-            this.viaturaToolStripMenuItem1.Click += new System.EventHandler(this.viaturaToolStripMenuItem1_Click);
             // 
             // editarItensToolStripMenuItem
             // 
@@ -202,7 +200,7 @@
             this.tmdToolStripMenuItem1,
             this.viaturaToolStripMenuItem2});
             this.editarItensToolStripMenuItem.Name = "editarItensToolStripMenuItem";
-            this.editarItensToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarItensToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.editarItensToolStripMenuItem.Text = "Editar Itens";
             // 
             // tmdToolStripMenuItem1
@@ -222,7 +220,7 @@
             // reciboToolStripMenuItem
             // 
             this.reciboToolStripMenuItem.Name = "reciboToolStripMenuItem";
-            this.reciboToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reciboToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.reciboToolStripMenuItem.Text = "Recibo";
             // 
             // AbaGuarda
@@ -238,6 +236,7 @@
             this.controleDeAcessoToolStripMenuItem.Name = "controleDeAcessoToolStripMenuItem";
             this.controleDeAcessoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.controleDeAcessoToolStripMenuItem.Text = "Controle de Acesso";
+            this.controleDeAcessoToolStripMenuItem.Click += new System.EventHandler(this.controleDeAcessoToolStripMenuItem_Click);
             // 
             // AbaReservaArmas
             // 

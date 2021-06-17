@@ -267,14 +267,14 @@ namespace SistemaMysql.View
 
                        
 
-            /*if (SrcConsultar.Text == "")
+            if (SrcConsultar.Text == "")
             {
                 MessageBox.Show("Material sem Imagem, Favor cadastrar atraves da aba editar !");
             }
             else
             {
                 pbConsultar.Load(grid.CurrentRow.Cells[7].Value.ToString());
-            }*/
+            }
             
 
 
@@ -299,6 +299,22 @@ namespace SistemaMysql.View
         private void pbConsultar_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

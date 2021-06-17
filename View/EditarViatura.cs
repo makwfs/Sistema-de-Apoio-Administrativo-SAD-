@@ -64,7 +64,6 @@ namespace SistemaMysql.View
         {
             Pessoas dado = new Pessoas();
             EditarVtr(dado);
-            Listar();
         }
 
         public void EditarVtr(Pessoas dados)
@@ -168,7 +167,7 @@ namespace SistemaMysql.View
 
             try
             {
-                dado.Placa = txbPesquisar.Text;
+                dado.PatrimonioInfo = txbPesquisar.Text;
                 grid.DataSource = model.PesquisarVtr(dado);
 
             }
@@ -183,7 +182,7 @@ namespace SistemaMysql.View
         {
             try
             {
-                dados.Patrimonio = txbPatrimonio.Text;
+                dados.Id = Convert.ToInt32(txbId.Text);
 
 
                 model.ExcluirVtr(dados);
@@ -200,7 +199,7 @@ namespace SistemaMysql.View
         {
             try
             {
-                dados.Patrimonio = txbPatrimonio.Text;
+                dados.Id = Convert.ToInt32(txbId.Text);
 
 
                 model.ExcluirTodos(dados);
