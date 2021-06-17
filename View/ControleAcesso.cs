@@ -20,6 +20,7 @@ namespace SistemaMysql.View
 {
     public partial class ControleAcesso : Form
     {
+        Model.Model model = new Model.Model();
         public ControleAcesso()
         {
             InitializeComponent();
@@ -67,7 +68,7 @@ namespace SistemaMysql.View
 
         private void RE_TextChanged(object sender, EventArgs e)
         {
-            if (CBRE.Text != "")
+            if (TXBRE.Text != "")
             {
 
                 ListarTmd();
@@ -92,6 +93,49 @@ namespace SistemaMysql.View
         {
             //PESQUISAR AO APERTAR ENTER
         }
+
+        
+
+        public void ENTRADAControleAcesso(Pessoas dados)     // capturando dados dos textbox
+        {
+
+
+            try
+            {
+                dados.NomeControleAcesso = NOME.Text;
+                dados.REControleAcesso1 = TXBRE.Text;
+                dados.POSTOGRADControleAcesso1 = CBPOSTOGRAD.Text;
+                dados.TXBRGControleAcesso1 = TXBRG.Text;
+                dados.UNIDADEControleAcesso1 = UNIDADE.Text;
+                dados.CIAControleAcesso1 = CBCIA.Text;
+                dados.SECAOControleAcesso1 = CBSECAO.Text;
+                dados.NCARTAOontroleAcesso1 = NCARTAO.Text;
+                dados.VENCIMENTOControleAcesso1 = DATAVENCIMENTO.Text;
+                dados.MARCAControleAcesso1 = TXBMARCA.Text;
+                dados.MODELOControleAcesso1 = MODELOVEICULO.Text;
+                dados.EMPLACAMENTOControleAcesso1 = EMPLACAMENTO.Text;
+                dados.CIDADEControleAcesso1 = CIDADE.Text;
+                dados.CORControleAcesso1 = COR.Text;
+                dados.DATA1 = DATA.Text;
+                dados.HORA1 = HORA.Text;
+
+
+                model.ENTRADAControleAcesso(dados);
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Salvar " + ex.Message);
+            }
+        }
+
+        private void btnEntrada_Click(object sender, EventArgs e)
+        {
+            Pessoas dado = new Pessoas();
+            ENTRADAControleAcesso(dado);
+        }
     }
+    
 }
 

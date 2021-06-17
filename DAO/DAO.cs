@@ -413,6 +413,79 @@ namespace SistemaMysql.DAO
             }
         }
 
+        public void CadastroControleAcesso(Pessoas dados)
+        {
+
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO controleacessoteste ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
+                sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
+                sql.Parameters.AddWithValue("@POSTO", dados.POSTOGRADControleAcesso1);
+                sql.Parameters.AddWithValue("@RG", dados.TXBRGControleAcesso1);
+                sql.Parameters.AddWithValue("@UNIDADE", dados.UNIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@CIA", dados.CIAControleAcesso1);
+                sql.Parameters.AddWithValue("@SEÇÃO", dados.SECAOControleAcesso1);
+                sql.Parameters.AddWithValue("@CARTÃO", dados.NCARTAOontroleAcesso1);
+                sql.Parameters.AddWithValue("@VENCIMENTO", dados.VENCIMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@MARCA", dados.MARCAControleAcesso1);
+                sql.Parameters.AddWithValue("@MODELO", dados.MODELOControleAcesso1);
+                sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
+                sql.Parameters.AddWithValue("@DATA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA", dados.HORA1);
+                sql.ExecuteNonQuery();                
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
+        public void ENTRADAControleAcesso(Pessoas dados)
+        {
+
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO entradacontroleacessoteste ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
+                sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
+                sql.Parameters.AddWithValue("@POSTO", dados.POSTOGRADControleAcesso1);
+                sql.Parameters.AddWithValue("@RG", dados.TXBRGControleAcesso1);
+                sql.Parameters.AddWithValue("@UNIDADE", dados.UNIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@CIA", dados.CIAControleAcesso1);
+                sql.Parameters.AddWithValue("@SEÇÃO", dados.SECAOControleAcesso1);
+                sql.Parameters.AddWithValue("@CARTÃO", dados.NCARTAOontroleAcesso1);
+                sql.Parameters.AddWithValue("@VENCIMENTO", dados.VENCIMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@MARCA", dados.MARCAControleAcesso1);
+                sql.Parameters.AddWithValue("@MODELO", dados.MODELOControleAcesso1);
+                sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
+                sql.Parameters.AddWithValue("@DATA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA", dados.HORA1);
+                sql.ExecuteNonQuery();
+                MessageBox.Show("ENTRADA CADASTRADA COM SUCESSO !");
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
         public DataTable PesquisarTmd(Pessoas dados)
         {
             try                                                                                                                                // Usar o try para caso ocorra algum erro

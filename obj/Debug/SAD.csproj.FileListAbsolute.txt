@@ -109,3 +109,27 @@ C:\Users\PMESP\Desktop\SAD (1.1)\obj\Debug\SAD.csproj.CopyComplete
 C:\Users\PMESP\Desktop\SAD (1.1)\obj\Debug\SistemaMysql.exe
 C:\Users\PMESP\Desktop\SAD (1.1)\obj\Debug\SistemaMysql.pdb
 C:\Users\PMESP\Desktop\SAD (1.1)\obj\Debug\SistemaMysql.View.ControleAcessoCadastro.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\bin\Debug\SistemaMysql.exe.config
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\bin\Debug\SistemaMysql.exe
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\bin\Debug\SistemaMysql.pdb
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\bin\Debug\MySql.Data.xml
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SAD.csproj.AssemblyReference.cache
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.CadastrarInformatica.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.CadastrarVtr.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ControleAcesso.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ControleAcessoCadastro.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.EditarInformatica.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.EditarUsuario.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.EditarViatura.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.Login.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.TelaCadastrarUsuario.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.TelaConsultarInformatica.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.TelaRecuperarSenha.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SAD.csproj.GenerateResource.cache
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SAD.csproj.CoreCompileInputs.cache
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SAD.csproj.CopyComplete
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.exe
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.pdb

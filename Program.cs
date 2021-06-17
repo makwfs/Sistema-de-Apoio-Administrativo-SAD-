@@ -17,7 +17,7 @@ namespace SistemaMysql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ControleAcessoCadastro());
+            Application.Run(new ControleAcesso());
         }
     }
 }

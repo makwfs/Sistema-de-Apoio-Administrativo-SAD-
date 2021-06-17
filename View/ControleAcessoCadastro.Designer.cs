@@ -29,6 +29,7 @@ namespace SistemaMysql.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleAcessoCadastro));
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -36,6 +37,8 @@ namespace SistemaMysql.View
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.CBSECAO = new System.Windows.Forms.ComboBox();
+            this.CBCIA = new System.Windows.Forms.ComboBox();
             this.CBPOSTOGRAD = new System.Windows.Forms.ComboBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -51,10 +54,8 @@ namespace SistemaMysql.View
             this.label20 = new System.Windows.Forms.Label();
             this.TXBRE = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.HORA = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.DATA = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DATAVENCIMENTO = new System.Windows.Forms.TextBox();
             this.COR = new System.Windows.Forms.TextBox();
@@ -85,8 +86,11 @@ namespace SistemaMysql.View
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.CBCIA = new System.Windows.Forms.ComboBox();
-            this.CBSECAO = new System.Windows.Forms.ComboBox();
+            this.DATAATUAL = new System.Windows.Forms.Label();
+            this.HORAATUAL = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.HORA = new System.Windows.Forms.TextBox();
+            this.DATA = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -189,6 +193,41 @@ namespace SistemaMysql.View
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DADOS PESSOAIS";
+            // 
+            // CBSECAO
+            // 
+            this.CBSECAO.FormattingEnabled = true;
+            this.CBSECAO.Items.AddRange(new object[] {
+            "RP",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            ""});
+            this.CBSECAO.Location = new System.Drawing.Point(745, 89);
+            this.CBSECAO.Name = "CBSECAO";
+            this.CBSECAO.Size = new System.Drawing.Size(223, 25);
+            this.CBSECAO.TabIndex = 70;
+            // 
+            // CBCIA
+            // 
+            this.CBCIA.FormattingEnabled = true;
+            this.CBCIA.Items.AddRange(new object[] {
+            "1ª CIA",
+            "2ª CIA",
+            "3ª CIA",
+            "4ª CIA",
+            "5ª CIA",
+            "6ª CIA",
+            "EM",
+            "FORÇA TÁTICA",
+            "",
+            ""});
+            this.CBCIA.Location = new System.Drawing.Point(516, 90);
+            this.CBCIA.Name = "CBCIA";
+            this.CBCIA.Size = new System.Drawing.Size(223, 25);
+            this.CBCIA.TabIndex = 70;
             // 
             // CBPOSTOGRAD
             // 
@@ -361,15 +400,6 @@ namespace SistemaMysql.View
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "ENTRADA/SAÍDA";
             // 
-            // HORA
-            // 
-            this.HORA.Enabled = false;
-            this.HORA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORA.Location = new System.Drawing.Point(498, 46);
-            this.HORA.Name = "HORA";
-            this.HORA.Size = new System.Drawing.Size(238, 25);
-            this.HORA.TabIndex = 61;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -393,15 +423,6 @@ namespace SistemaMysql.View
             this.label9.Size = new System.Drawing.Size(45, 17);
             this.label9.TabIndex = 56;
             this.label9.Text = "HORA";
-            // 
-            // DATA
-            // 
-            this.DATA.Enabled = false;
-            this.DATA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DATA.Location = new System.Drawing.Point(274, 46);
-            this.DATA.Name = "DATA";
-            this.DATA.Size = new System.Drawing.Size(200, 25);
-            this.DATA.TabIndex = 61;
             // 
             // groupBox3
             // 
@@ -720,40 +741,54 @@ namespace SistemaMysql.View
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
             // 
-            // CBCIA
+            // DATAATUAL
             // 
-            this.CBCIA.FormattingEnabled = true;
-            this.CBCIA.Items.AddRange(new object[] {
-            "1ª CIA",
-            "2ª CIA",
-            "3ª CIA",
-            "4ª CIA",
-            "5ª CIA",
-            "6ª CIA",
-            "EM",
-            "FORÇA TÁTICA",
-            "",
-            ""});
-            this.CBCIA.Location = new System.Drawing.Point(516, 90);
-            this.CBCIA.Name = "CBCIA";
-            this.CBCIA.Size = new System.Drawing.Size(223, 25);
-            this.CBCIA.TabIndex = 70;
+            this.DATAATUAL.AutoSize = true;
+            this.DATAATUAL.BackColor = System.Drawing.Color.Transparent;
+            this.DATAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DATAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.DATAATUAL.Location = new System.Drawing.Point(1154, 564);
+            this.DATAATUAL.Name = "DATAATUAL";
+            this.DATAATUAL.Size = new System.Drawing.Size(42, 17);
+            this.DATAATUAL.TabIndex = 56;
+            this.DATAATUAL.Text = "DATA";
             // 
-            // CBSECAO
+            // HORAATUAL
             // 
-            this.CBSECAO.FormattingEnabled = true;
-            this.CBSECAO.Items.AddRange(new object[] {
-            "RP",
-            "P1",
-            "P2",
-            "P3",
-            "P4",
-            "P5",
-            ""});
-            this.CBSECAO.Location = new System.Drawing.Point(745, 89);
-            this.CBSECAO.Name = "CBSECAO";
-            this.CBSECAO.Size = new System.Drawing.Size(223, 25);
-            this.CBSECAO.TabIndex = 70;
+            this.HORAATUAL.AutoSize = true;
+            this.HORAATUAL.BackColor = System.Drawing.Color.Transparent;
+            this.HORAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HORAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.HORAATUAL.Location = new System.Drawing.Point(1154, 591);
+            this.HORAATUAL.Name = "HORAATUAL";
+            this.HORAATUAL.Size = new System.Drawing.Size(45, 17);
+            this.HORAATUAL.TabIndex = 56;
+            this.HORAATUAL.Text = "HORA";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // HORA
+            // 
+            this.HORA.Enabled = false;
+            this.HORA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HORA.Location = new System.Drawing.Point(480, 46);
+            this.HORA.Name = "HORA";
+            this.HORA.Size = new System.Drawing.Size(238, 25);
+            this.HORA.TabIndex = 61;
+            // 
+            // DATA
+            // 
+            this.DATA.Enabled = false;
+            this.DATA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DATA.Location = new System.Drawing.Point(274, 46);
+            this.DATA.Name = "DATA";
+            this.DATA.Size = new System.Drawing.Size(200, 25);
+            this.DATA.TabIndex = 61;
+            this.DATA.TextChanged += new System.EventHandler(this.DATA_TextChanged);
             // 
             // ControleAcessoCadastro
             // 
@@ -762,14 +797,17 @@ namespace SistemaMysql.View
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1330, 760);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.HORAATUAL);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.DATAATUAL);
             this.Controls.Add(this.ControleAcessoBtnCadastrar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.Name = "ControleAcessoCadastro";
             this.Text = "ControleAcessoCadastro";
+            this.Load += new System.EventHandler(this.ControleAcessoCadastro_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -787,6 +825,7 @@ namespace SistemaMysql.View
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -813,10 +852,8 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox TXBRE;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox HORA;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox DATA;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox DATAVENCIMENTO;
         private System.Windows.Forms.TextBox COR;
@@ -849,5 +886,10 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CBCIA;
         private System.Windows.Forms.ComboBox CBSECAO;
+        private System.Windows.Forms.Label DATAATUAL;
+        private System.Windows.Forms.Label HORAATUAL;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox HORA;
+        private System.Windows.Forms.TextBox DATA;
     }
 }

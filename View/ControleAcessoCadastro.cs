@@ -27,6 +27,7 @@ namespace SistemaMysql.View
             InitializeComponent();
         }
 
+
         private void ControleAcessoBtnCadastrar_Click(object sender, EventArgs e)
         {
             Pessoas dado = new Pessoas();
@@ -58,13 +59,30 @@ namespace SistemaMysql.View
 
 
                 model.CadastroControleAcesso(dados);
-                MessageBox.Show("Salvo com Sucesso!");
+                
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Erro ao Salvar " + ex.Message);
             }
+        }
+
+        private void DATA_TextChanged(object sender, EventArgs e)
+        {
+            string Date = DateTime.Now.ToString("dd-MM-yyyy");
+            Console.WriteLine("The Current Date Without Time is {0}.", Date);
+            //DATA.Text == Date;
+        }
+
+        private void ControleAcessoCadastro_Load(object sender, EventArgs e)
+        {
+            DATAATUAL.Text = DateTime.Now.ToString("dd/MM/yyyy");            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            HORAATUAL.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

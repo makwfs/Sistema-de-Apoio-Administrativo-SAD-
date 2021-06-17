@@ -231,6 +231,35 @@ namespace SistemaMysql.Model
                 MessageBox.Show("Erro ao salvar" + ex);
             }
         }
+        public void CadastroControleAcesso(Pessoas dados)
+        {
+
+            try
+            {
+                dao.CadastroControleAcesso(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
+
+        public void ENTRADAControleAcesso(Pessoas dados)
+        {
+
+            try
+            {
+                dao.ENTRADAControleAcesso(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
 
 
         public void EditarDadosTmd(Pessoas dados)

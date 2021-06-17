@@ -33,28 +33,32 @@ namespace SistemaMysql.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleAcesso));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.CBSECAO = new System.Windows.Forms.ComboBox();
+            this.CBCIA = new System.Windows.Forms.ComboBox();
+            this.CBPOSTOGRAD = new System.Windows.Forms.ComboBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.UNIDADE = new System.Windows.Forms.TextBox();
-            this.SECAO = new System.Windows.Forms.TextBox();
-            this.CBRG = new System.Windows.Forms.TextBox();
+            this.TXBRG = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.NOME = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.CIA = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.CBRE = new System.Windows.Forms.TextBox();
+            this.TXBRE = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.HORA = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.DATA = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.VEICULOPARTICULAR = new System.Windows.Forms.GroupBox();
             this.DATAVENCIMENTO = new System.Windows.Forms.TextBox();
             this.COR = new System.Windows.Forms.TextBox();
             this.CIDADE = new System.Windows.Forms.TextBox();
@@ -63,7 +67,7 @@ namespace SistemaMysql.View
             this.label2 = new System.Windows.Forms.Label();
             this.MARCA = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.CBMARCA = new System.Windows.Forms.TextBox();
+            this.TXBMARCA = new System.Windows.Forms.TextBox();
             this.EMPLACAMENTO = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -81,35 +85,31 @@ namespace SistemaMysql.View
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEntrada = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.versão = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.VEICULOPARTICULAR.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,11 +138,33 @@ namespace SistemaMysql.View
             this.label16.Text = "CONTROLE DE ACESSO";
             this.label16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label16_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1283, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1304, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.VEICULOPARTICULAR);
             this.groupBox2.Controls.Add(this.FOTO);
             this.groupBox2.Controls.Add(this.PREFIXO);
             this.groupBox2.Controls.Add(this.label24);
@@ -163,22 +185,22 @@ namespace SistemaMysql.View
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.CBSECAO);
+            this.groupBox4.Controls.Add(this.CBCIA);
+            this.groupBox4.Controls.Add(this.CBPOSTOGRAD);
             this.groupBox4.Controls.Add(this.ID);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.UNIDADE);
-            this.groupBox4.Controls.Add(this.SECAO);
-            this.groupBox4.Controls.Add(this.CBRG);
+            this.groupBox4.Controls.Add(this.TXBRG);
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.NOME);
             this.groupBox4.Controls.Add(this.label29);
-            this.groupBox4.Controls.Add(this.CIA);
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.CBRE);
+            this.groupBox4.Controls.Add(this.TXBRE);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.groupBox4.Location = new System.Drawing.Point(15, 84);
             this.groupBox4.Name = "groupBox4";
@@ -186,6 +208,64 @@ namespace SistemaMysql.View
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DADOS PESSOAIS";
+            // 
+            // CBSECAO
+            // 
+            this.CBSECAO.FormattingEnabled = true;
+            this.CBSECAO.Items.AddRange(new object[] {
+            "RP",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            ""});
+            this.CBSECAO.Location = new System.Drawing.Point(745, 89);
+            this.CBSECAO.Name = "CBSECAO";
+            this.CBSECAO.Size = new System.Drawing.Size(223, 25);
+            this.CBSECAO.TabIndex = 72;
+            // 
+            // CBCIA
+            // 
+            this.CBCIA.FormattingEnabled = true;
+            this.CBCIA.Items.AddRange(new object[] {
+            "1ª CIA",
+            "2ª CIA",
+            "3ª CIA",
+            "4ª CIA",
+            "5ª CIA",
+            "6ª CIA",
+            "EM",
+            "FORÇA TÁTICA",
+            "",
+            ""});
+            this.CBCIA.Location = new System.Drawing.Point(516, 89);
+            this.CBCIA.Name = "CBCIA";
+            this.CBCIA.Size = new System.Drawing.Size(223, 25);
+            this.CBCIA.TabIndex = 71;
+            // 
+            // CBPOSTOGRAD
+            // 
+            this.CBPOSTOGRAD.FormattingEnabled = true;
+            this.CBPOSTOGRAD.Items.AddRange(new object[] {
+            "CIVIL",
+            "SD PM",
+            "CB PM",
+            "3º SGT PM",
+            "2º SGT PM",
+            "1º SGT PM",
+            "SUB TEN",
+            "ASP",
+            "2º TEN PM",
+            "1º TEN PM",
+            "CAP PM",
+            "MAJ PM",
+            "TEN CEL PM",
+            "CEL PM"});
+            this.CBPOSTOGRAD.Location = new System.Drawing.Point(745, 40);
+            this.CBPOSTOGRAD.Name = "CBPOSTOGRAD";
+            this.CBPOSTOGRAD.Size = new System.Drawing.Size(223, 25);
+            this.CBPOSTOGRAD.TabIndex = 70;
             // 
             // ID
             // 
@@ -240,21 +320,13 @@ namespace SistemaMysql.View
             this.UNIDADE.Size = new System.Drawing.Size(232, 25);
             this.UNIDADE.TabIndex = 60;
             // 
-            // SECAO
+            // TXBRG
             // 
-            this.SECAO.Enabled = false;
-            this.SECAO.Location = new System.Drawing.Point(745, 89);
-            this.SECAO.Name = "SECAO";
-            this.SECAO.Size = new System.Drawing.Size(223, 25);
-            this.SECAO.TabIndex = 68;
-            // 
-            // CBRG
-            // 
-            this.CBRG.Enabled = false;
-            this.CBRG.Location = new System.Drawing.Point(6, 89);
-            this.CBRG.Name = "CBRG";
-            this.CBRG.Size = new System.Drawing.Size(266, 25);
-            this.CBRG.TabIndex = 68;
+            this.TXBRG.Enabled = false;
+            this.TXBRG.Location = new System.Drawing.Point(6, 89);
+            this.TXBRG.Name = "TXBRG";
+            this.TXBRG.Size = new System.Drawing.Size(266, 25);
+            this.TXBRG.TabIndex = 68;
             // 
             // label21
             // 
@@ -270,7 +342,6 @@ namespace SistemaMysql.View
             // 
             // NOME
             // 
-            this.NOME.Enabled = false;
             this.NOME.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NOME.Location = new System.Drawing.Point(59, 40);
             this.NOME.Name = "NOME";
@@ -289,15 +360,6 @@ namespace SistemaMysql.View
             this.label29.TabIndex = 35;
             this.label29.Text = "NOME:";
             // 
-            // CIA
-            // 
-            this.CIA.Enabled = false;
-            this.CIA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CIA.Location = new System.Drawing.Point(516, 89);
-            this.CIA.Name = "CIA";
-            this.CIA.Size = new System.Drawing.Size(223, 25);
-            this.CIA.TabIndex = 46;
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -309,6 +371,18 @@ namespace SistemaMysql.View
             this.label27.Size = new System.Drawing.Size(33, 17);
             this.label27.TabIndex = 45;
             this.label27.Text = "CIA:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(788, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 17);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "POSTO/GRADUAÇÃO";
             // 
             // label20
             // 
@@ -322,13 +396,12 @@ namespace SistemaMysql.View
             this.label20.TabIndex = 63;
             this.label20.Text = "RE:";
             // 
-            // CBRE
+            // TXBRE
             // 
-            this.CBRE.Enabled = false;
-            this.CBRE.Location = new System.Drawing.Point(516, 40);
-            this.CBRE.Name = "CBRE";
-            this.CBRE.Size = new System.Drawing.Size(223, 25);
-            this.CBRE.TabIndex = 62;
+            this.TXBRE.Location = new System.Drawing.Point(516, 40);
+            this.TXBRE.Name = "TXBRE";
+            this.TXBRE.Size = new System.Drawing.Size(223, 25);
+            this.TXBRE.TabIndex = 62;
             // 
             // groupBox5
             // 
@@ -386,29 +459,29 @@ namespace SistemaMysql.View
             this.DATA.Size = new System.Drawing.Size(200, 25);
             this.DATA.TabIndex = 61;
             // 
-            // groupBox3
+            // VEICULOPARTICULAR
             // 
-            this.groupBox3.Controls.Add(this.DATAVENCIMENTO);
-            this.groupBox3.Controls.Add(this.COR);
-            this.groupBox3.Controls.Add(this.CIDADE);
-            this.groupBox3.Controls.Add(this.MODELOVEICULO);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.MARCA);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.CBMARCA);
-            this.groupBox3.Controls.Add(this.EMPLACAMENTO);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.NCARTAO);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.groupBox3.Location = new System.Drawing.Point(15, 226);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(983, 153);
-            this.groupBox3.TabIndex = 42;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "VEICULO";
+            this.VEICULOPARTICULAR.Controls.Add(this.DATAVENCIMENTO);
+            this.VEICULOPARTICULAR.Controls.Add(this.COR);
+            this.VEICULOPARTICULAR.Controls.Add(this.CIDADE);
+            this.VEICULOPARTICULAR.Controls.Add(this.MODELOVEICULO);
+            this.VEICULOPARTICULAR.Controls.Add(this.label23);
+            this.VEICULOPARTICULAR.Controls.Add(this.label2);
+            this.VEICULOPARTICULAR.Controls.Add(this.MARCA);
+            this.VEICULOPARTICULAR.Controls.Add(this.label22);
+            this.VEICULOPARTICULAR.Controls.Add(this.TXBMARCA);
+            this.VEICULOPARTICULAR.Controls.Add(this.EMPLACAMENTO);
+            this.VEICULOPARTICULAR.Controls.Add(this.label6);
+            this.VEICULOPARTICULAR.Controls.Add(this.label4);
+            this.VEICULOPARTICULAR.Controls.Add(this.NCARTAO);
+            this.VEICULOPARTICULAR.Controls.Add(this.label19);
+            this.VEICULOPARTICULAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.VEICULOPARTICULAR.Location = new System.Drawing.Point(15, 226);
+            this.VEICULOPARTICULAR.Name = "VEICULOPARTICULAR";
+            this.VEICULOPARTICULAR.Size = new System.Drawing.Size(983, 153);
+            this.VEICULOPARTICULAR.TabIndex = 42;
+            this.VEICULOPARTICULAR.TabStop = false;
+            this.VEICULOPARTICULAR.Text = "VEICULO PARTICULAR";
             // 
             // DATAVENCIMENTO
             // 
@@ -494,14 +567,14 @@ namespace SistemaMysql.View
             this.label22.TabIndex = 57;
             this.label22.Text = "PLACA:";
             // 
-            // CBMARCA
+            // TXBMARCA
             // 
-            this.CBMARCA.Enabled = false;
-            this.CBMARCA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBMARCA.Location = new System.Drawing.Point(6, 97);
-            this.CBMARCA.Name = "CBMARCA";
-            this.CBMARCA.Size = new System.Drawing.Size(223, 25);
-            this.CBMARCA.TabIndex = 58;
+            this.TXBMARCA.Enabled = false;
+            this.TXBMARCA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXBMARCA.Location = new System.Drawing.Point(6, 97);
+            this.TXBMARCA.Name = "TXBMARCA";
+            this.TXBMARCA.Size = new System.Drawing.Size(223, 25);
+            this.TXBMARCA.TabIndex = 58;
             // 
             // EMPLACAMENTO
             // 
@@ -677,15 +750,16 @@ namespace SistemaMysql.View
             this.button2.Text = "SAÍDA";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnEntrada
             // 
-            this.button3.BackColor = System.Drawing.Color.SeaShell;
-            this.button3.Location = new System.Drawing.Point(1073, 324);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 47);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "ENTRADA";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEntrada.BackColor = System.Drawing.Color.SeaShell;
+            this.btnEntrada.Location = new System.Drawing.Point(1073, 324);
+            this.btnEntrada.Name = "btnEntrada";
+            this.btnEntrada.Size = new System.Drawing.Size(225, 47);
+            this.btnEntrada.TabIndex = 5;
+            this.btnEntrada.Text = "ENTRADA";
+            this.btnEntrada.UseVisualStyleBackColor = false;
+            this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
             // 
             // groupBox1
             // 
@@ -739,42 +813,6 @@ namespace SistemaMysql.View
             this.button5.TabIndex = 8;
             this.button5.Text = "PESQUISAR";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "CIVIL",
-            "SD PM",
-            "CB PM",
-            "3º SGT PM",
-            "2º SGT PM",
-            "1º SGT PM",
-            "SUB TEN",
-            "ASP",
-            "2º TEN PM",
-            "1º TEN PM",
-            "CAP PM",
-            "MAJ PM",
-            "TEN CEL PM",
-            "CEL PM"});
-            this.comboBox1.Location = new System.Drawing.Point(745, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 25);
-            this.comboBox1.TabIndex = 70;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(788, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 17);
-            this.label3.TabIndex = 63;
-            this.label3.Text = "POSTO/GRADUAÇÃO";
             // 
             // pictureBox5
             // 
@@ -831,28 +869,6 @@ namespace SistemaMysql.View
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1283, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1304, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // ControleAcesso
             // 
             this.AllowDrop = true;
@@ -868,7 +884,7 @@ namespace SistemaMysql.View
             this.Controls.Add(this.versão);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
@@ -881,14 +897,16 @@ namespace SistemaMysql.View
             this.Text = "ControleAcesso";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.VEICULOPARTICULAR.ResumeLayout(false);
+            this.VEICULOPARTICULAR.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -896,8 +914,6 @@ namespace SistemaMysql.View
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -912,13 +928,13 @@ namespace SistemaMysql.View
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox CBRG;
+        private System.Windows.Forms.TextBox TXBRG;
         private System.Windows.Forms.Label FOTO;
         private System.Windows.Forms.TextBox PREFIXO;
         private System.Windows.Forms.TextBox MODELOVEICULO;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox CBRE;
+        private System.Windows.Forms.TextBox TXBRE;
         private System.Windows.Forms.TextBox NCARTAO;
         private System.Windows.Forms.TextBox UNIDADE;
         private System.Windows.Forms.Label label21;
@@ -931,7 +947,6 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox RE;
         private System.Windows.Forms.TextBox RG;
-        private System.Windows.Forms.TextBox CIA;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox NOME;
@@ -942,19 +957,18 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox VEICULOPARTICULAR;
         private System.Windows.Forms.TextBox DATAVENCIMENTO;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox SECAO;
         private System.Windows.Forms.TextBox COR;
         private System.Windows.Forms.TextBox CIDADE;
         private System.Windows.Forms.Label MARCA;
-        private System.Windows.Forms.TextBox CBMARCA;
+        private System.Windows.Forms.TextBox TXBMARCA;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label versão;
@@ -970,7 +984,9 @@ namespace SistemaMysql.View
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBPOSTOGRAD;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox CBCIA;
+        private System.Windows.Forms.ComboBox CBSECAO;
     }
 }
