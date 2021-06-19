@@ -33,8 +33,6 @@ namespace SistemaMysql.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleAcessoCadastro));
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.CBSECAO = new System.Windows.Forms.ComboBox();
@@ -80,23 +78,28 @@ namespace SistemaMysql.View
             this.label30 = new System.Windows.Forms.Label();
             this.ControleAcessoBtnCadastrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.DATAATUAL = new System.Windows.Forms.Label();
-            this.HORAATUAL = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.OpenFileDialogFoto = new System.Windows.Forms.OpenFileDialog();
-            this.CADASTROFOTO = new System.Windows.Forms.PictureBox();
             this.ControleAcessoBtnFoto = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.CADASTROFOTO = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CADASTROFOTO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label16
@@ -123,28 +126,6 @@ namespace SistemaMysql.View
             this.panel2.TabIndex = 40;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1283, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1304, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // groupBox2
             // 
@@ -260,6 +241,7 @@ namespace SistemaMysql.View
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(47, 25);
             this.ID.TabIndex = 36;
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label28
             // 
@@ -304,6 +286,7 @@ namespace SistemaMysql.View
             this.UNIDADE.Name = "UNIDADE";
             this.UNIDADE.Size = new System.Drawing.Size(232, 25);
             this.UNIDADE.TabIndex = 9;
+            this.UNIDADE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXBRG
             // 
@@ -311,6 +294,7 @@ namespace SistemaMysql.View
             this.TXBRG.Name = "TXBRG";
             this.TXBRG.Size = new System.Drawing.Size(266, 25);
             this.TXBRG.TabIndex = 8;
+            this.TXBRG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
             // 
@@ -331,6 +315,7 @@ namespace SistemaMysql.View
             this.NOME.Name = "NOME";
             this.NOME.Size = new System.Drawing.Size(451, 25);
             this.NOME.TabIndex = 5;
+            this.NOME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label29
             // 
@@ -386,6 +371,7 @@ namespace SistemaMysql.View
             this.TXBRE.Name = "TXBRE";
             this.TXBRE.Size = new System.Drawing.Size(223, 25);
             this.TXBRE.TabIndex = 6;
+            this.TXBRE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox5
             // 
@@ -428,6 +414,7 @@ namespace SistemaMysql.View
             this.DATAVENCIMENTO.Name = "DATAVENCIMENTO";
             this.DATAVENCIMENTO.Size = new System.Drawing.Size(238, 25);
             this.DATAVENCIMENTO.TabIndex = 13;
+            this.DATAVENCIMENTO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // COR
             // 
@@ -436,6 +423,7 @@ namespace SistemaMysql.View
             this.COR.Name = "COR";
             this.COR.Size = new System.Drawing.Size(113, 25);
             this.COR.TabIndex = 18;
+            this.COR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CIDADE
             // 
@@ -444,6 +432,7 @@ namespace SistemaMysql.View
             this.CIDADE.Name = "CIDADE";
             this.CIDADE.Size = new System.Drawing.Size(192, 25);
             this.CIDADE.TabIndex = 17;
+            this.CIDADE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MODELOVEICULO
             // 
@@ -452,6 +441,7 @@ namespace SistemaMysql.View
             this.MODELOVEICULO.Name = "MODELOVEICULO";
             this.MODELOVEICULO.Size = new System.Drawing.Size(275, 25);
             this.MODELOVEICULO.TabIndex = 15;
+            this.MODELOVEICULO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label23
             // 
@@ -508,6 +498,7 @@ namespace SistemaMysql.View
             this.TXBMARCA.Name = "TXBMARCA";
             this.TXBMARCA.Size = new System.Drawing.Size(223, 25);
             this.TXBMARCA.TabIndex = 14;
+            this.TXBMARCA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // EMPLACAMENTO
             // 
@@ -516,6 +507,7 @@ namespace SistemaMysql.View
             this.EMPLACAMENTO.Name = "EMPLACAMENTO";
             this.EMPLACAMENTO.Size = new System.Drawing.Size(135, 25);
             this.EMPLACAMENTO.TabIndex = 16;
+            this.EMPLACAMENTO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -548,6 +540,7 @@ namespace SistemaMysql.View
             this.NCARTAO.Name = "NCARTAO";
             this.NCARTAO.Size = new System.Drawing.Size(122, 25);
             this.NCARTAO.TabIndex = 12;
+            this.NCARTAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
@@ -580,6 +573,7 @@ namespace SistemaMysql.View
             this.PREFIXO.Name = "PREFIXO";
             this.PREFIXO.Size = new System.Drawing.Size(204, 25);
             this.PREFIXO.TabIndex = 4;
+            this.PREFIXO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label24
             // 
@@ -611,6 +605,7 @@ namespace SistemaMysql.View
             this.TXBCARTAO.Name = "TXBCARTAO";
             this.TXBCARTAO.Size = new System.Drawing.Size(199, 25);
             this.TXBCARTAO.TabIndex = 3;
+            this.TXBCARTAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
@@ -631,6 +626,7 @@ namespace SistemaMysql.View
             this.RE.Name = "RE";
             this.RE.Size = new System.Drawing.Size(204, 25);
             this.RE.TabIndex = 1;
+            this.RE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RG
             // 
@@ -639,6 +635,7 @@ namespace SistemaMysql.View
             this.RG.Name = "RG";
             this.RG.Size = new System.Drawing.Size(204, 25);
             this.RG.TabIndex = 2;
+            this.RG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label30
             // 
@@ -655,7 +652,7 @@ namespace SistemaMysql.View
             // ControleAcessoBtnCadastrar
             // 
             this.ControleAcessoBtnCadastrar.BackColor = System.Drawing.Color.SeaShell;
-            this.ControleAcessoBtnCadastrar.Location = new System.Drawing.Point(1060, 441);
+            this.ControleAcessoBtnCadastrar.Location = new System.Drawing.Point(1062, 339);
             this.ControleAcessoBtnCadastrar.Name = "ControleAcessoBtnCadastrar";
             this.ControleAcessoBtnCadastrar.Size = new System.Drawing.Size(225, 47);
             this.ControleAcessoBtnCadastrar.TabIndex = 45;
@@ -665,7 +662,7 @@ namespace SistemaMysql.View
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SeaShell;
-            this.button2.Location = new System.Drawing.Point(1061, 494);
+            this.button2.Location = new System.Drawing.Point(1062, 392);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(225, 47);
             this.button2.TabIndex = 46;
@@ -673,72 +670,14 @@ namespace SistemaMysql.View
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.SeaShell;
-            this.pictureBox4.Image = global::SistemaMysql.Properties.Resources.cadastro;
-            this.pictureBox4.Location = new System.Drawing.Point(1234, 447);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 53;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.SeaShell;
-            this.pictureBox3.Image = global::SistemaMysql.Properties.Resources.sweeping;
-            this.pictureBox3.Location = new System.Drawing.Point(1234, 500);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 54;
-            this.pictureBox3.TabStop = false;
-            // 
-            // DATAATUAL
-            // 
-            this.DATAATUAL.AutoSize = true;
-            this.DATAATUAL.BackColor = System.Drawing.Color.Transparent;
-            this.DATAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DATAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.DATAATUAL.Location = new System.Drawing.Point(1140, 620);
-            this.DATAATUAL.Name = "DATAATUAL";
-            this.DATAATUAL.Size = new System.Drawing.Size(42, 17);
-            this.DATAATUAL.TabIndex = 56;
-            this.DATAATUAL.Text = "DATA";
-            this.DATAATUAL.Click += new System.EventHandler(this.DATAATUAL_Click);
-            // 
-            // HORAATUAL
-            // 
-            this.HORAATUAL.AutoSize = true;
-            this.HORAATUAL.BackColor = System.Drawing.Color.Transparent;
-            this.HORAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.HORAATUAL.Location = new System.Drawing.Point(1148, 637);
-            this.HORAATUAL.Name = "HORAATUAL";
-            this.HORAATUAL.Size = new System.Drawing.Size(45, 17);
-            this.HORAATUAL.TabIndex = 56;
-            this.HORAATUAL.Text = "HORA";
-            this.HORAATUAL.Click += new System.EventHandler(this.HORAATUAL_Click);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // OpenFileDialogFoto
             // 
             this.OpenFileDialogFoto.FileName = "Foto";
-            // 
-            // CADASTROFOTO
-            // 
-            this.CADASTROFOTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CADASTROFOTO.Location = new System.Drawing.Point(1036, 66);
-            this.CADASTROFOTO.Name = "CADASTROFOTO";
-            this.CADASTROFOTO.Size = new System.Drawing.Size(285, 210);
-            this.CADASTROFOTO.TabIndex = 57;
-            this.CADASTROFOTO.TabStop = false;
             // 
             // ControleAcessoBtnFoto
             // 
@@ -751,6 +690,92 @@ namespace SistemaMysql.View
             this.ControleAcessoBtnFoto.UseVisualStyleBackColor = false;
             this.ControleAcessoBtnFoto.Click += new System.EventHandler(this.ControleAcessoBtnFoto_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.SeaShell;
+            this.btnCancelar.Location = new System.Drawing.Point(1063, 445);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(224, 47);
+            this.btnCancelar.TabIndex = 58;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // CADASTROFOTO
+            // 
+            this.CADASTROFOTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CADASTROFOTO.Location = new System.Drawing.Point(1036, 66);
+            this.CADASTROFOTO.Name = "CADASTROFOTO";
+            this.CADASTROFOTO.Size = new System.Drawing.Size(285, 210);
+            this.CADASTROFOTO.TabIndex = 57;
+            this.CADASTROFOTO.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.SeaShell;
+            this.pictureBox6.Image = global::SistemaMysql.Properties.Resources.camera;
+            this.pictureBox6.Location = new System.Drawing.Point(1235, 292);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 35);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 53;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.SeaShell;
+            this.pictureBox4.Image = global::SistemaMysql.Properties.Resources.cadastro;
+            this.pictureBox4.Location = new System.Drawing.Point(1236, 345);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 53;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.SeaShell;
+            this.pictureBox5.Image = global::SistemaMysql.Properties.Resources.cancel1;
+            this.pictureBox5.Location = new System.Drawing.Point(1236, 451);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(39, 35);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 54;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.SeaShell;
+            this.pictureBox3.Image = global::SistemaMysql.Properties.Resources.sweeping;
+            this.pictureBox3.Location = new System.Drawing.Point(1235, 398);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 54;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1283, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1304, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // ControleAcessoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -758,36 +783,38 @@ namespace SistemaMysql.View
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1330, 760);
             this.Controls.Add(this.CADASTROFOTO);
-            this.Controls.Add(this.HORAATUAL);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.DATAATUAL);
             this.Controls.Add(this.ControleAcessoBtnFoto);
             this.Controls.Add(this.ControleAcessoBtnCadastrar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnCancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ControleAcessoCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControleAcessoCadastro";
-            this.Load += new System.EventHandler(this.ControleAcessoCadastro_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ControleAcessoCadastro_MouseDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CADASTROFOTO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -844,11 +871,12 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox CBCIA;
         private System.Windows.Forms.ComboBox CBSECAO;
-        private System.Windows.Forms.Label DATAATUAL;
-        private System.Windows.Forms.Label HORAATUAL;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.OpenFileDialog OpenFileDialogFoto;
         private System.Windows.Forms.PictureBox CADASTROFOTO;
         private System.Windows.Forms.Button ControleAcessoBtnFoto;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

@@ -78,15 +78,7 @@ namespace SistemaMysql.View
             //DATA.Text == Date;
         }
 
-        private void ControleAcessoCadastro_Load(object sender, EventArgs e)
-        {
-            DATAATUAL.Text = DateTime.Now.ToString("dd/MM/yyyy");            
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            HORAATUAL.Text = DateTime.Now.ToString("HH:mm:ss");
-        }
+        
 
         private void DATAATUAL_Click(object sender, EventArgs e)
         {
@@ -174,6 +166,11 @@ namespace SistemaMysql.View
                 return;
             }            
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }        
     
