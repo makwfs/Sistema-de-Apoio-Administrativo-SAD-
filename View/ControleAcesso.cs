@@ -79,16 +79,6 @@ namespace SistemaMysql.View
 
            
         }
-
-
-        private void RE_Enter(object sender, EventArgs e)
-        {
-            
-
-        }
-
-
-
         public void ENTRADAControleAcesso(Pessoas dados)     // capturando dados dos textbox
         {
 
@@ -109,8 +99,8 @@ namespace SistemaMysql.View
                 dados.EMPLACAMENTOControleAcesso1 = EMPLACAMENTO.Text;
                 dados.CIDADEControleAcesso1 = CIDADE.Text;
                 dados.CORControleAcesso1 = COR.Text;
-                dados.DATA1 = DATA.Text;
-                dados.HORA1 = HORA.Text;
+                /*dados.DATA1 = DATA.Text;
+                dados.HORA1 = HORA.Text;*/
 
 
                 model.ENTRADAControleAcesso(dados);
@@ -156,10 +146,19 @@ namespace SistemaMysql.View
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
+
+        }
+
+        
+
+        private void RE_KeyPress(object sender, KeyPressEventArgs e)
+        {
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO FROM entradacontroleacessoteste WHERE RE = ?", con.con);
+                sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE RE = ?", con.con);
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
                 sql.CommandType = CommandType.Text;
@@ -168,34 +167,100 @@ namespace SistemaMysql.View
                 dr = sql.ExecuteReader();
                 dr.Read();
 
+                ID.Text = dr.GetString(0);
                 NOME.Text = dr.GetString(1);
+                TXBRE.Text = dr.GetString(2);
+                CBPOSTOGRAD.Text = dr.GetString(3);
+                TXBRG.Text = dr.GetString(4);
+                UNIDADE.Text = dr.GetString(5);
+                CBCIA.Text = dr.GetString(6);
+                CBSECAO.Text = dr.GetString(7);
+                NCARTAO.Text = dr.GetString(8);
+                DATAVENCIMENTO.Text = dr.GetString(9);
+                TXBMARCA.Text = dr.GetString(10);
+                MODELOVEICULO.Text = dr.GetString(11);
+                EMPLACAMENTO.Text = dr.GetString(12);
+                CIDADE.Text = dr.GetString(13);
+                COR.Text = dr.GetString(14);
+
 
             }
             catch (Exception)
             {
 
             }
-
         }
 
-        public void TESTE(Pessoas dados)     // capturando dados dos textbox
+        private void RG_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from entradacontroleacessoteste where  RE LIKE @RE", con.con);
-                sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1 + "%");
+                sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE RG = ?", con.con);
                 sql.Parameters.Clear();
-                sql.Parameters.Add("@entradacontroleacessoteste", MySqlDbType.Int32).Value = ID.Text;
+                sql.Parameters.Add("@RG", MySqlDbType.Int32).Value = RG.Text;
                 sql.CommandType = CommandType.Text;
 
                 MySqlDataReader dr;
                 dr = sql.ExecuteReader();
                 dr.Read();
 
+                ID.Text = dr.GetString(0);
                 NOME.Text = dr.GetString(1);
+                TXBRE.Text = dr.GetString(2);
+                CBPOSTOGRAD.Text = dr.GetString(3);
+                TXBRG.Text = dr.GetString(4);
+                UNIDADE.Text = dr.GetString(5);
+                CBCIA.Text = dr.GetString(6);
+                CBSECAO.Text = dr.GetString(7);
+                NCARTAO.Text = dr.GetString(8);
+                DATAVENCIMENTO.Text = dr.GetString(9);
+                TXBMARCA.Text = dr.GetString(10);
+                MODELOVEICULO.Text = dr.GetString(11);
+                EMPLACAMENTO.Text = dr.GetString(12);
+                CIDADE.Text = dr.GetString(13);
+                COR.Text = dr.GetString(14);
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void CBCARTAO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE CARTÃO = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@CARTÃO", MySqlDbType.Int32).Value = CBCARTAO.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr;
+                dr = sql.ExecuteReader();
+                dr.Read();
+
+                ID.Text = dr.GetString(0);
+                NOME.Text = dr.GetString(1);
+                TXBRE.Text = dr.GetString(2);
+                CBPOSTOGRAD.Text = dr.GetString(3);
+                TXBRG.Text = dr.GetString(4);
+                UNIDADE.Text = dr.GetString(5);
+                CBCIA.Text = dr.GetString(6);
+                CBSECAO.Text = dr.GetString(7);
+                NCARTAO.Text = dr.GetString(8);
+                DATAVENCIMENTO.Text = dr.GetString(9);
+                TXBMARCA.Text = dr.GetString(10);
+                MODELOVEICULO.Text = dr.GetString(11);
+                EMPLACAMENTO.Text = dr.GetString(12);
+                CIDADE.Text = dr.GetString(13);
+                COR.Text = dr.GetString(14);
+
 
             }
             catch (Exception)

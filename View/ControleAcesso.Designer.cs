@@ -37,9 +37,6 @@ namespace SistemaMysql.View
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.CBSECAO = new System.Windows.Forms.ComboBox();
-            this.CBCIA = new System.Windows.Forms.ComboBox();
-            this.CBPOSTOGRAD = new System.Windows.Forms.ComboBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,12 +49,11 @@ namespace SistemaMysql.View
             this.label27 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.CBCIA = new System.Windows.Forms.TextBox();
+            this.CBSECAO = new System.Windows.Forms.TextBox();
+            this.CBPOSTOGRAD = new System.Windows.Forms.TextBox();
             this.TXBRE = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.HORA = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.DATA = new System.Windows.Forms.TextBox();
             this.VEICULOPARTICULAR = new System.Windows.Forms.GroupBox();
             this.DATAVENCIMENTO = new System.Windows.Forms.TextBox();
             this.COR = new System.Windows.Forms.TextBox();
@@ -100,13 +96,11 @@ namespace SistemaMysql.View
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.VEICULOPARTICULAR.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -166,7 +160,6 @@ namespace SistemaMysql.View
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.VEICULOPARTICULAR);
@@ -180,7 +173,7 @@ namespace SistemaMysql.View
             this.groupBox2.Controls.Add(this.RG);
             this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(136)))), ((int)(((byte)(253)))));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 69);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1015, 650);
@@ -190,9 +183,6 @@ namespace SistemaMysql.View
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.CBSECAO);
-            this.groupBox4.Controls.Add(this.CBCIA);
-            this.groupBox4.Controls.Add(this.CBPOSTOGRAD);
             this.groupBox4.Controls.Add(this.ID);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label5);
@@ -205,8 +195,11 @@ namespace SistemaMysql.View
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.CBCIA);
+            this.groupBox4.Controls.Add(this.CBSECAO);
+            this.groupBox4.Controls.Add(this.CBPOSTOGRAD);
             this.groupBox4.Controls.Add(this.TXBRE);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(15, 84);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(983, 136);
@@ -214,68 +207,9 @@ namespace SistemaMysql.View
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DADOS PESSOAIS";
             // 
-            // CBSECAO
-            // 
-            this.CBSECAO.FormattingEnabled = true;
-            this.CBSECAO.Items.AddRange(new object[] {
-            "RP",
-            "P1",
-            "P2",
-            "P3",
-            "P4",
-            "P5",
-            ""});
-            this.CBSECAO.Location = new System.Drawing.Point(745, 89);
-            this.CBSECAO.Name = "CBSECAO";
-            this.CBSECAO.Size = new System.Drawing.Size(223, 25);
-            this.CBSECAO.TabIndex = 72;
-            // 
-            // CBCIA
-            // 
-            this.CBCIA.FormattingEnabled = true;
-            this.CBCIA.Items.AddRange(new object[] {
-            "1ª CIA",
-            "2ª CIA",
-            "3ª CIA",
-            "4ª CIA",
-            "5ª CIA",
-            "6ª CIA",
-            "EM",
-            "FORÇA TÁTICA",
-            "",
-            ""});
-            this.CBCIA.Location = new System.Drawing.Point(516, 89);
-            this.CBCIA.Name = "CBCIA";
-            this.CBCIA.Size = new System.Drawing.Size(223, 25);
-            this.CBCIA.TabIndex = 71;
-            // 
-            // CBPOSTOGRAD
-            // 
-            this.CBPOSTOGRAD.Enabled = false;
-            this.CBPOSTOGRAD.FormattingEnabled = true;
-            this.CBPOSTOGRAD.IntegralHeight = false;
-            this.CBPOSTOGRAD.Items.AddRange(new object[] {
-            "CIVIL",
-            "SD PM",
-            "CB PM",
-            "3º SGT PM",
-            "2º SGT PM",
-            "1º SGT PM",
-            "SUB TEN",
-            "ASP",
-            "2º TEN PM",
-            "1º TEN PM",
-            "CAP PM",
-            "MAJ PM",
-            "TEN CEL PM",
-            "CEL PM"});
-            this.CBPOSTOGRAD.Location = new System.Drawing.Point(745, 40);
-            this.CBPOSTOGRAD.Name = "CBPOSTOGRAD";
-            this.CBPOSTOGRAD.Size = new System.Drawing.Size(223, 25);
-            this.CBPOSTOGRAD.TabIndex = 70;
-            // 
             // ID
             // 
+            this.ID.Enabled = false;
             this.ID.Location = new System.Drawing.Point(6, 40);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(47, 25);
@@ -286,7 +220,7 @@ namespace SistemaMysql.View
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(3, 21);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(26, 17);
@@ -298,7 +232,7 @@ namespace SistemaMysql.View
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(832, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 17);
@@ -310,7 +244,7 @@ namespace SistemaMysql.View
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(125, 69);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 17);
@@ -325,6 +259,7 @@ namespace SistemaMysql.View
             this.UNIDADE.Name = "UNIDADE";
             this.UNIDADE.Size = new System.Drawing.Size(232, 25);
             this.UNIDADE.TabIndex = 60;
+            this.UNIDADE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXBRG
             // 
@@ -333,13 +268,14 @@ namespace SistemaMysql.View
             this.TXBRG.Name = "TXBRG";
             this.TXBRG.Size = new System.Drawing.Size(266, 25);
             this.TXBRG.TabIndex = 68;
+            this.TXBRG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(359, 70);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(71, 17);
@@ -354,13 +290,14 @@ namespace SistemaMysql.View
             this.NOME.Name = "NOME";
             this.NOME.Size = new System.Drawing.Size(451, 25);
             this.NOME.TabIndex = 34;
+            this.NOME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(259, 21);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(51, 17);
@@ -372,7 +309,7 @@ namespace SistemaMysql.View
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(611, 70);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(33, 17);
@@ -384,7 +321,7 @@ namespace SistemaMysql.View
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(788, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 17);
@@ -396,12 +333,39 @@ namespace SistemaMysql.View
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(614, 21);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(27, 17);
             this.label20.TabIndex = 63;
             this.label20.Text = "RE:";
+            // 
+            // CBCIA
+            // 
+            this.CBCIA.Enabled = false;
+            this.CBCIA.Location = new System.Drawing.Point(516, 89);
+            this.CBCIA.Name = "CBCIA";
+            this.CBCIA.Size = new System.Drawing.Size(223, 25);
+            this.CBCIA.TabIndex = 62;
+            this.CBCIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // CBSECAO
+            // 
+            this.CBSECAO.Enabled = false;
+            this.CBSECAO.Location = new System.Drawing.Point(745, 89);
+            this.CBSECAO.Name = "CBSECAO";
+            this.CBSECAO.Size = new System.Drawing.Size(223, 25);
+            this.CBSECAO.TabIndex = 62;
+            this.CBSECAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // CBPOSTOGRAD
+            // 
+            this.CBPOSTOGRAD.Enabled = false;
+            this.CBPOSTOGRAD.Location = new System.Drawing.Point(745, 40);
+            this.CBPOSTOGRAD.Name = "CBPOSTOGRAD";
+            this.CBPOSTOGRAD.Size = new System.Drawing.Size(223, 25);
+            this.CBPOSTOGRAD.TabIndex = 62;
+            this.CBPOSTOGRAD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXBRE
             // 
@@ -410,62 +374,17 @@ namespace SistemaMysql.View
             this.TXBRE.Name = "TXBRE";
             this.TXBRE.Size = new System.Drawing.Size(223, 25);
             this.TXBRE.TabIndex = 62;
+            this.TXBRE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.HORA);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.DATA);
-            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(16, 385);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(983, 106);
             this.groupBox5.TabIndex = 42;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "ENTRADA/SAÍDA";
-            // 
-            // HORA
-            // 
-            this.HORA.Enabled = false;
-            this.HORA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORA.Location = new System.Drawing.Point(498, 46);
-            this.HORA.Name = "HORA";
-            this.HORA.Size = new System.Drawing.Size(238, 25);
-            this.HORA.TabIndex = 61;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label8.Location = new System.Drawing.Point(353, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 17);
-            this.label8.TabIndex = 56;
-            this.label8.Text = "DATA";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label9.Location = new System.Drawing.Point(595, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 17);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "HORA";
-            // 
-            // DATA
-            // 
-            this.DATA.Enabled = false;
-            this.DATA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DATA.Location = new System.Drawing.Point(274, 46);
-            this.DATA.Name = "DATA";
-            this.DATA.Size = new System.Drawing.Size(200, 25);
-            this.DATA.TabIndex = 61;
+            this.groupBox5.Text = "VIATURA";
             // 
             // VEICULOPARTICULAR
             // 
@@ -483,7 +402,7 @@ namespace SistemaMysql.View
             this.VEICULOPARTICULAR.Controls.Add(this.label4);
             this.VEICULOPARTICULAR.Controls.Add(this.NCARTAO);
             this.VEICULOPARTICULAR.Controls.Add(this.label19);
-            this.VEICULOPARTICULAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.VEICULOPARTICULAR.ForeColor = System.Drawing.Color.White;
             this.VEICULOPARTICULAR.Location = new System.Drawing.Point(15, 226);
             this.VEICULOPARTICULAR.Name = "VEICULOPARTICULAR";
             this.VEICULOPARTICULAR.Size = new System.Drawing.Size(983, 153);
@@ -499,6 +418,7 @@ namespace SistemaMysql.View
             this.DATAVENCIMENTO.Name = "DATAVENCIMENTO";
             this.DATAVENCIMENTO.Size = new System.Drawing.Size(238, 25);
             this.DATAVENCIMENTO.TabIndex = 61;
+            this.DATAVENCIMENTO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // COR
             // 
@@ -508,6 +428,7 @@ namespace SistemaMysql.View
             this.COR.Name = "COR";
             this.COR.Size = new System.Drawing.Size(113, 25);
             this.COR.TabIndex = 65;
+            this.COR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CIDADE
             // 
@@ -517,6 +438,7 @@ namespace SistemaMysql.View
             this.CIDADE.Name = "CIDADE";
             this.CIDADE.Size = new System.Drawing.Size(192, 25);
             this.CIDADE.TabIndex = 65;
+            this.CIDADE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MODELOVEICULO
             // 
@@ -526,13 +448,14 @@ namespace SistemaMysql.View
             this.MODELOVEICULO.Name = "MODELOVEICULO";
             this.MODELOVEICULO.Size = new System.Drawing.Size(275, 25);
             this.MODELOVEICULO.TabIndex = 65;
+            this.MODELOVEICULO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(335, 18);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(79, 17);
@@ -544,7 +467,7 @@ namespace SistemaMysql.View
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(503, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 17);
@@ -556,7 +479,7 @@ namespace SistemaMysql.View
             this.MARCA.AutoSize = true;
             this.MARCA.BackColor = System.Drawing.Color.Transparent;
             this.MARCA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MARCA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.MARCA.ForeColor = System.Drawing.Color.White;
             this.MARCA.Location = new System.Drawing.Point(90, 75);
             this.MARCA.Name = "MARCA";
             this.MARCA.Size = new System.Drawing.Size(54, 17);
@@ -568,7 +491,7 @@ namespace SistemaMysql.View
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(557, 75);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 17);
@@ -583,6 +506,7 @@ namespace SistemaMysql.View
             this.TXBMARCA.Name = "TXBMARCA";
             this.TXBMARCA.Size = new System.Drawing.Size(223, 25);
             this.TXBMARCA.TabIndex = 58;
+            this.TXBMARCA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // EMPLACAMENTO
             // 
@@ -592,13 +516,14 @@ namespace SistemaMysql.View
             this.EMPLACAMENTO.Name = "EMPLACAMENTO";
             this.EMPLACAMENTO.Size = new System.Drawing.Size(135, 25);
             this.EMPLACAMENTO.TabIndex = 58;
+            this.EMPLACAMENTO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(894, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 17);
@@ -610,7 +535,7 @@ namespace SistemaMysql.View
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(725, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 17);
@@ -625,13 +550,14 @@ namespace SistemaMysql.View
             this.NCARTAO.Name = "NCARTAO";
             this.NCARTAO.Size = new System.Drawing.Size(122, 25);
             this.NCARTAO.TabIndex = 61;
+            this.NCARTAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(309, 77);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(126, 17);
@@ -643,7 +569,7 @@ namespace SistemaMysql.View
             this.FOTO.AutoSize = true;
             this.FOTO.BackColor = System.Drawing.Color.Transparent;
             this.FOTO.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FOTO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.FOTO.ForeColor = System.Drawing.Color.White;
             this.FOTO.Location = new System.Drawing.Point(864, 25);
             this.FOTO.Name = "FOTO";
             this.FOTO.Size = new System.Drawing.Size(65, 17);
@@ -656,6 +582,7 @@ namespace SistemaMysql.View
             this.PREFIXO.Name = "PREFIXO";
             this.PREFIXO.Size = new System.Drawing.Size(204, 25);
             this.PREFIXO.TabIndex = 4;
+            this.PREFIXO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label24
             // 
@@ -673,7 +600,7 @@ namespace SistemaMysql.View
             this.CARTAO.AutoSize = true;
             this.CARTAO.BackColor = System.Drawing.Color.Transparent;
             this.CARTAO.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CARTAO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.CARTAO.ForeColor = System.Drawing.Color.White;
             this.CARTAO.Location = new System.Drawing.Point(627, 25);
             this.CARTAO.Name = "CARTAO";
             this.CARTAO.Size = new System.Drawing.Size(59, 17);
@@ -686,13 +613,15 @@ namespace SistemaMysql.View
             this.CBCARTAO.Name = "CBCARTAO";
             this.CBCARTAO.Size = new System.Drawing.Size(199, 25);
             this.CBCARTAO.TabIndex = 3;
+            this.CBCARTAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CBCARTAO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CBCARTAO_KeyPress);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(379, 25);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(25, 17);
@@ -705,8 +634,9 @@ namespace SistemaMysql.View
             this.RE.Name = "RE";
             this.RE.Size = new System.Drawing.Size(204, 25);
             this.RE.TabIndex = 1;
+            this.RE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.RE.TextChanged += new System.EventHandler(this.RE_TextChanged);
-            this.RE.Enter += new System.EventHandler(this.RE_Enter);
+            this.RE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RE_KeyPress);
             // 
             // RG
             // 
@@ -714,13 +644,15 @@ namespace SistemaMysql.View
             this.RG.Name = "RG";
             this.RG.Size = new System.Drawing.Size(204, 25);
             this.RG.TabIndex = 2;
+            this.RG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RG_KeyPress);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(109, 25);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(23, 17);
@@ -829,7 +761,7 @@ namespace SistemaMysql.View
             this.HORAATUAL.BackColor = System.Drawing.Color.Transparent;
             this.HORAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HORAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.HORAATUAL.Location = new System.Drawing.Point(1162, 637);
+            this.HORAATUAL.Location = new System.Drawing.Point(1148, 637);
             this.HORAATUAL.Name = "HORAATUAL";
             this.HORAATUAL.Size = new System.Drawing.Size(45, 17);
             this.HORAATUAL.TabIndex = 57;
@@ -841,11 +773,11 @@ namespace SistemaMysql.View
             this.DATAATUAL.BackColor = System.Drawing.Color.Transparent;
             this.DATAATUAL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DATAATUAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.DATAATUAL.Location = new System.Drawing.Point(1162, 610);
+            this.DATAATUAL.Location = new System.Drawing.Point(1140, 620);
             this.DATAATUAL.Name = "DATAATUAL";
-            this.DATAATUAL.Size = new System.Drawing.Size(42, 17);
+            this.DATAATUAL.Size = new System.Drawing.Size(78, 17);
             this.DATAATUAL.TabIndex = 58;
-            this.DATAATUAL.Text = "DATA";
+            this.DATAATUAL.Text = "DATA AQUI";
             // 
             // timer1
             // 
@@ -908,16 +840,6 @@ namespace SistemaMysql.View
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(489, 562);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 67;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // ControleAcesso
             // 
             this.AllowDrop = true;
@@ -955,8 +877,6 @@ namespace SistemaMysql.View
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.VEICULOPARTICULAR.ResumeLayout(false);
             this.VEICULOPARTICULAR.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1026,23 +946,18 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label versão;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox HORA;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox DATA;
         private System.Windows.Forms.Button btnPESQUISAR;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox CBPOSTOGRAD;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox CBCIA;
-        private System.Windows.Forms.ComboBox CBSECAO;
         private System.Windows.Forms.Label HORAATUAL;
         private System.Windows.Forms.Label DATAATUAL;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox CBCIA;
+        private System.Windows.Forms.TextBox CBSECAO;
+        private System.Windows.Forms.TextBox CBPOSTOGRAD;
     }
 }
