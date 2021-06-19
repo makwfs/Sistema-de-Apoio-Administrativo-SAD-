@@ -22,17 +22,21 @@ namespace SistemaMysql.View
     public partial class ControleAcessoCadastro : Form
     {
         Model.Model model = new Model.Model();
+        public string Foto = "";
         public ControleAcessoCadastro()
         {
             InitializeComponent();
         }
 
+        //Arrastar janela
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
 
-        private void ControleAcessoBtnCadastrar_Click(object sender, EventArgs e)
-        {
-            Pessoas dado = new Pessoas();
-            CadastroControleAcesso(dado);
-        }
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+
+        
 
         public void CadastroControleAcesso(Pessoas dados)     // capturando dados dos textbox
         {
@@ -54,8 +58,7 @@ namespace SistemaMysql.View
                 dados.EMPLACAMENTOControleAcesso1 = EMPLACAMENTO.Text;
                 dados.CIDADEControleAcesso1 = CIDADE.Text;
                 dados.CORControleAcesso1 = COR.Text;
-                dados.DATA1 = DATA.Text;
-                dados.HORA1 = HORA.Text;
+                
 
 
                 model.CadastroControleAcesso(dados);
@@ -94,5 +97,84 @@ namespace SistemaMysql.View
         {
 
         }
-    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NOME.Text = "";
+            TXBRE.Text = "";
+            CBPOSTOGRAD.Text = "";
+            TXBRG.Text = "";
+            UNIDADE.Text = "";
+            CBCIA.Text = "";
+            CBSECAO.Text = "";
+            NCARTAO.Text = "";
+            DATAVENCIMENTO.Text = "";
+            TXBMARCA.Text = "";
+            MODELOVEICULO.Text = "";
+            EMPLACAMENTO.Text = "";
+            CIDADE.Text = "";
+            COR.Text = "";
+            CADASTROFOTO.Image = null;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+       
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label16_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void ControleAcessoCadastro_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void ControleAcessoBtnFoto_Click(object sender, EventArgs e)
+        {
+            // Carregando imagem na tela
+
+            if(OpenFileDialogFoto.ShowDialog() == DialogResult.OK)  // Dar prosseguimento apenas se o usuário escolher uma foto
+            {
+                this.Foto = OpenFileDialogFoto.FileName;
+                CADASTROFOTO.Load(this.Foto);
+
+
+
+
+
+                Bitmap bmp = new Bitmap(OpenFileDialogFoto.FileName);
+                Bitmap bmp2 = new Bitmap(bmp, CADASTROFOTO.Size);
+
+                CADASTROFOTO.Image = bmp2;
+                CADASTROFOTO.Image.Save(Application.StartupPath.ToString() + "\\FotosCadastro\\" + NOME.Text + ".png", System.Drawing.Imaging.ImageFormat.Png);
+            }            
+            else
+            {                
+                return;
+            }            
+
+        }
+    }        
+    
 }
