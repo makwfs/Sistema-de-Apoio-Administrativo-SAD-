@@ -1025,7 +1025,7 @@ namespace SistemaMysql.View
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(44, 662);
+            this.label14.Location = new System.Drawing.Point(70, 662);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 69;
@@ -1040,7 +1040,7 @@ namespace SistemaMysql.View
             "FORA"});
             this.STATUS.Location = new System.Drawing.Point(35, 682);
             this.STATUS.Name = "STATUS";
-            this.STATUS.Size = new System.Drawing.Size(74, 21);
+            this.STATUS.Size = new System.Drawing.Size(125, 21);
             this.STATUS.TabIndex = 70;
             // 
             // ControleAcesso

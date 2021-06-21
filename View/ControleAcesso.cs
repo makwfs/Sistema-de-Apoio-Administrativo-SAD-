@@ -97,6 +97,7 @@ namespace SistemaMysql.View
 
             try
             {
+                STATUS.Text = "TRABALHANDO";
                 dados.NomeControleAcesso = NOME.Text;
                 dados.REControleAcesso1 = TXBRE.Text;
                 dados.POSTOGRADControleAcesso1 = CBPOSTOGRAD.Text;
@@ -114,6 +115,7 @@ namespace SistemaMysql.View
                 dados.DATA1 = DATAATUAL.Text;
                 dados.HORA1 = HORAATUAL.Text;
                 dados.Id = Convert.ToInt32(ID.Text);
+                dados.STATUS1 = STATUS.Text;
 
 
                 model.ENTRADAControleAcesso(dados);
@@ -131,10 +133,12 @@ namespace SistemaMysql.View
             if (ID.Text == "")
             {
                 MessageBox.Show("ERRO: DIGITE UMA IDENTIFICAÇÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
 
             }
             if (STATUS.Text == "TRABALHANDO") {
                 MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else
             {
@@ -170,11 +174,17 @@ namespace SistemaMysql.View
 
         private void RE_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             try
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
                     "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE RE = ?", con.con);
+
+                //TESTE INNER JOIN
+                //SELECT* FROM entradacontroleacessoteste INNER JOIN entradasaida.STATUS ON entradacontroleacessoteste.id = entradasaida.fk_id_ES;
+                //SELECT* FROM `entradacontroleacessoteste` inner JOIN entradasaida ON entradacontroleacessoteste.id = entradasaida.fk_id_ES;
+
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
                 sql.CommandType = CommandType.Text;
@@ -198,6 +208,7 @@ namespace SistemaMysql.View
                 EMPLACAMENTO.Text = dr.GetString(12);
                 CIDADE.Text = dr.GetString(13);
                 COR.Text = dr.GetString(14);
+
 
 
             }

@@ -211,7 +211,7 @@ namespace SistemaMysql.DAO
             try                                                                                                               // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from entradacontroleacessoteste", con.con);                                                    // comando para buscar dados no BD
+                sql = new MySqlCommand("select * from entradasaida", con.con);                                                    // comando para buscar dados no BD
 
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
