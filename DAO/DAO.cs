@@ -480,9 +480,13 @@ namespace SistemaMysql.DAO
 
             try
             {
-                con.Conectar();
+                /*con.Conectar();
                 sql = new MySqlCommand("INSERT INTO entradacontroleacessoteste ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA)" +
-                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA )", con.con);  // inclusão de dados no BD pessoa
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA )", con.con);  // inclusão de dados no BD pessoa*/
+
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO entradasaida ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA, fk_id_ES)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
 
                 sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
                 sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
@@ -500,6 +504,7 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
                 sql.Parameters.AddWithValue("@DATA", dados.DATA1);
                 sql.Parameters.AddWithValue("@HORA", dados.HORA1);
+                sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
                 sql.ExecuteNonQuery();
                 MessageBox.Show("ENTRADA CADASTRADA COM SUCESSO !");
                 con.FecharConexao();

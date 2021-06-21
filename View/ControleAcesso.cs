@@ -70,14 +70,26 @@ namespace SistemaMysql.View
 
         private void RE_TextChanged(object sender, EventArgs e)
         {
-           
+            if (RE.Text !="")
+            {
+                RG.Enabled = false;
+                CBCARTAO.Enabled = false;
+                PREFIXO.Enabled = false;
+
+            }
+            else
+            {
+                RG.Enabled = true;
+                CBCARTAO.Enabled = true;
+                PREFIXO.Enabled = true;
+            }
 
         }
 
         public void RetornoDadosAcesso(Pessoas dados)
         {
 
-           
+
         }
         public void ENTRADAControleAcesso(Pessoas dados)     // capturando dados dos textbox
         {
@@ -99,8 +111,9 @@ namespace SistemaMysql.View
                 dados.EMPLACAMENTOControleAcesso1 = EMPLACAMENTO.Text;
                 dados.CIDADEControleAcesso1 = CIDADE.Text;
                 dados.CORControleAcesso1 = COR.Text;
-                /*dados.DATA1 = DATA.Text;
-                dados.HORA1 = HORA.Text;*/
+                dados.DATA1 = DATAATUAL.Text;
+                dados.HORA1 = HORAATUAL.Text;
+                dados.Id = Convert.ToInt32(ID.Text);
 
 
                 model.ENTRADAControleAcesso(dados);
@@ -119,6 +132,9 @@ namespace SistemaMysql.View
             {
                 MessageBox.Show("ERRO: DIGITE UMA IDENTIFICAÇÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
+            if (STATUS.Text == "TRABALHANDO") {
+                MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -146,11 +162,11 @@ namespace SistemaMysql.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
-        
+
 
         private void RE_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -266,6 +282,87 @@ namespace SistemaMysql.View
             catch (Exception)
             {
 
+            }
+        }
+
+        private void PREFIXO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("SELECT * FROM controlevtr WHERE PREFIXO = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@PREFIXO", MySqlDbType.Int32).Value = PREFIXO.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr;
+                dr = sql.ExecuteReader();
+                dr.Read();
+
+                PREFIXOVTR.Text = dr.GetString(8);
+                MARCAVTR.Text = dr.GetString(3);
+                MODELOVTR.Text = dr.GetString(2);
+                PLACAVTR.Text = dr.GetString(7);
+                CIDADEVTR.Text = dr.GetString(9);
+                CORVTR.Text = dr.GetString(10);
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        private void RG_TextChanged(object sender, EventArgs e)
+        {
+            if (RG.Text != "")
+            {
+                RE.Enabled = false;
+                CBCARTAO.Enabled = false;
+                PREFIXO.Enabled = false;
+
+            }
+            else
+            {
+                RE.Enabled = true;
+                CBCARTAO.Enabled = true;
+                PREFIXO.Enabled = true;
+            }
+        }
+
+        private void CBCARTAO_TextChanged(object sender, EventArgs e)
+        {
+            if (CBCARTAO.Text != "")
+            {
+                RE.Enabled = false;
+                RG.Enabled = false;
+                PREFIXO.Enabled = false;
+
+            }
+            else
+            {
+                RE.Enabled = true;
+                RG.Enabled = true;
+                PREFIXO.Enabled = true;
+            }
+        }
+
+        private void PREFIXO_TextChanged(object sender, EventArgs e)
+        {
+            if (PREFIXO.Text != "")
+            {
+                RE.Enabled = false;
+                RG.Enabled = false;
+                CBCARTAO.Enabled = false;
+
+            }
+            else
+            {
+                RE.Enabled = true;
+                RG.Enabled = true;
+                CBCARTAO.Enabled = true;
             }
         }
     }

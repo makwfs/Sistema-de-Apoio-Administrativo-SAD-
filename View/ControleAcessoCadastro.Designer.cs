@@ -89,9 +89,24 @@ namespace SistemaMysql.View
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PREFIXOVTR = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.PLACAVTR = new System.Windows.Forms.TextBox();
+            this.MARCAVTR = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.MODELOVTR = new System.Windows.Forms.TextBox();
+            this.CIDADEVTR = new System.Windows.Forms.TextBox();
+            this.CORVTR = new System.Windows.Forms.TextBox();
+            this.MOTORISTAVTR = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CADASTROFOTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -145,7 +160,7 @@ namespace SistemaMysql.View
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 56);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1015, 650);
+            this.groupBox2.Size = new System.Drawing.Size(1015, 585);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PESQUISAR";
@@ -251,9 +266,9 @@ namespace SistemaMysql.View
             this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(3, 21);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(26, 17);
+            this.label28.Size = new System.Drawing.Size(22, 17);
             this.label28.TabIndex = 37;
-            this.label28.Text = "ID:";
+            this.label28.Text = "ID";
             // 
             // label5
             // 
@@ -275,9 +290,9 @@ namespace SistemaMysql.View
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(125, 69);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(29, 17);
+            this.label17.Size = new System.Drawing.Size(25, 17);
             this.label17.TabIndex = 69;
-            this.label17.Text = "RG:";
+            this.label17.Text = "RG";
             // 
             // UNIDADE
             // 
@@ -304,9 +319,9 @@ namespace SistemaMysql.View
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(359, 70);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 17);
+            this.label21.Size = new System.Drawing.Size(67, 17);
             this.label21.TabIndex = 59;
-            this.label21.Text = "UNIDADE:";
+            this.label21.Text = "UNIDADE";
             // 
             // NOME
             // 
@@ -325,9 +340,9 @@ namespace SistemaMysql.View
             this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(259, 21);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(51, 17);
+            this.label29.Size = new System.Drawing.Size(47, 17);
             this.label29.TabIndex = 35;
-            this.label29.Text = "NOME:";
+            this.label29.Text = "NOME";
             // 
             // label27
             // 
@@ -337,9 +352,9 @@ namespace SistemaMysql.View
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(611, 70);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(33, 17);
+            this.label27.Size = new System.Drawing.Size(29, 17);
             this.label27.TabIndex = 45;
-            this.label27.Text = "CIA:";
+            this.label27.Text = "CIA";
             // 
             // label3
             // 
@@ -361,9 +376,9 @@ namespace SistemaMysql.View
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(614, 21);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 17);
+            this.label20.Size = new System.Drawing.Size(23, 17);
             this.label20.TabIndex = 63;
-            this.label20.Text = "RE:";
+            this.label20.Text = "RE";
             // 
             // TXBRE
             // 
@@ -375,13 +390,27 @@ namespace SistemaMysql.View
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.CORVTR);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.CIDADEVTR);
+            this.groupBox5.Controls.Add(this.MOTORISTAVTR);
+            this.groupBox5.Controls.Add(this.PREFIXOVTR);
+            this.groupBox5.Controls.Add(this.MODELOVTR);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.PLACAVTR);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.MARCAVTR);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(16, 385);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(983, 106);
+            this.groupBox5.Size = new System.Drawing.Size(983, 169);
             this.groupBox5.TabIndex = 42;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "ENTRADA/SAÍDA";
+            this.groupBox5.Text = "VIATURA";
             // 
             // groupBox3
             // 
@@ -405,7 +434,7 @@ namespace SistemaMysql.View
             this.groupBox3.Size = new System.Drawing.Size(983, 153);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "VEICULO";
+            this.groupBox3.Text = "VEICULO PARTICULAR";
             // 
             // DATAVENCIMENTO
             // 
@@ -487,9 +516,9 @@ namespace SistemaMysql.View
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(557, 75);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(53, 17);
+            this.label22.Size = new System.Drawing.Size(49, 17);
             this.label22.TabIndex = 57;
-            this.label22.Text = "PLACA:";
+            this.label22.Text = "PLACA";
             // 
             // TXBMARCA
             // 
@@ -550,9 +579,9 @@ namespace SistemaMysql.View
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(309, 77);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(126, 17);
+            this.label19.Size = new System.Drawing.Size(122, 17);
             this.label19.TabIndex = 64;
-            this.label19.Text = "MODELO VEICULO:";
+            this.label19.Text = "MODELO VEICULO";
             // 
             // FOTO
             // 
@@ -704,9 +733,11 @@ namespace SistemaMysql.View
             // CADASTROFOTO
             // 
             this.CADASTROFOTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CADASTROFOTO.Image = global::SistemaMysql.Properties.Resources.police;
             this.CADASTROFOTO.Location = new System.Drawing.Point(1036, 66);
             this.CADASTROFOTO.Name = "CADASTROFOTO";
             this.CADASTROFOTO.Size = new System.Drawing.Size(285, 210);
+            this.CADASTROFOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CADASTROFOTO.TabIndex = 57;
             this.CADASTROFOTO.TabStop = false;
             // 
@@ -776,6 +807,153 @@ namespace SistemaMysql.View
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(590, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "MOTORISTA";
+            // 
+            // PREFIXOVTR
+            // 
+            this.PREFIXOVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PREFIXOVTR.Location = new System.Drawing.Point(267, 41);
+            this.PREFIXOVTR.Name = "PREFIXOVTR";
+            this.PREFIXOVTR.Size = new System.Drawing.Size(223, 25);
+            this.PREFIXOVTR.TabIndex = 14;
+            this.PREFIXOVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(348, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 17);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "PREFIXO";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(311, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 17);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "MODELO VEICULO";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(727, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 17);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "CIDADE";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(896, 93);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 17);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "COR";
+            // 
+            // PLACAVTR
+            // 
+            this.PLACAVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PLACAVTR.Location = new System.Drawing.Point(518, 113);
+            this.PLACAVTR.Name = "PLACAVTR";
+            this.PLACAVTR.Size = new System.Drawing.Size(135, 25);
+            this.PLACAVTR.TabIndex = 16;
+            this.PLACAVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MARCAVTR
+            // 
+            this.MARCAVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MARCAVTR.Location = new System.Drawing.Point(8, 113);
+            this.MARCAVTR.Name = "MARCAVTR";
+            this.MARCAVTR.Size = new System.Drawing.Size(223, 25);
+            this.MARCAVTR.TabIndex = 14;
+            this.MARCAVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(559, 91);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 17);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "PLACA";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(92, 91);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "MARCA";
+            // 
+            // MODELOVTR
+            // 
+            this.MODELOVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MODELOVTR.Location = new System.Drawing.Point(237, 113);
+            this.MODELOVTR.Name = "MODELOVTR";
+            this.MODELOVTR.Size = new System.Drawing.Size(275, 25);
+            this.MODELOVTR.TabIndex = 15;
+            this.MODELOVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // CIDADEVTR
+            // 
+            this.CIDADEVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CIDADEVTR.Location = new System.Drawing.Point(659, 113);
+            this.CIDADEVTR.Name = "CIDADEVTR";
+            this.CIDADEVTR.Size = new System.Drawing.Size(192, 25);
+            this.CIDADEVTR.TabIndex = 17;
+            this.CIDADEVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // CORVTR
+            // 
+            this.CORVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CORVTR.Location = new System.Drawing.Point(857, 113);
+            this.CORVTR.Name = "CORVTR";
+            this.CORVTR.Size = new System.Drawing.Size(113, 25);
+            this.CORVTR.TabIndex = 18;
+            this.CORVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MOTORISTAVTR
+            // 
+            this.MOTORISTAVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MOTORISTAVTR.Location = new System.Drawing.Point(519, 41);
+            this.MOTORISTAVTR.Name = "MOTORISTAVTR";
+            this.MOTORISTAVTR.Size = new System.Drawing.Size(223, 25);
+            this.MOTORISTAVTR.TabIndex = 14;
+            this.MOTORISTAVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ControleAcessoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -805,6 +983,8 @@ namespace SistemaMysql.View
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CADASTROFOTO)).EndInit();
@@ -878,5 +1058,19 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TextBox CORVTR;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox CIDADEVTR;
+        private System.Windows.Forms.TextBox MOTORISTAVTR;
+        private System.Windows.Forms.TextBox PREFIXOVTR;
+        private System.Windows.Forms.TextBox MODELOVTR;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox PLACAVTR;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox MARCAVTR;
     }
 }

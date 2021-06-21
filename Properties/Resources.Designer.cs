@@ -313,6 +313,26 @@ namespace SistemaMysql.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap police {
+            get {
+                object obj = ResourceManager.GetObject("police", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap police_officer {
+            get {
+                object obj = ResourceManager.GetObject("police-officer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sweeping {
             get {
                 object obj = ResourceManager.GetObject("sweeping", resourceCulture);
