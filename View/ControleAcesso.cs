@@ -23,6 +23,7 @@ namespace SistemaMysql.View
         Model.Model model = new Model.Model();
         MySqlCommand sql;
         Conexao con = new Conexao();
+        String imgLoc = "";
         public ControleAcesso()
         {
             InitializeComponent();
@@ -97,7 +98,7 @@ namespace SistemaMysql.View
 
             try
             {
-                STATUS.Text = "TRABALHANDO";
+                
                 dados.NomeControleAcesso = NOME.Text;
                 dados.REControleAcesso1 = TXBRE.Text;
                 dados.POSTOGRADControleAcesso1 = CBPOSTOGRAD.Text;
@@ -115,7 +116,7 @@ namespace SistemaMysql.View
                 dados.DATA1 = DATAATUAL.Text;
                 dados.HORA1 = HORAATUAL.Text;
                 dados.Id = Convert.ToInt32(ID.Text);
-                dados.STATUS1 = STATUS.Text;
+                
 
 
                 model.ENTRADAControleAcesso(dados);
@@ -137,7 +138,11 @@ namespace SistemaMysql.View
 
             }
             if (STATUS.Text == "TRABALHANDO") {
-                MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                
+
+
+                MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                                CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -164,12 +169,6 @@ namespace SistemaMysql.View
             form.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
 
 
         private void RE_KeyPress(object sender, KeyPressEventArgs e)
@@ -179,11 +178,7 @@ namespace SistemaMysql.View
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
-                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE RE = ?", con.con);
-
-                //TESTE INNER JOIN
-                //SELECT* FROM entradacontroleacessoteste INNER JOIN entradasaida.STATUS ON entradacontroleacessoteste.id = entradasaida.fk_id_ES;
-                //SELECT* FROM `entradacontroleacessoteste` inner JOIN entradasaida ON entradacontroleacessoteste.id = entradasaida.fk_id_ES;
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, FOTO FROM entradacontroleacessoteste WHERE RE = ?", con.con);
 
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
@@ -208,6 +203,39 @@ namespace SistemaMysql.View
                 EMPLACAMENTO.Text = dr.GetString(12);
                 CIDADE.Text = dr.GetString(13);
                 COR.Text = dr.GetString(14);
+                
+                //RECUPERANDO IMAGEM DO BD
+                byte[] img = (byte[])(dr[15]);
+
+                
+                PCFOTO.Image = SistemaMysql.Properties.Resources.police; 
+                if (img == null)
+                    PCFOTO.Image = null;
+                else
+                {
+                    MemoryStream ms = new MemoryStream(img);
+                    PCFOTO.Image = System.Drawing.Image.FromStream(ms);
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("SELECT * FROM status WHERE fk_id_ES = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@fk_id_ES", MySqlDbType.Int32).Value = ID.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr;
+                dr = sql.ExecuteReader();
+                dr.Read();
+
+                STATUS.Text = dr.GetString(5);
 
 
 
@@ -375,6 +403,56 @@ namespace SistemaMysql.View
                 RG.Enabled = true;
                 CBCARTAO.Enabled = true;
             }
+        }
+
+        private void STATUS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("SELECT * FROM status WHERE fk_id_ES = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@fk_id_ES", MySqlDbType.Int32).Value = ID.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr;
+                dr = sql.ExecuteReader();
+                dr.Read();
+
+                STATUS.Text = dr.GetString(5);
+
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RE.Text = "";
+            RG.Text = "";
+            CBCARTAO.Text = "";
+            PREFIXO.Text = "";
+            ID.Text = "";
+            NOME.Text = "";
+            TXBRE.Text = "";
+            CBPOSTOGRAD.Text = "";
+            TXBRG.Text = "";
+            UNIDADE.Text = "";
+            CBCIA.Text = "";
+            CBSECAO.Text = "";
+            NCARTAO.Text = "";
+            DATAVENCIMENTO.Text = "";
+            TXBMARCA.Text = "";
+            MODELOVEICULO.Text = "";
+            EMPLACAMENTO.Text = "";
+            CIDADE.Text = "";
+            COR.Text = "";
+            STATUS.Text = "";
+            PCFOTO.Image = SistemaMysql.Properties.Resources.police;
         }
     }
     

@@ -23,6 +23,9 @@ namespace SistemaMysql.View
     {
         Model.Model model = new Model.Model();
         public string Foto = "";
+        String imgLoc = "";
+        MySqlCommand sql;
+        Conexao con = new Conexao();
         public ControleAcessoCadastro()
         {
             InitializeComponent();
@@ -146,7 +149,27 @@ namespace SistemaMysql.View
         {
             // Carregando imagem na tela
 
-            if(OpenFileDialogFoto.ShowDialog() == DialogResult.OK)  // Dar prosseguimento apenas se o usuário escolher uma foto
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Filter = "JPG Files(*.jpg)|*.jpg|GIF Files(*.gif)|*.gif|All Files(*.*)|*.*";
+                dlg.Title = "Select Employee Picture";
+                if(dlg.ShowDialog() == DialogResult.OK)
+                {
+                    imgLoc = dlg.FileName.ToString();
+                    CADASTROFOTO.ImageLocation = imgLoc;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+            
+            
+            
+            /* if(OpenFileDialogFoto.ShowDialog() == DialogResult.OK)  // Dar prosseguimento apenas se o usuário escolher uma foto
             {
                 this.Foto = OpenFileDialogFoto.FileName;
                 CADASTROFOTO.Load(this.Foto);
@@ -164,7 +187,7 @@ namespace SistemaMysql.View
             else
             {                
                 return;
-            }            
+            }  */          
 
         }
 
@@ -172,6 +195,51 @@ namespace SistemaMysql.View
         {
             this.Close();
         }
+
+        private void ControleAcessoBtnCadastrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO cadastroguarda ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, FOTO)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @FOTO )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@NOME", NOME.Text);
+                sql.Parameters.AddWithValue("@RE", TXBRE.Text);
+                sql.Parameters.AddWithValue("@POSTO", CBPOSTOGRAD.Text);
+                sql.Parameters.AddWithValue("@RG", TXBRG.Text);
+                sql.Parameters.AddWithValue("@UNIDADE", UNIDADE.Text);
+                sql.Parameters.AddWithValue("@CIA", CBCIA.Text);
+                sql.Parameters.AddWithValue("@SEÇÃO", CBSECAO.Text);
+                sql.Parameters.AddWithValue("@CARTÃO", NCARTAO.Text );
+                sql.Parameters.AddWithValue("@VENCIMENTO", DATAVENCIMENTO.Text);
+                sql.Parameters.AddWithValue("@MARCA", TXBMARCA.Text);
+                sql.Parameters.AddWithValue("@MODELO", MODELOVEICULO.Text);
+                sql.Parameters.AddWithValue("@EMPLACAMENTO", EMPLACAMENTO.Text);
+                sql.Parameters.AddWithValue("@CIDADE", CIDADE.Text);
+                sql.Parameters.AddWithValue("@COR", COR.Text);
+                sql.Parameters.AddWithValue("@FOTO", img );
+
+
+                
+
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
+        
     }        
     
 }

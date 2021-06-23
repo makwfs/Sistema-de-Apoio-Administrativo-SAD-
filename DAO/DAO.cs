@@ -475,6 +475,8 @@ namespace SistemaMysql.DAO
             }
         }
 
+        
+
         public void ENTRADAControleAcesso(Pessoas dados)
         {
 

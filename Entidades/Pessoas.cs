@@ -15,6 +15,8 @@ namespace SistemaMysql.Entidades
             CIAControleAcesso, SECAOControleAcesso, NCARTAOontroleAcesso, VENCIMENTOControleAcesso, MARCAControleAcesso,
             MODELOControleAcesso, EMPLACAMENTOControleAcesso, CIDADEControleAcesso, CORControleAcesso, DATA, HORA, STATUS;
 
+        
+
 
 
 
@@ -52,5 +54,6 @@ namespace SistemaMysql.Entidades
         public string DATA1 { get => DATA; set => DATA = value; }
         public string HORA1 { get => HORA; set => HORA = value; }
         public string STATUS1 { get => STATUS; set => STATUS = value; }
+        
     }
 }

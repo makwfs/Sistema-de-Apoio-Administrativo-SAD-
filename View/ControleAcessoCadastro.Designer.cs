@@ -857,6 +857,7 @@ namespace SistemaMysql.View
             this.ControleAcessoBtnCadastrar.TabIndex = 45;
             this.ControleAcessoBtnCadastrar.Text = "CADASTRAR";
             this.ControleAcessoBtnCadastrar.UseVisualStyleBackColor = false;
+            this.ControleAcessoBtnCadastrar.Click += new System.EventHandler(this.ControleAcessoBtnCadastrar_Click);
             // 
             // button2
             // 

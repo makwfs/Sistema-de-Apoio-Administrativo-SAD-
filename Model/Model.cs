@@ -263,6 +263,8 @@ namespace SistemaMysql.Model
             }
         }
 
+        
+
         public void ENTRADAControleAcesso(Pessoas dados)
         {
 
