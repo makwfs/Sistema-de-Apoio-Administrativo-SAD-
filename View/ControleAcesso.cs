@@ -29,6 +29,18 @@ namespace SistemaMysql.View
             InitializeComponent();
         }
 
+        public ControleAcesso(String Valor, ErroControle_Acesso Reset)
+        {
+            InitializeComponent();
+            //RECUPERANDO VALORES DO FORM CONTROLE DE ACESSO
+            STATUS.Text = Valor;
+            
+        }
+
+        
+
+
+
         //Arrastar janela
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -129,26 +141,54 @@ namespace SistemaMysql.View
             }
         }
 
+        
+
+
         private void btnEntrada_Click(object sender, EventArgs e)
         {
             if (ID.Text == "")
             {
-                MessageBox.Show("ERRO: DIGITE UMA IDENTIFICAÇÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ErroControle_Acesso form = new ErroControle_Acesso();
+                form.Show();
+                //MessageBox.Show("ERRO: DIGITE UMA IDENTIFICAÇÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
             }
             if (STATUS.Text == "TRABALHANDO") {
 
-                
 
-
-                MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                                CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ErroEntradaControleAcesso form = new ErroEntradaControleAcesso(ID.Text,this);      
+                form.Show();
+                //MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                                CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
             {
                 Pessoas dado = new Pessoas();
+                try
+                {
+
+                    con.Conectar();
+                    sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
+
+                    sql.Parameters.AddWithValue("@ID", ID.Text);
+                    sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "TRABALHANDO");
+                    sql.ExecuteNonQuery();
+                    con.FecharConexao();
+                    
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Erro ao editar" + ex);
+                    con.FecharConexao();
+                }
                 ENTRADAControleAcesso(dado);
+                ConfirmarEntrada form = new ConfirmarEntrada();
+                form.Show();
+                ReloadForm();
+
+
             }
 
         }
@@ -156,6 +196,7 @@ namespace SistemaMysql.View
         private void ControleAcesso_Load(object sender, EventArgs e)
         {
             DATAATUAL.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -454,7 +495,37 @@ namespace SistemaMysql.View
             STATUS.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
         }
+
+        public void ReloadForm()
+        {
+            //STATUS.ResetText();
+            RE.Text = "";
+            RG.Text = "";
+            CBCARTAO.Text = "";
+            PREFIXO.Text = "";
+            ID.Text = "";
+            NOME.Text = "";
+            TXBRE.Text = "";
+            CBPOSTOGRAD.Text = "";
+            TXBRG.Text = "";
+            UNIDADE.Text = "";
+            CBCIA.Text = "";
+            CBSECAO.Text = "";
+            NCARTAO.Text = "";
+            DATAVENCIMENTO.Text = "";
+            TXBMARCA.Text = "";
+            MODELOVEICULO.Text = "";
+            EMPLACAMENTO.Text = "";
+            CIDADE.Text = "";
+            COR.Text = "";
+            STATUS.Text = "";
+            PCFOTO.Image = SistemaMysql.Properties.Resources.police;
+
+        }
+
+
+
     }
-    
+
 }
 

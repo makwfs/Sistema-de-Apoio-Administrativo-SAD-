@@ -98,6 +98,12 @@
     <Compile Include="View\CadastrarVtr.Designer.cs">
       <DependentUpon>CadastrarVtr.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConfirmarEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfirmarEntrada.Designer.cs">
+      <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ControleAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,18 @@
     </Compile>
     <Compile Include="View\EditarViatura.Designer.cs">
       <DependentUpon>EditarViatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ErroEntradaControleAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ErroEntradaControleAcesso.Designer.cs">
+      <DependentUpon>ErroEntradaControleAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ErroIdentificacaoControle Acesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ErroIdentificacaoControle Acesso.Designer.cs">
+      <DependentUpon>ErroIdentificacaoControle Acesso.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
@@ -180,6 +198,9 @@
     <EmbeddedResource Include="View\CadastrarVtr.resx">
       <DependentUpon>CadastrarVtr.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ConfirmarEntrada.resx">
+      <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ControleAcesso.resx">
       <DependentUpon>ControleAcesso.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +218,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarViatura.resx">
       <DependentUpon>EditarViatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ErroEntradaControleAcesso.resx">
+      <DependentUpon>ErroEntradaControleAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ErroIdentificacaoControle Acesso.resx">
+      <DependentUpon>ErroIdentificacaoControle Acesso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -258,6 +285,10 @@
     <None Include="Logo\Logo_prog1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\security-gate.png" />
+    <None Include="Resources\open-door.png" />
+    <None Include="Resources\police-line.png" />
+    <None Include="Resources\policial.jpg" />
     <None Include="Resources\police-officer.png" />
     <None Include="Resources\police.png" />
     <None Include="Resources\camera.png" />

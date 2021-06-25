@@ -134,3 +134,6 @@ C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\S
 C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.exe
 C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.pdb
 C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ControleAcessoPesquisar.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ErroControle_Acesso.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ErroEntradaControleAcesso.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ConfirmarEntrada.resources

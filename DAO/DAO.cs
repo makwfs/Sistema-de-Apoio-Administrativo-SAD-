@@ -507,8 +507,7 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@DATA", dados.DATA1);
                 sql.Parameters.AddWithValue("@HORA", dados.HORA1);
                 sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
-                sql.ExecuteNonQuery();
-                MessageBox.Show("ENTRADA CADASTRADA COM SUCESSO !");
+                sql.ExecuteNonQuery();                
                 con.FecharConexao();
             }
             catch (Exception ex)
