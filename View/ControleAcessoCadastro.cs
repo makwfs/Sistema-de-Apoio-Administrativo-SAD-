@@ -21,6 +21,7 @@ namespace SistemaMysql.View
 {
     public partial class ControleAcessoCadastro : Form
     {
+        
         Model.Model model = new Model.Model();
         public string Foto = "";
         String imgLoc = "";
@@ -30,6 +31,8 @@ namespace SistemaMysql.View
         {
             InitializeComponent();
         }
+
+
 
         //Arrastar janela
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -109,7 +112,7 @@ namespace SistemaMysql.View
             EMPLACAMENTO.Text = "";
             CIDADE.Text = "";
             COR.Text = "";
-            CADASTROFOTO.Image = null;
+            PCFOTO.Image = SistemaMysql.Properties.Resources.police;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -157,7 +160,7 @@ namespace SistemaMysql.View
                 if(dlg.ShowDialog() == DialogResult.OK)
                 {
                     imgLoc = dlg.FileName.ToString();
-                    CADASTROFOTO.ImageLocation = imgLoc;
+                    PCFOTO.ImageLocation = imgLoc;
                 }
             }
             catch (Exception)
@@ -224,22 +227,55 @@ namespace SistemaMysql.View
                 sql.Parameters.AddWithValue("@CIDADE", CIDADE.Text);
                 sql.Parameters.AddWithValue("@COR", COR.Text);
                 sql.Parameters.AddWithValue("@FOTO", img );
-
-
-                
-
                 sql.ExecuteNonQuery();
-                con.FecharConexao();
+
+
+                //Insert na tabela de Status usando o LAST_INSERT_ID
+                sql = new MySqlCommand("INSERT INTO status ( NOME, RE, RG, STATUS, fk_id_ES)  values (@NOME, @RE, @RG, @STATUS, LAST_INSERT_ID())", con.con);
+                sql.Parameters.AddWithValue("@NOME", NOME.Text);
+                sql.Parameters.AddWithValue("@RE", TXBRE.Text);
+                sql.Parameters.AddWithValue("@RG", TXBRG.Text);
+                sql.Parameters.AddWithValue("@STATUS", " DESCANSANDO ");
+                sql.ExecuteNonQuery();
+                con.FecharConexao();                                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar" + ex);
                 //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 con.FecharConexao();
-            }
+            }            
+            CadastroConcluido form = new CadastroConcluido();
+            form.Show();
+            ReloadForm();
         }
 
-        
+        public void ReloadForm()
+        {
+            //STATUS.ResetText();
+            RE.Text = "";
+            RG.Text = "";
+            NCARTAO.Text = "";
+            PREFIXO.Text = "";
+            ID.Text = "";
+            NOME.Text = "";
+            TXBRE.Text = "";
+            CBPOSTOGRAD.Text = "";
+            TXBRG.Text = "";
+            UNIDADE.Text = "";
+            CBCIA.Text = "";
+            CBSECAO.Text = "";
+            NCARTAO.Text = "";
+            DATAVENCIMENTO.Text = "";
+            TXBMARCA.Text = "";
+            MODELOVEICULO.Text = "";
+            EMPLACAMENTO.Text = "";
+            CIDADE.Text = "";
+            COR.Text = "";            
+            PCFOTO.Image = SistemaMysql.Properties.Resources.police;
+
+        }
     }        
     
 }

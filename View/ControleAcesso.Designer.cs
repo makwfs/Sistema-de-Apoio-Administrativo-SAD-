@@ -148,7 +148,7 @@ namespace SistemaMysql.View
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(519, 8);
+            this.label16.Location = new System.Drawing.Point(519, 7);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(294, 37);
             this.label16.TabIndex = 6;
@@ -956,6 +956,8 @@ namespace SistemaMysql.View
             this.STATUS.Size = new System.Drawing.Size(122, 25);
             this.STATUS.TabIndex = 14;
             this.STATUS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS.Visible = false;
+            this.STATUS.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // button2
             // 

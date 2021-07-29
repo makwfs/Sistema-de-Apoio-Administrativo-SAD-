@@ -163,6 +163,16 @@ namespace SistemaMysql.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap complacente {
+            get {
+                object obj = ResourceManager.GetObject("complacente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
@@ -333,6 +343,16 @@ namespace SistemaMysql.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap police_car {
+            get {
+                object obj = ResourceManager.GetObject("police-car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap police_line {
             get {
                 object obj = ResourceManager.GetObject("police-line", resourceCulture);
@@ -396,6 +416,16 @@ namespace SistemaMysql.Properties {
         internal static System.Drawing.Bitmap variante_de_pesquisa_de_lista {
             get {
                 object obj = ResourceManager.GetObject("variante-de-pesquisa-de-lista", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walking {
+            get {
+                object obj = ResourceManager.GetObject("walking", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

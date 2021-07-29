@@ -23,13 +23,13 @@ namespace SistemaMysql.View
         Model.Model model = new Model.Model();
         MySqlCommand sql;
         Conexao con = new Conexao();
-        String imgLoc = "";
+        //String imgLoc = "";
         public ControleAcesso()
         {
             InitializeComponent();
         }
 
-        public ControleAcesso(String Valor, ErroControle_Acesso Reset)
+        public ControleAcesso(String Valor, ErroControle_Acesso Reset, EscolhaEntrada Escolha)
         {
             InitializeComponent();
             //RECUPERANDO VALORES DO FORM CONTROLE DE ACESSO
@@ -141,57 +141,160 @@ namespace SistemaMysql.View
             }
         }
 
-        
+
+        public void ENTRADAControleAcessoaPe(Pessoas dados)     // capturando dados dos textbox
+        {
+            // Entrada de pessoas a pé
+
+            try
+            {
+
+                dados.NomeControleAcesso = NOME.Text;
+                dados.REControleAcesso1 = TXBRE.Text;
+                dados.POSTOGRADControleAcesso1 = CBPOSTOGRAD.Text;
+                dados.TXBRGControleAcesso1 = TXBRG.Text;
+                dados.UNIDADEControleAcesso1 = UNIDADE.Text;
+                dados.CIAControleAcesso1 = CBCIA.Text;
+                dados.SECAOControleAcesso1 = CBSECAO.Text;
+                dados.NCARTAOontroleAcesso1 = " A PÉ ";
+                dados.VENCIMENTOControleAcesso1 = " A PÉ ";
+                dados.MARCAControleAcesso1 = " A PÉ ";
+                dados.MODELOControleAcesso1 = " A PÉ ";
+                dados.EMPLACAMENTOControleAcesso1 = " A PÉ ";
+                dados.CIDADEControleAcesso1 = " A PÉ ";
+                dados.CORControleAcesso1 = " A PÉ ";
+                dados.DATA1 = DATAATUAL.Text;
+                dados.HORA1 = HORAATUAL.Text;
+                dados.Id = Convert.ToInt32(ID.Text);
+
+
+
+                model.ENTRADAControleAcessoaPe(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Salvar " + ex.Message);
+            }
+        }
+
+
 
 
         private void btnEntrada_Click(object sender, EventArgs e)
         {
             if (ID.Text == "")
             {
+                //Tela de erro por não informar a identificação
                 ErroControle_Acesso form = new ErroControle_Acesso();
-                form.Show();
-                //MessageBox.Show("ERRO: DIGITE UMA IDENTIFICAÇÃO", "                                 CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                form.Show();                
                 return;
 
             }
             if (STATUS.Text == "TRABALHANDO") {
 
-
+                //Tela de Policial já se encontra no interior do quartel
                 ErroEntradaControleAcesso form = new ErroEntradaControleAcesso(ID.Text,this);      
-                form.Show();
-                //MessageBox.Show("ATENÇÃO: A PESSOA JÁ SE ENCONTRA NO INTERIOR DO BATALHÃO", "                                                CUIDADO !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                form.Show();                
                 return;
-            }
+            }            
             else
             {
                 Pessoas dado = new Pessoas();
-                try
+                if (ID.Text != "")
                 {
-
-                    con.Conectar();
-                    sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
-
-                    sql.Parameters.AddWithValue("@ID", ID.Text);
-                    sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "TRABALHANDO");
-                    sql.ExecuteNonQuery();
-                    con.FecharConexao();
-                    
+                    //Tela escolha o tipo de entrada (com veiculo ou a pé)
+                    EscolhaEntrada form = new EscolhaEntrada(ID.Text,this);
+                    form.Show();
+                    return;
                 }
-                catch (Exception ex)
+                else
                 {
+                    /* try
+                     {
 
-                    MessageBox.Show("Erro ao editar" + ex);
-                    con.FecharConexao();
+                         con.Conectar();
+                         sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
+
+                         sql.Parameters.AddWithValue("@ID", ID.Text);
+                         sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "TRABALHANDO");
+                         sql.ExecuteNonQuery();
+                         con.FecharConexao();
+
+                     }
+                     catch (Exception ex)
+                     {
+
+                         MessageBox.Show("Erro ao editar" + ex);
+                         con.FecharConexao();
+                     }
+                     ENTRADAControleAcesso(dado);
+                     ConfirmarEntrada form = new ConfirmarEntrada();
+                     form.Show();
+                     ReloadForm();
+                 }*/
                 }
-                ENTRADAControleAcesso(dado);
-                ConfirmarEntrada form = new ConfirmarEntrada();
-                form.Show();
-                ReloadForm();
+                
 
 
             }
 
         }
+
+        public void CadastrarEntradaVeiculo()
+        {
+            Pessoas dado = new Pessoas();
+            try
+            {
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
+                sql.Parameters.AddWithValue("@ID", ID.Text);
+                sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "TRABALHANDO");
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao editar" + ex);
+                con.FecharConexao();
+            }
+            ENTRADAControleAcesso(dado);
+            ConfirmarEntrada form = new ConfirmarEntrada();
+            form.Show();
+            ReloadForm();
+        }
+
+
+        public void CadastrarEntradaaPe()
+        {
+            Pessoas dado = new Pessoas();
+            try
+            {
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
+                sql.Parameters.AddWithValue("@ID", ID.Text);
+                sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "TRABALHANDO");
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao editar" + ex);
+                con.FecharConexao();
+            }
+            ENTRADAControleAcessoaPe(dado);
+            ConfirmarEntrada form = new ConfirmarEntrada();
+            form.Show();
+            ReloadForm();
+        }
+
 
         private void ControleAcesso_Load(object sender, EventArgs e)
         {
@@ -219,7 +322,7 @@ namespace SistemaMysql.View
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
-                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, FOTO FROM entradacontroleacessoteste WHERE RE = ?", con.con);
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, FOTO FROM cadastroguarda WHERE RE = ?", con.con);
 
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
@@ -276,7 +379,7 @@ namespace SistemaMysql.View
                 dr = sql.ExecuteReader();
                 dr.Read();
 
-                STATUS.Text = dr.GetString(5);
+                STATUS.Text = dr.GetString(4);
 
 
 
@@ -293,7 +396,7 @@ namespace SistemaMysql.View
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
-                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE RG = ?", con.con);
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM cadastroguarda WHERE RG = ?", con.con);
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@RG", MySqlDbType.Int32).Value = RG.Text;
                 sql.CommandType = CommandType.Text;
@@ -332,7 +435,7 @@ namespace SistemaMysql.View
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
-                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM entradacontroleacessoteste WHERE CARTÃO = ?", con.con);
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM cadastroguarda WHERE CARTÃO = ?", con.con);
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@CARTÃO", MySqlDbType.Int32).Value = CBCARTAO.Text;
                 sql.CommandType = CommandType.Text;
@@ -523,8 +626,10 @@ namespace SistemaMysql.View
 
         }
 
+        private void STATUS_TextChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 
 }

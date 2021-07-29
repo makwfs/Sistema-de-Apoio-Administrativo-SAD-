@@ -178,8 +178,8 @@
   <data name="47bpmi (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\47bpmi (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="policial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\policial.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="security-gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security-gate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="police-officer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\police-officer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +192,15 @@
   </data>
   <data name="logo_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Logo\logo_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="police-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\police-car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="walking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\walking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="policial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\policial.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_prog11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Logo\Logo_prog1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +226,7 @@
   <data name="Icone_foto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icone_foto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="security-gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\security-gate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="complacente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\complacente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

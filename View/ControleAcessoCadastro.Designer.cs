@@ -98,7 +98,7 @@ namespace SistemaMysql.View
             this.OpenFileDialogFoto = new System.Windows.Forms.OpenFileDialog();
             this.ControleAcessoBtnFoto = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.CADASTROFOTO = new System.Windows.Forms.PictureBox();
+            this.PCFOTO = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -110,7 +110,7 @@ namespace SistemaMysql.View
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CADASTROFOTO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCFOTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -901,16 +901,16 @@ namespace SistemaMysql.View
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // CADASTROFOTO
+            // PCFOTO
             // 
-            this.CADASTROFOTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CADASTROFOTO.Image = global::SistemaMysql.Properties.Resources.police;
-            this.CADASTROFOTO.Location = new System.Drawing.Point(1036, 66);
-            this.CADASTROFOTO.Name = "CADASTROFOTO";
-            this.CADASTROFOTO.Size = new System.Drawing.Size(285, 210);
-            this.CADASTROFOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CADASTROFOTO.TabIndex = 57;
-            this.CADASTROFOTO.TabStop = false;
+            this.PCFOTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PCFOTO.Image = global::SistemaMysql.Properties.Resources.police;
+            this.PCFOTO.Location = new System.Drawing.Point(1036, 66);
+            this.PCFOTO.Name = "PCFOTO";
+            this.PCFOTO.Size = new System.Drawing.Size(285, 210);
+            this.PCFOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PCFOTO.TabIndex = 57;
+            this.PCFOTO.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -962,7 +962,7 @@ namespace SistemaMysql.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1330, 760);
-            this.Controls.Add(this.CADASTROFOTO);
+            this.Controls.Add(this.PCFOTO);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
@@ -991,7 +991,7 @@ namespace SistemaMysql.View
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CADASTROFOTO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCFOTO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1055,7 +1055,7 @@ namespace SistemaMysql.View
         private System.Windows.Forms.ComboBox CBSECAO;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.OpenFileDialog OpenFileDialogFoto;
-        private System.Windows.Forms.PictureBox CADASTROFOTO;
+        private System.Windows.Forms.PictureBox PCFOTO;
         private System.Windows.Forms.Button ControleAcessoBtnFoto;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox5;

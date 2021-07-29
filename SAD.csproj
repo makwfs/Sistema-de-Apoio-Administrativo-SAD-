@@ -98,6 +98,12 @@
     <Compile Include="View\CadastrarVtr.Designer.cs">
       <DependentUpon>CadastrarVtr.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CadastroConcluido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastroConcluido.Designer.cs">
+      <DependentUpon>CadastroConcluido.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ConfirmarEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="View\ErroIdentificacaoControle Acesso.Designer.cs">
       <DependentUpon>ErroIdentificacaoControle Acesso.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EscolhaEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EscolhaEntrada.Designer.cs">
+      <DependentUpon>EscolhaEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,9 @@
     <EmbeddedResource Include="View\CadastrarVtr.resx">
       <DependentUpon>CadastrarVtr.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastroConcluido.resx">
+      <DependentUpon>CadastroConcluido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ConfirmarEntrada.resx">
       <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ErroIdentificacaoControle Acesso.resx">
       <DependentUpon>ErroIdentificacaoControle Acesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EscolhaEntrada.resx">
+      <DependentUpon>EscolhaEntrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -285,6 +303,9 @@
     <None Include="Logo\Logo_prog1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\complacente.png" />
+    <None Include="Resources\walking.png" />
+    <None Include="Resources\police-car.png" />
     <None Include="Resources\security-gate.png" />
     <None Include="Resources\open-door.png" />
     <None Include="Resources\police-line.png" />

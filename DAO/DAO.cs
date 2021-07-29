@@ -211,7 +211,7 @@ namespace SistemaMysql.DAO
             try                                                                                                               // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from entradasaida", con.con);                                                    // comando para buscar dados no BD
+                sql = new MySqlCommand("select * from acesso", con.con);                                                    // comando para buscar dados no BD
 
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
@@ -465,7 +465,8 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@DATA", dados.DATA1);
                 sql.Parameters.AddWithValue("@HORA", dados.HORA1);
                 sql.ExecuteNonQuery();                
-                con.FecharConexao();
+                con.FecharConexao();                
+
             }
             catch (Exception ex)
             {
@@ -482,12 +483,10 @@ namespace SistemaMysql.DAO
 
             try
             {
-                /*con.Conectar();
-                sql = new MySqlCommand("INSERT INTO entradacontroleacessoteste ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA)" +
-                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA )", con.con);  // inclusão de dados no BD pessoa*/
+               
 
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO entradasaida ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA, fk_id_ES)" +
+                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA, fk_id_ES)" +
                     " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
 
                 sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
@@ -508,6 +507,45 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@HORA", dados.HORA1);
                 sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
                 sql.ExecuteNonQuery();                
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
+        public void ENTRADAControleAcessoaPe(Pessoas dados)
+        {
+
+            try
+            {
+                //Cadastro de pessoas que entram a pé
+                
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA, fk_id_ES)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
+                sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
+                sql.Parameters.AddWithValue("@POSTO", dados.POSTOGRADControleAcesso1);
+                sql.Parameters.AddWithValue("@RG", dados.TXBRGControleAcesso1);
+                sql.Parameters.AddWithValue("@UNIDADE", dados.UNIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@CIA", dados.CIAControleAcesso1);
+                sql.Parameters.AddWithValue("@SEÇÃO", dados.SECAOControleAcesso1);
+                sql.Parameters.AddWithValue("@CARTÃO", dados.NCARTAOontroleAcesso1);
+                sql.Parameters.AddWithValue("@VENCIMENTO", dados.VENCIMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@MARCA", dados.MARCAControleAcesso1);
+                sql.Parameters.AddWithValue("@MODELO", dados.MODELOControleAcesso1);
+                sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
+                sql.Parameters.AddWithValue("@DATA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA", dados.HORA1);
+                sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
+                sql.ExecuteNonQuery();
                 con.FecharConexao();
             }
             catch (Exception ex)
