@@ -476,7 +476,38 @@ namespace SistemaMysql.DAO
             }
         }
 
-        
+
+        public void SAIDAControleAcesso(Pessoas dados)
+        {
+
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE acesso SET HORA_SAIDA = @HORA_SAIDA, DATA_SAIDA = @DATA_SAIDA  WHERE id = @id", con.con);  
+
+                sql.Parameters.AddWithValue("@ID", dados.IdSaida1);
+                sql.Parameters.AddWithValue("@DATA_SAIDA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA_SAIDA", dados.HORA1);
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS  WHERE id = @id", con.con);
+                sql.Parameters.AddWithValue("@ID", dados.Id);
+                sql.Parameters.AddWithValue("@STATUS", dados.STATUS1);
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
+
 
         public void ENTRADAControleAcesso(Pessoas dados)
         {
@@ -486,8 +517,8 @@ namespace SistemaMysql.DAO
                
 
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA, fk_id_ES)" +
-                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
+                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA, fk_id_ES)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
 
                 sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
                 sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
@@ -503,8 +534,8 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
                 sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
                 sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
-                sql.Parameters.AddWithValue("@DATA", dados.DATA1);
-                sql.Parameters.AddWithValue("@HORA", dados.HORA1);
+                sql.Parameters.AddWithValue("@DATA_ENTRADA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA_ENTRADA", dados.HORA1);
                 sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
                 sql.ExecuteNonQuery();                
                 con.FecharConexao();
@@ -525,8 +556,8 @@ namespace SistemaMysql.DAO
                 //Cadastro de pessoas que entram a pé
                 
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA, HORA, fk_id_ES)" +
-                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA, @HORA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
+                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA, fk_id_ES)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
 
                 sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
                 sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
@@ -542,8 +573,8 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
                 sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
                 sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
-                sql.Parameters.AddWithValue("@DATA", dados.DATA1);
-                sql.Parameters.AddWithValue("@HORA", dados.HORA1);
+                sql.Parameters.AddWithValue("@DATA_ENTRADA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA_ENTRADA", dados.HORA1);
                 sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();

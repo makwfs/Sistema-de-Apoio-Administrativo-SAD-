@@ -29,13 +29,13 @@ namespace SistemaMysql.View
             InitializeComponent();
         }
 
-        public ControleAcesso(String Valor, ErroControle_Acesso Reset, EscolhaEntrada Escolha)
+       /* public ControleAcesso(String Valor, ErroControle_Acesso Reset, EscolhaEntrada Escolha)
         {
             InitializeComponent();
             //RECUPERANDO VALORES DO FORM CONTROLE DE ACESSO
             STATUS.Text = Valor;
             
-        }
+        }*/
 
         
 
@@ -132,6 +132,32 @@ namespace SistemaMysql.View
 
 
                 model.ENTRADAControleAcesso(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Salvar " + ex.Message);
+            }
+        }
+
+        public void SAIDAControleAcesso(Pessoas dados)     // capturando dados dos textbox
+        {
+
+
+            try
+            {
+                                
+                dados.DATA1 = DATAATUAL.Text;
+                dados.HORA1 = HORAATUAL.Text;
+                dados.STATUS1 = "DESCANSANDO";
+                dados.Id = Convert.ToInt32(ID.Text);
+                dados.IdSaida1 = Convert.ToInt32(ID_SAIDA.Text);
+               
+
+
+
+                model.SAIDAControleAcesso(dados);
 
             }
             catch (Exception ex)
@@ -242,6 +268,35 @@ namespace SistemaMysql.View
 
         }
 
+        private void btnSAIDA_Click(object sender, EventArgs e)
+        {
+            if (ID.Text == "")
+            {
+                //Tela de erro por não informar a identificação
+                ErroControle_Acesso form = new ErroControle_Acesso();
+                form.Show();
+                return;
+            }
+            if (STATUS.Text == "DESCANSANDO")
+            {
+                MessageBox.Show("O USUÁRIO JÁ SE ENCONTRA FORA DO QUARTEL", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            if (HORA_SAIDA.Text == "")
+            {
+                MessageBox.Show("O USUÁRIO NÃO SE ENCONTRA NO INTERIOR DO QUARTEL", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                EscolhaSaida form = new EscolhaSaida(ID_SAIDA.Text, this);
+                form.Show();
+                return;
+            }
+
+        }
+
         public void CadastrarEntradaVeiculo()
         {
             Pessoas dado = new Pessoas();
@@ -266,6 +321,35 @@ namespace SistemaMysql.View
             ConfirmarEntrada form = new ConfirmarEntrada();
             form.Show();
             ReloadForm();
+        }
+
+        public void CadastrarSaidaVeiculo()
+        {
+
+            //MessageBox.Show(" ATÉ AQUI OK!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Pessoas dado = new Pessoas();
+             try
+             {
+
+                 con.Conectar();
+                 sql = new MySqlCommand("UPDATE acesso SET HORA_SAIDA = @HORA_SAIDA WHERE ID = @ID", con.con);   // comando para editar dados no BD
+                 sql.Parameters.AddWithValue("@ID", ID_SAIDA.Text);
+                 sql.Parameters.AddWithValue("@HORA_SAIDA", HORAATUAL.Text);                
+                 sql.ExecuteNonQuery();
+                 con.FecharConexao();
+
+             }
+             catch (Exception ex)
+             {
+
+                 MessageBox.Show("Erro ao editar" + ex);
+                 con.FecharConexao();
+                 return;
+             }
+             SAIDAControleAcesso(dado);
+             ConfirmarEntrada form = new ConfirmarEntrada();
+             form.Show();
+             ReloadForm();
         }
 
 
@@ -332,6 +416,8 @@ namespace SistemaMysql.View
                 dr = sql.ExecuteReader();
                 dr.Read();
 
+
+
                 ID.Text = dr.GetString(0);
                 NOME.Text = dr.GetString(1);
                 TXBRE.Text = dr.GetString(2);
@@ -378,8 +464,33 @@ namespace SistemaMysql.View
                 MySqlDataReader dr;
                 dr = sql.ExecuteReader();
                 dr.Read();
+                STATUS.Text = dr.GetString(4);               
+                con.FecharConexao();
 
-                STATUS.Text = dr.GetString(4);
+
+                //Pegando o último id com MAX(id)
+                con.Conectar();
+                sql = new MySqlCommand("SELECT MAX(id) from acesso WHERE RE = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
+                dr = sql.ExecuteReader();
+                dr.Read();                
+                ID_SAIDA.Text = dr.GetString(0);
+                
+
+
+
+                con.Conectar();
+                sql = new MySqlCommand("SELECT MAX(HORA_SAIDA) from acesso WHERE RE = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@RE", MySqlDbType.Int32).Value = RE.Text;
+                dr = sql.ExecuteReader();
+                dr.Read();                
+                HORA_SAIDA.Text = dr.GetString(0);
+
+
+
+                con.FecharConexao();
 
 
 
@@ -630,6 +741,8 @@ namespace SistemaMysql.View
         {
 
         }
+
+        
     }
 
 }

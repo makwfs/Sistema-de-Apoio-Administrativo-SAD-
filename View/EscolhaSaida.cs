@@ -15,14 +15,12 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;   // Biblioteca para arrastar tela
-
 namespace SistemaMysql.View
 {
-    public partial class EscolhaEntrada : Form
+    public partial class EscolhaSaida : Form
     {
-       
         ControleAcesso esc; // Construtor para buscar form principal
-        public EscolhaEntrada()
+        public EscolhaSaida()
         {
             InitializeComponent();
         }
@@ -36,7 +34,8 @@ namespace SistemaMysql.View
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-        public EscolhaEntrada(String Valor, ControleAcesso Escolha)
+
+        public EscolhaSaida(String Valor, ControleAcesso Escolha)
         {
             InitializeComponent();
             //RECUPERANDO VALORES DO FORM CONTROLE DE ACESSO            
@@ -44,53 +43,10 @@ namespace SistemaMysql.View
 
         }
 
-
-        private void EscolhaEntrada_Click(object sender, EventArgs e)
+        private void btnSaida_Click(object sender, EventArgs e)
         {
+            esc.CadastrarSaidaVeiculo();
             this.Close();
-        }
-
-        private void Esc(object sender, KeyPressEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void EscolhaEntrada_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void btnEntrada_Click(object sender, EventArgs e)
-        {
-            esc.CadastrarEntradaVeiculo();
-            this.Close();
-            
-        }
-
-        private void EscolhaEntrada_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            esc.CadastrarEntradaaPe();
-            this.Close();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

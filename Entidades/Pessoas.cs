@@ -8,7 +8,7 @@ namespace SistemaMysql.Entidades
 {
     public class Pessoas
     {
-        int id;
+        int id, IdSaida;
         public string Patrimonio, Modelo, Serial, Local, Observacao, PatrimonioPM, pbTmd, SrcFoto, SrcEditarFoto;
         public string placa, prefixo;
         private string nomeControleAcesso, REControleAcesso, POSTOGRADControleAcesso, TXBRGControleAcesso, UNIDADEControleAcesso,
@@ -54,6 +54,6 @@ namespace SistemaMysql.Entidades
         public string DATA1 { get => DATA; set => DATA = value; }
         public string HORA1 { get => HORA; set => HORA = value; }
         public string STATUS1 { get => STATUS; set => STATUS = value; }
-        
+        public int IdSaida1 { get => IdSaida; set => IdSaida = value; }
     }
 }

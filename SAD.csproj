@@ -164,6 +164,12 @@
     <Compile Include="View\EscolhaEntrada.Designer.cs">
       <DependentUpon>EscolhaEntrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EscolhaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EscolhaSaida.Designer.cs">
+      <DependentUpon>EscolhaSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EscolhaEntrada.resx">
       <DependentUpon>EscolhaEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EscolhaSaida.resx">
+      <DependentUpon>EscolhaSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

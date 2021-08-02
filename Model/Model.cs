@@ -280,6 +280,21 @@ namespace SistemaMysql.Model
             }
         }
 
+        public void SAIDAControleAcesso(Pessoas dados)
+        {
+
+            try
+            {
+                dao.SAIDAControleAcesso(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
+
         public void ENTRADAControleAcessoaPe(Pessoas dados)
         {
 
