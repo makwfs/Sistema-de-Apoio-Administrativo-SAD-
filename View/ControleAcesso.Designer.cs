@@ -421,7 +421,7 @@ namespace SistemaMysql.View
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(3, 21);
+            this.label28.Location = new System.Drawing.Point(16, 21);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(26, 17);
             this.label28.TabIndex = 37;
@@ -983,6 +983,7 @@ namespace SistemaMysql.View
             this.STATUS.Size = new System.Drawing.Size(122, 25);
             this.STATUS.TabIndex = 14;
             this.STATUS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS.Visible = false;
             this.STATUS.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // button2
@@ -1082,6 +1083,7 @@ namespace SistemaMysql.View
             this.HORA_SAIDA.Size = new System.Drawing.Size(84, 25);
             this.HORA_SAIDA.TabIndex = 14;
             this.HORA_SAIDA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.HORA_SAIDA.Visible = false;
             this.HORA_SAIDA.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // label15
@@ -1106,6 +1108,7 @@ namespace SistemaMysql.View
             this.ID_SAIDA.Size = new System.Drawing.Size(84, 25);
             this.ID_SAIDA.TabIndex = 14;
             this.ID_SAIDA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ID_SAIDA.Visible = false;
             this.ID_SAIDA.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // label18

@@ -35,9 +35,47 @@ namespace SistemaMysql.View
             }
         }
 
+        public void ListarControleVTR()
+        {
+            try
+            {
+                grid.DataSource = model.ListarControleVTR(); // alimentar o grid 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro com os dados" + ex.Message);
+
+            }
+        }
+
         private void ControleAcessoPesquisar_Load(object sender, EventArgs e)
         {
             ListarControle();
+        }      
+       
+
+        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
+
+        }
+
+        private void cmbTipo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbTipo.Text == "ACESSO PESSOAS")
+            {
+                ListarControle();
+            }
+            if (cmbTipo.Text == "ACESSO VTR")
+            {
+                ListarControleVTR();
+            }
+            else if (cmbTipo.Text == "TODOS")
+            {
+                ListarControleVTR();
+            }
         }
     }
 

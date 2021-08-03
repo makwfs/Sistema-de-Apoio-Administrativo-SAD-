@@ -13,7 +13,7 @@ namespace SistemaMysql.Entidades
         public string placa, prefixo;
         private string nomeControleAcesso, REControleAcesso, POSTOGRADControleAcesso, TXBRGControleAcesso, UNIDADEControleAcesso,
             CIAControleAcesso, SECAOControleAcesso, NCARTAOontroleAcesso, VENCIMENTOControleAcesso, MARCAControleAcesso,
-            MODELOControleAcesso, EMPLACAMENTOControleAcesso, CIDADEControleAcesso, CORControleAcesso, DATA, HORA, STATUS;
+            MODELOControleAcesso, EMPLACAMENTOControleAcesso, CIDADEControleAcesso, CORControleAcesso, DATA, HORA, STATUS, MOTORISTA;
 
         
 
@@ -55,5 +55,6 @@ namespace SistemaMysql.Entidades
         public string HORA1 { get => HORA; set => HORA = value; }
         public string STATUS1 { get => STATUS; set => STATUS = value; }
         public int IdSaida1 { get => IdSaida; set => IdSaida = value; }
+        public string MOTORISTA1 { get => MOTORISTA; set => MOTORISTA = value; }
     }
 }

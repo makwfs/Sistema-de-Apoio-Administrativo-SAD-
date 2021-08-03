@@ -48,5 +48,11 @@ namespace SistemaMysql.View
             esc.CadastrarSaidaVeiculo();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            esc.CadastrarSaidaaPe();
+            this.Close();
+        }
     }
 }

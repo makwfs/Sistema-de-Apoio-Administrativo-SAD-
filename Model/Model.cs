@@ -54,6 +54,23 @@ namespace SistemaMysql.Model
             }
         }
 
+        public DataTable ListarControleVTR()
+        {
+
+            try                                       // Utilizar o try pra caso ocorra o erro ele retorne
+            {
+
+                DataTable dt = new DataTable();
+                dt = dao.ListarControleVTR();
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public DataTable ListarTmd()
         {
 
@@ -301,6 +318,36 @@ namespace SistemaMysql.Model
             try
             {
                 dao.ENTRADAControleAcessoaPe(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
+
+        public void ENTRADAControleAcessoVTR(Pessoas dados)
+        {
+
+            try
+            {
+                dao.ENTRADAControleAcessoVTR(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao salvar" + ex);
+            }
+        }
+
+        public void SAIDAControleAcessoaPe(Pessoas dados)
+        {
+
+            try
+            {
+                dao.SAIDAControleAcessoaPe(dados);
 
             }
             catch (Exception ex)

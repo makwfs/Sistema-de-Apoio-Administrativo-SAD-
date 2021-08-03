@@ -216,9 +216,6 @@ namespace SistemaMysql.View
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
-
-
             if (cmbTipo.Text== "TMD")
             {
 

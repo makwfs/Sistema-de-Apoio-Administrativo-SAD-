@@ -141,6 +141,36 @@ namespace SistemaMysql.View
             }
         }
 
+        public void ENTRADAControleAcessoVTR(Pessoas dados)     // capturando dados dos textbox
+        {
+
+
+            try
+            {
+
+                dados.prefixo = PREFIXOVTR.Text;
+                dados.MOTORISTA1 = MOTORISTAVTR.Text;
+                dados.MARCAControleAcesso1 = MARCAVTR.Text;
+                dados.MODELOControleAcesso1 = MODELOVTR.Text;
+                dados.EMPLACAMENTOControleAcesso1 = PLACAVTR.Text;
+                dados.CIDADEControleAcesso1 = CIDADEVTR.Text;
+                dados.CORControleAcesso1 = CORVTR.Text;
+                dados.DATA1 = DATAATUAL.Text;
+                dados.HORA1 = HORAATUAL.Text;
+                dados.Id = Convert.ToInt32(ID.Text);
+
+
+
+                model.ENTRADAControleAcessoVTR(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Salvar " + ex.Message);
+            }
+        }
+
         public void SAIDAControleAcesso(Pessoas dados)     // capturando dados dos textbox
         {
 
@@ -158,6 +188,39 @@ namespace SistemaMysql.View
 
 
                 model.SAIDAControleAcesso(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Salvar " + ex.Message);
+            }
+        }
+
+        public void SAIDAControleAcessoaPe(Pessoas dados)     // capturando dados dos textbox
+        {
+
+
+            try
+            {
+                
+                dados.NCARTAOontroleAcesso1 = " A PÉ ";
+                dados.VENCIMENTOControleAcesso1 = " A PÉ ";
+                dados.MARCAControleAcesso1 = " A PÉ ";
+                dados.MODELOControleAcesso1 = " A PÉ ";
+                dados.EMPLACAMENTOControleAcesso1 = " A PÉ ";
+                dados.CIDADEControleAcesso1 = " A PÉ ";
+                dados.CORControleAcesso1 = " A PÉ ";
+                dados.DATA1 = DATAATUAL.Text;
+                dados.HORA1 = HORAATUAL.Text;
+                dados.STATUS1 = "DESCANSANDO";
+                dados.Id = Convert.ToInt32(ID.Text);
+                dados.IdSaida1 = Convert.ToInt32(ID_SAIDA.Text);
+
+
+
+
+                model.SAIDAControleAcessoaPe(dados);
 
             }
             catch (Exception ex)
@@ -224,7 +287,19 @@ namespace SistemaMysql.View
                 ErroEntradaControleAcesso form = new ErroEntradaControleAcesso(ID.Text,this);      
                 form.Show();                
                 return;
-            }            
+            }
+            if(PREFIXO.Text != "")
+            {
+                if(MOTORISTAVTR.Text == "")
+                {
+                    MessageBox.Show("Informe o Motorista da Viatura!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                CadastrarEntradaVTR();
+                ReloadForm();
+
+                //MessageBox.Show(" Até aqui OK!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 Pessoas dado = new Pessoas();
@@ -279,7 +354,9 @@ namespace SistemaMysql.View
             }
             if (STATUS.Text == "DESCANSANDO")
             {
-                MessageBox.Show("O USUÁRIO JÁ SE ENCONTRA FORA DO QUARTEL", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("O USUÁRIO JÁ SE ENCONTRA FORA DO QUARTEL", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ErroSaida form = new ErroSaida();
+                form.Show();
                 return;
 
             }
@@ -296,6 +373,33 @@ namespace SistemaMysql.View
             }
 
         }
+
+        public void CadastrarEntradaVTR()
+        {
+            Pessoas dado = new Pessoas();
+            try
+            {
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
+                sql.Parameters.AddWithValue("@ID", ID.Text);
+                sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "TRABALHANDO");
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao editar" + ex);
+                con.FecharConexao();
+            }
+            ENTRADAControleAcessoVTR(dado);
+            ConfirmarEntrada form = new ConfirmarEntrada();
+            form.Show();
+            ReloadForm();
+        }
+
 
         public void CadastrarEntradaVeiculo()
         {
@@ -347,7 +451,7 @@ namespace SistemaMysql.View
                  return;
              }
              SAIDAControleAcesso(dado);
-             ConfirmarEntrada form = new ConfirmarEntrada();
+             ConfirmarSaida form = new ConfirmarSaida();
              form.Show();
              ReloadForm();
         }
@@ -375,6 +479,32 @@ namespace SistemaMysql.View
             }
             ENTRADAControleAcessoaPe(dado);
             ConfirmarEntrada form = new ConfirmarEntrada();
+            form.Show();
+            ReloadForm();
+        }
+
+        public void CadastrarSaidaaPe()
+        {
+            Pessoas dado = new Pessoas();
+            try
+            {
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS WHERE ID = @ID", con.con);   // comando para editar dados no BD
+                sql.Parameters.AddWithValue("@ID", ID.Text);
+                sql.Parameters.AddWithValue("@STATUS", STATUS.Text = "DESCANSANDO");
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao editar" + ex);
+                con.FecharConexao();
+            }
+            SAIDAControleAcessoaPe(dado);
+            ConfirmarSaida form = new ConfirmarSaida();
             form.Show();
             ReloadForm();
         }
@@ -532,7 +662,6 @@ namespace SistemaMysql.View
                 CIDADE.Text = dr.GetString(13);
                 COR.Text = dr.GetString(14);
 
-
             }
             catch (Exception)
             {
@@ -593,6 +722,7 @@ namespace SistemaMysql.View
                 dr = sql.ExecuteReader();
                 dr.Read();
 
+                ID.Text = dr.GetString(0);
                 PREFIXOVTR.Text = dr.GetString(8);
                 MARCAVTR.Text = dr.GetString(3);
                 MODELOVTR.Text = dr.GetString(2);
@@ -707,6 +837,8 @@ namespace SistemaMysql.View
             CIDADE.Text = "";
             COR.Text = "";
             STATUS.Text = "";
+            ID_SAIDA.Text = "";
+            HORA_SAIDA.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
         }
 
@@ -733,6 +865,8 @@ namespace SistemaMysql.View
             CIDADE.Text = "";
             COR.Text = "";
             STATUS.Text = "";
+            ID_SAIDA.Text = "";
+            HORA_SAIDA.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
 
         }

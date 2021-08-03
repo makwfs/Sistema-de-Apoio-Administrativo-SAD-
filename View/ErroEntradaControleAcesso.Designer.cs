@@ -45,7 +45,7 @@ namespace SistemaMysql.View
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(39, 233);
+            this.label2.Location = new System.Drawing.Point(25, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(612, 31);
             this.label2.TabIndex = 4;
@@ -67,11 +67,11 @@ namespace SistemaMysql.View
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(124, 279);
+            this.label3.Location = new System.Drawing.Point(67, 279);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(407, 31);
+            this.label3.Size = new System.Drawing.Size(529, 31);
             this.label3.TabIndex = 4;
-            this.label3.Text = "DESEJA CADASTRAR SAÍDA ?";
+            this.label3.Text = "CADASTRE A SAÍDA PARA CONTINUAR";
             // 
             // btnEntrada
             // 
@@ -82,6 +82,7 @@ namespace SistemaMysql.View
             this.btnEntrada.TabIndex = 6;
             this.btnEntrada.Text = "SIM";
             this.btnEntrada.UseVisualStyleBackColor = false;
+            this.btnEntrada.Visible = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
             // 
             // SAÍDA
@@ -93,6 +94,7 @@ namespace SistemaMysql.View
             this.SAÍDA.TabIndex = 6;
             this.SAÍDA.Text = "NÃO";
             this.SAÍDA.UseVisualStyleBackColor = false;
+            this.SAÍDA.Visible = false;
             this.SAÍDA.Click += new System.EventHandler(this.button1_Click);
             // 
             // STATUS
@@ -128,7 +130,7 @@ namespace SistemaMysql.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(684, 402);
+            this.ClientSize = new System.Drawing.Size(685, 400);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.STATUS);
             this.Controls.Add(this.SAÍDA);
@@ -139,6 +141,7 @@ namespace SistemaMysql.View
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ErroEntradaControleAcesso";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ErroEntradaControleAcesso";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ErroEntradaControleAcesso_FormClosed);

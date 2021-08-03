@@ -110,6 +110,12 @@
     <Compile Include="View\ConfirmarEntrada.Designer.cs">
       <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConfirmarSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfirmarSaida.Designer.cs">
+      <DependentUpon>ConfirmarSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ControleAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="View\ErroIdentificacaoControle Acesso.Designer.cs">
       <DependentUpon>ErroIdentificacaoControle Acesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ErroSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ErroSaida.Designer.cs">
+      <DependentUpon>ErroSaida.cs</DependentUpon>
     </Compile>
     <Compile Include="View\EscolhaEntrada.cs">
       <SubType>Form</SubType>
@@ -222,6 +234,9 @@
     <EmbeddedResource Include="View\ConfirmarEntrada.resx">
       <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ConfirmarSaida.resx">
+      <DependentUpon>ConfirmarSaida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ControleAcesso.resx">
       <DependentUpon>ControleAcesso.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ErroIdentificacaoControle Acesso.resx">
       <DependentUpon>ErroIdentificacaoControle Acesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ErroSaida.resx">
+      <DependentUpon>ErroSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EscolhaEntrada.resx">
       <DependentUpon>EscolhaEntrada.cs</DependentUpon>

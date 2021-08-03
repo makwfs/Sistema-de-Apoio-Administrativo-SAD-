@@ -34,15 +34,23 @@ namespace SistemaMysql.View
             //RECUPERANDO VALORES DO FORM CONTROLE DE ACESSO
             ID.Text = Valor;
             rst = Reset; // Construtor para limpar campos do form principal
-        }       
+        }
 
-
+        //FECHAR FORM AO APERTAR ESC
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Escape))
+            {
+                this.Close();
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
 
 
         private void ErroEntradaControleAcesso_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnEntrada_Click(object sender, EventArgs e)

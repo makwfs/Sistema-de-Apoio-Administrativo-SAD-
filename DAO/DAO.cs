@@ -48,6 +48,7 @@ namespace SistemaMysql.DAO
             }
         }
 
+       
 
         public DataTable ListarTmd()
         {
@@ -226,8 +227,28 @@ namespace SistemaMysql.DAO
             }
         }
 
-         
-        
+        public DataTable ListarControleVTR()
+        {
+
+
+            try                                                                                                               // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from acessovtr", con.con);                                                    // comando para buscar dados no BD
+
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
 
         public void CadastroTmd(Pessoas dados)
@@ -507,6 +528,44 @@ namespace SistemaMysql.DAO
             }
         }
 
+        public void SAIDAControleAcessoaPe(Pessoas dados)
+        {
+
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE acesso SET CARTÃO = @CARTÃO, VENCIMENTO = @VENCIMENTO, MARCA =  @MARCA, MODELO =  @MODELO, EMPLACAMENTO = @EMPLACAMENTO, CIDADE =  @CIDADE, COR = @COR, HORA_SAIDA =  @HORA_SAIDA, DATA_SAIDA = @DATA_SAIDA  WHERE id = @id", con.con);
+
+                
+                sql.Parameters.AddWithValue("@CARTÃO", dados.NCARTAOontroleAcesso1);
+                sql.Parameters.AddWithValue("@VENCIMENTO", dados.VENCIMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@MARCA", dados.MARCAControleAcesso1);
+                sql.Parameters.AddWithValue("@MODELO", dados.MODELOControleAcesso1);
+                sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
+                sql.Parameters.AddWithValue("@ID", dados.IdSaida1);
+                sql.Parameters.AddWithValue("@DATA_SAIDA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA_SAIDA", dados.HORA1);
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE status SET STATUS = @STATUS  WHERE id = @id", con.con);
+                sql.Parameters.AddWithValue("@ID", dados.Id);
+                sql.Parameters.AddWithValue("@STATUS", dados.STATUS1);
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
 
 
         public void ENTRADAControleAcesso(Pessoas dados)
@@ -538,6 +597,37 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@HORA_ENTRADA", dados.HORA1);
                 sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
                 sql.ExecuteNonQuery();                
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar" + ex);
+                //MessageBox.Show("O número de patrimônio inserido já esta cadastrado! Verifique o numéro e tente novamente!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.FecharConexao();
+            }
+        }
+
+        public void ENTRADAControleAcessoVTR(Pessoas dados)
+        {
+
+            try
+            {
+
+
+                con.Conectar();
+                sql = new MySqlCommand("INSERT INTO acessovtr ( MOTORISTA, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA, fk_id_ES)" +
+                    " values ( @MOTORISTA, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
+
+                sql.Parameters.AddWithValue("@MOTORISTA", dados.MOTORISTA1);                
+                sql.Parameters.AddWithValue("@MARCA", dados.MARCAControleAcesso1);
+                sql.Parameters.AddWithValue("@MODELO", dados.MODELOControleAcesso1);
+                sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
+                sql.Parameters.AddWithValue("@CIDADE", dados.CIDADEControleAcesso1);
+                sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
+                sql.Parameters.AddWithValue("@DATA_ENTRADA", dados.DATA1);
+                sql.Parameters.AddWithValue("@HORA_ENTRADA", dados.HORA1);
+                sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
+                sql.ExecuteNonQuery();
                 con.FecharConexao();
             }
             catch (Exception ex)

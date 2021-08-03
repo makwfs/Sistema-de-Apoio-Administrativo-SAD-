@@ -30,26 +30,27 @@ namespace SistemaMysql.View
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleAcessoPesquisar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.grid = new System.Windows.Forms.DataGridView();
             this.FOTO = new System.Windows.Forms.Label();
             this.PREFIXO = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.CARTAO = new System.Windows.Forms.Label();
-            this.CBCARTAO = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.RE = new System.Windows.Forms.TextBox();
             this.RG = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,7 +63,7 @@ namespace SistemaMysql.View
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(681, 8);
+            this.label16.Location = new System.Drawing.Point(809, 8);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(153, 37);
             this.label16.TabIndex = 6;
@@ -76,13 +77,13 @@ namespace SistemaMysql.View
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1515, 50);
+            this.panel2.Size = new System.Drawing.Size(1771, 50);
             this.panel2.TabIndex = 40;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1466, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1721, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(15, 15);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -92,7 +93,7 @@ namespace SistemaMysql.View
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1487, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1742, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(15, 15);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,25 +102,47 @@ namespace SistemaMysql.View
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbTipo);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.grid);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.FOTO);
             this.groupBox2.Controls.Add(this.PREFIXO);
             this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.CARTAO);
-            this.groupBox2.Controls.Add(this.CBCARTAO);
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.RE);
             this.groupBox2.Controls.Add(this.RG);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(136)))), ((int)(((byte)(253)))));
             this.groupBox2.Location = new System.Drawing.Point(22, 56);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1469, 650);
+            this.groupBox2.Size = new System.Drawing.Size(1735, 650);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PESQUISAR";
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "ACESSO PESSOAS",
+            "ACESSO VTR"});
+            this.cmbTipo.Location = new System.Drawing.Point(297, 44);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(224, 25);
+            this.cmbTipo.TabIndex = 69;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged_1);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1157, 44);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(192, 25);
+            this.dateTimePicker1.TabIndex = 68;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 6, 21, 0, 0, 0, 0);
             // 
             // grid
             // 
@@ -130,44 +153,44 @@ namespace SistemaMysql.View
             this.grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.grid.ColumnHeadersHeight = 30;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(136)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(136)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid.DefaultCellStyle = dataGridViewCellStyle10;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.GridColor = System.Drawing.Color.MidnightBlue;
             this.grid.Location = new System.Drawing.Point(8, 94);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(94)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            this.grid.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(94)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            this.grid.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(1454, 344);
+            this.grid.Size = new System.Drawing.Size(1721, 533);
             this.grid.TabIndex = 67;
             // 
             // FOTO
@@ -176,7 +199,7 @@ namespace SistemaMysql.View
             this.FOTO.BackColor = System.Drawing.Color.Transparent;
             this.FOTO.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FOTO.ForeColor = System.Drawing.Color.White;
-            this.FOTO.Location = new System.Drawing.Point(1037, 25);
+            this.FOTO.Location = new System.Drawing.Point(1017, 24);
             this.FOTO.Name = "FOTO";
             this.FOTO.Size = new System.Drawing.Size(65, 17);
             this.FOTO.TabIndex = 66;
@@ -184,7 +207,7 @@ namespace SistemaMysql.View
             // 
             // PREFIXO
             // 
-            this.PREFIXO.Location = new System.Drawing.Point(967, 45);
+            this.PREFIXO.Location = new System.Drawing.Point(947, 44);
             this.PREFIXO.Name = "PREFIXO";
             this.PREFIXO.Size = new System.Drawing.Size(204, 25);
             this.PREFIXO.TabIndex = 4;
@@ -200,32 +223,13 @@ namespace SistemaMysql.View
             this.label24.Size = new System.Drawing.Size(0, 17);
             this.label24.TabIndex = 55;
             // 
-            // CARTAO
-            // 
-            this.CARTAO.AutoSize = true;
-            this.CARTAO.BackColor = System.Drawing.Color.Transparent;
-            this.CARTAO.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CARTAO.ForeColor = System.Drawing.Color.White;
-            this.CARTAO.Location = new System.Drawing.Point(800, 25);
-            this.CARTAO.Name = "CARTAO";
-            this.CARTAO.Size = new System.Drawing.Size(59, 17);
-            this.CARTAO.TabIndex = 52;
-            this.CARTAO.Text = "CARTÃO";
-            // 
-            // CBCARTAO
-            // 
-            this.CBCARTAO.Location = new System.Drawing.Point(725, 45);
-            this.CBCARTAO.Name = "CBCARTAO";
-            this.CBCARTAO.Size = new System.Drawing.Size(199, 25);
-            this.CBCARTAO.TabIndex = 3;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(552, 25);
+            this.label26.Location = new System.Drawing.Point(827, 24);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(25, 17);
             this.label26.TabIndex = 50;
@@ -233,17 +237,29 @@ namespace SistemaMysql.View
             // 
             // RE
             // 
-            this.RE.Location = new System.Drawing.Point(191, 45);
+            this.RE.Location = new System.Drawing.Point(527, 44);
             this.RE.Name = "RE";
             this.RE.Size = new System.Drawing.Size(204, 25);
             this.RE.TabIndex = 1;
             // 
             // RG
             // 
-            this.RG.Location = new System.Drawing.Point(462, 45);
+            this.RG.Location = new System.Drawing.Point(737, 44);
             this.RG.Name = "RG";
             this.RG.Size = new System.Drawing.Size(204, 25);
             this.RG.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(390, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "TIPO";
             // 
             // label30
             // 
@@ -251,27 +267,31 @@ namespace SistemaMysql.View
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(282, 25);
+            this.label30.Location = new System.Drawing.Point(618, 24);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(23, 17);
             this.label30.TabIndex = 1;
             this.label30.Text = "RE";
             // 
-            // dateTimePicker1
+            // label2
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1354, 42);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(105, 25);
-            this.dateTimePicker1.TabIndex = 68;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 6, 21, 0, 0, 0, 0);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1232, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "DATA";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ControleAcessoPesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1514, 715);
+            this.ClientSize = new System.Drawing.Size(1769, 715);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.Name = "ControleAcessoPesquisar";
@@ -298,13 +318,14 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label FOTO;
         private System.Windows.Forms.TextBox PREFIXO;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label CARTAO;
-        private System.Windows.Forms.TextBox CBCARTAO;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox RE;
         private System.Windows.Forms.TextBox RG;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
