@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaMysql.View
 {
-    partial class ErroSaida
+    partial class ErroCartao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,57 +29,57 @@ namespace SistemaMysql.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(14, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(631, 31);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "O USUÁRIO NÃO SE ENCONTRA NO INTERIOR ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(249, 210);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 31);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "ATENÇÃO !";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaMysql.Properties.Resources.police_line;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(226, 293);
+            this.label3.Location = new System.Drawing.Point(91, 265);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 31);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "DO QUARTEL !";
+            this.label3.Size = new System.Drawing.Size(487, 31);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "PROCURE A SEÇÃO RESPONSÁVEL";
             // 
-            // ErroSaida
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(54, 218);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(561, 31);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "O CARTÃO DO USUÁRIO ESTÁ VENCIDO !";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(254, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 31);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "ATENÇÃO !";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaMysql.Properties.Resources.police_line;
+            this.pictureBox1.Location = new System.Drawing.Point(204, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(259, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ErroCartao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,11 +90,11 @@ namespace SistemaMysql.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ErroSaida";
+            this.Name = "ErroCartao";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ErroSaida";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ErroSaida_KeyPress);
+            this.Text = "ErroCartao";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ErroCartao_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,10 +102,9 @@ namespace SistemaMysql.View
         }
 
         #endregion
-
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
     }
 }

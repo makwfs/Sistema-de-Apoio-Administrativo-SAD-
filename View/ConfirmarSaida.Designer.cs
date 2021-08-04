@@ -72,7 +72,7 @@ namespace SistemaMysql.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(97)))), ((int)(((byte)(117)))));
             this.ClientSize = new System.Drawing.Size(608, 277);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);

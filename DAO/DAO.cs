@@ -212,7 +212,8 @@ namespace SistemaMysql.DAO
             try                                                                                                               // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from acesso", con.con);                                                    // comando para buscar dados no BD
+                sql = new MySqlCommand("select id, POSTO, NOME, RE, RG, UNIDADE, CIA, SEÇÃO," +
+                    "CARTÃO, VENCIMENTO, MARCA, MODELO, COR, EMPLACAMENTO, CIDADE, HORA_ENTRADA, HORA_SAIDA, DATA_ENTRADA, DATA_SAIDA,STATUS_CARTÃO from acesso", con.con); // comando para buscar dados no BD
 
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
@@ -576,8 +577,8 @@ namespace SistemaMysql.DAO
                
 
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA, fk_id_ES)" +
-                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
+                sql = new MySqlCommand("INSERT INTO acesso ( NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA,STATUS_CARTÃO, fk_id_ES)" +
+                    " values ( @NOME, @RE, @POSTO, @RG, @UNIDADE, @CIA, @SEÇÃO, @CARTÃO, @VENCIMENTO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA,@STATUS_CARTÃO, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
 
                 sql.Parameters.AddWithValue("@NOME", dados.NomeControleAcesso);
                 sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1);
@@ -595,6 +596,7 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@COR", dados.CORControleAcesso1);
                 sql.Parameters.AddWithValue("@DATA_ENTRADA", dados.DATA1);
                 sql.Parameters.AddWithValue("@HORA_ENTRADA", dados.HORA1);
+                sql.Parameters.AddWithValue("@STATUS_CARTÃO", dados.STATUS_CARTAO1);
                 sql.Parameters.AddWithValue("@fk_id_ES", dados.Id);
                 sql.ExecuteNonQuery();                
                 con.FecharConexao();

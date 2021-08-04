@@ -142,3 +142,4 @@ C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\S
 C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.EscolhaSaida.resources
 C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ErroSaida.resources
 C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ConfirmarSaida.resources
+C:\Users\PMESP\Documents\GitHub\Sistema-de-Apoio-Administrativo-SAD-\obj\Debug\SistemaMysql.View.ErroCartao.resources

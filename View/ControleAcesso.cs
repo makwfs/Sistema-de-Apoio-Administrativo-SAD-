@@ -127,6 +127,7 @@ namespace SistemaMysql.View
                 dados.CORControleAcesso1 = COR.Text;
                 dados.DATA1 = DATAATUAL.Text;
                 dados.HORA1 = HORAATUAL.Text;
+                dados.STATUS_CARTAO1 = StatusCartao.Text;
                 dados.Id = Convert.ToInt32(ID.Text);
                 
 
@@ -563,7 +564,10 @@ namespace SistemaMysql.View
                 EMPLACAMENTO.Text = dr.GetString(12);
                 CIDADE.Text = dr.GetString(13);
                 COR.Text = dr.GetString(14);
-                
+
+                              
+
+
                 //RECUPERANDO IMAGEM DO BD
                 byte[] img = (byte[])(dr[15]);
 
@@ -577,6 +581,19 @@ namespace SistemaMysql.View
                     PCFOTO.Image = System.Drawing.Image.FromStream(ms);
                 }
 
+
+                //Comparando se o Cartão está vencido//
+                DateTime data1 = Convert.ToDateTime(DATAVENCIMENTO.Text);
+                DateTime data2 = Convert.ToDateTime(DATAATUAL.Text);
+                if (data1 < data2)
+                {
+                    StatusCartao.Text = "VENCIDO";
+                    DATAVENCIMENTO.BackColor = Color.Red; // MUDA A COR DO CAMPO
+                    ErroCartao form = new ErroCartao();
+                    form.Show();
+                    //MessageBox.Show("CARTÃO VENCIDO, PROCURE O P2 DA SUA OPM!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
 
             }
             catch (Exception)
@@ -637,7 +654,7 @@ namespace SistemaMysql.View
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
-                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM cadastroguarda WHERE RG = ?", con.con);
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, FOTO FROM cadastroguarda WHERE RG = ?", con.con);
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@RG", MySqlDbType.Int32).Value = RG.Text;
                 sql.CommandType = CommandType.Text;
@@ -662,6 +679,32 @@ namespace SistemaMysql.View
                 CIDADE.Text = dr.GetString(13);
                 COR.Text = dr.GetString(14);
 
+                //RECUPERANDO IMAGEM DO BD
+                byte[] img = (byte[])(dr[15]);
+
+
+                PCFOTO.Image = SistemaMysql.Properties.Resources.police;
+                if (img == null)
+                    PCFOTO.Image = null;
+                else
+                {
+                    MemoryStream ms = new MemoryStream(img);
+                    PCFOTO.Image = System.Drawing.Image.FromStream(ms);
+                }
+
+
+                //Comparando se o Cartão está vencido//
+                DateTime data1 = Convert.ToDateTime(DATAVENCIMENTO.Text);
+                DateTime data2 = Convert.ToDateTime(DATAATUAL.Text);
+                if (data1 < data2)
+                {
+                    DATAVENCIMENTO.BackColor = Color.Red; // MUDA A COR DO CAMPO
+                    ErroCartao form = new ErroCartao();
+                    form.Show();
+                    //MessageBox.Show("CARTÃO VENCIDO, PROCURE O P2 DA SUA OPM!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
+
             }
             catch (Exception)
             {
@@ -675,7 +718,7 @@ namespace SistemaMysql.View
             {
                 con.Conectar();
                 sql = new MySqlCommand("SELECT id,NOME, RE, POSTO, RG, UNIDADE, CIA, SEÇÃO, CARTÃO, VENCIMENTO," +
-                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR FROM cadastroguarda WHERE CARTÃO = ?", con.con);
+                    "MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, FOTO FROM cadastroguarda WHERE CARTÃO = ?", con.con);
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@CARTÃO", MySqlDbType.Int32).Value = CBCARTAO.Text;
                 sql.CommandType = CommandType.Text;
@@ -699,6 +742,32 @@ namespace SistemaMysql.View
                 EMPLACAMENTO.Text = dr.GetString(12);
                 CIDADE.Text = dr.GetString(13);
                 COR.Text = dr.GetString(14);
+
+                //RECUPERANDO IMAGEM DO BD
+                byte[] img = (byte[])(dr[15]);
+
+
+                PCFOTO.Image = SistemaMysql.Properties.Resources.police;
+                if (img == null)
+                    PCFOTO.Image = null;
+                else
+                {
+                    MemoryStream ms = new MemoryStream(img);
+                    PCFOTO.Image = System.Drawing.Image.FromStream(ms);
+                }
+
+
+                //Comparando se o Cartão está vencido//
+                DateTime data1 = Convert.ToDateTime(DATAVENCIMENTO.Text);
+                DateTime data2 = Convert.ToDateTime(DATAATUAL.Text);
+                if (data1 < data2)
+                {
+                    DATAVENCIMENTO.BackColor = Color.Red; // MUDA A COR DO CAMPO
+                    ErroCartao form = new ErroCartao();
+                    form.Show();
+                    //MessageBox.Show("CARTÃO VENCIDO, PROCURE O P2 DA SUA OPM!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
 
 
             }
@@ -839,7 +908,9 @@ namespace SistemaMysql.View
             STATUS.Text = "";
             ID_SAIDA.Text = "";
             HORA_SAIDA.Text = "";
+            StatusCartao.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
+            DATAVENCIMENTO.BackColor = Color.White; // MUDA A COR DO CAMPO
         }
 
         public void ReloadForm()
@@ -867,7 +938,9 @@ namespace SistemaMysql.View
             STATUS.Text = "";
             ID_SAIDA.Text = "";
             HORA_SAIDA.Text = "";
+            StatusCartao.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
+            DATAVENCIMENTO.BackColor = Color.White; // MUDA A COR DO CAMPO
 
         }
 

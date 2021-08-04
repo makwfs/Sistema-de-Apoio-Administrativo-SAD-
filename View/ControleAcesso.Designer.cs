@@ -117,6 +117,8 @@ namespace SistemaMysql.View
             this.label15 = new System.Windows.Forms.Label();
             this.ID_SAIDA = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.StatusCartao = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1078,7 +1080,7 @@ namespace SistemaMysql.View
             // 
             this.HORA_SAIDA.Enabled = false;
             this.HORA_SAIDA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORA_SAIDA.Location = new System.Drawing.Point(174, 701);
+            this.HORA_SAIDA.Location = new System.Drawing.Point(150, 702);
             this.HORA_SAIDA.Name = "HORA_SAIDA";
             this.HORA_SAIDA.Size = new System.Drawing.Size(84, 25);
             this.HORA_SAIDA.TabIndex = 14;
@@ -1092,7 +1094,7 @@ namespace SistemaMysql.View
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(171, 681);
+            this.label15.Location = new System.Drawing.Point(147, 682);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 17);
             this.label15.TabIndex = 69;
@@ -1103,7 +1105,7 @@ namespace SistemaMysql.View
             // 
             this.ID_SAIDA.Enabled = false;
             this.ID_SAIDA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_SAIDA.Location = new System.Drawing.Point(268, 702);
+            this.ID_SAIDA.Location = new System.Drawing.Point(240, 702);
             this.ID_SAIDA.Name = "ID_SAIDA";
             this.ID_SAIDA.Size = new System.Drawing.Size(84, 25);
             this.ID_SAIDA.TabIndex = 14;
@@ -1117,12 +1119,36 @@ namespace SistemaMysql.View
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(276, 681);
+            this.label18.Location = new System.Drawing.Point(248, 681);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(66, 17);
             this.label18.TabIndex = 69;
             this.label18.Text = "ID_SAIDA";
             this.label18.Visible = false;
+            // 
+            // StatusCartao
+            // 
+            this.StatusCartao.Enabled = false;
+            this.StatusCartao.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusCartao.Location = new System.Drawing.Point(330, 702);
+            this.StatusCartao.Name = "StatusCartao";
+            this.StatusCartao.Size = new System.Drawing.Size(84, 25);
+            this.StatusCartao.TabIndex = 14;
+            this.StatusCartao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StatusCartao.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(320, 681);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(110, 17);
+            this.label25.TabIndex = 69;
+            this.label25.Text = "STATUS_CARTAO";
+            this.label25.Visible = false;
             // 
             // ControleAcesso
             // 
@@ -1135,6 +1161,7 @@ namespace SistemaMysql.View
             this.Controls.Add(this.button2);
             this.Controls.Add(this.HORAATUAL);
             this.Controls.Add(this.DATAATUAL);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -1148,6 +1175,7 @@ namespace SistemaMysql.View
             this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.btnSAIDA);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.StatusCartao);
             this.Controls.Add(this.ID_SAIDA);
             this.Controls.Add(this.HORA_SAIDA);
             this.Controls.Add(this.STATUS);
@@ -1275,5 +1303,7 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox ID_SAIDA;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox StatusCartao;
+        private System.Windows.Forms.Label label25;
     }
 }

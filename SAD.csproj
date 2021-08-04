@@ -152,6 +152,12 @@
     <Compile Include="View\EditarViatura.Designer.cs">
       <DependentUpon>EditarViatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ErroCartao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ErroCartao.Designer.cs">
+      <DependentUpon>ErroCartao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ErroEntradaControleAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarViatura.resx">
       <DependentUpon>EditarViatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ErroCartao.resx">
+      <DependentUpon>ErroCartao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ErroEntradaControleAcesso.resx">
       <DependentUpon>ErroEntradaControleAcesso.cs</DependentUpon>
