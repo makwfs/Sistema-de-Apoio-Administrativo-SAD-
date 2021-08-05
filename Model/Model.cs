@@ -611,5 +611,50 @@ namespace SistemaMysql.Model
             }
         }
 
+        public object PesquisarRE(Pessoas dados)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = dao.PesquisarRE(dados);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public object PesquisarRG(Pessoas dados)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = dao.PesquisarRG(dados);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public object PesquisarVTR(Pessoas dados)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = dao.PesquisarVTR(dados);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

@@ -614,13 +614,14 @@ namespace SistemaMysql.DAO
 
             try
             {
-
+                
 
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO acessovtr ( MOTORISTA, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA, fk_id_ES)" +
-                    " values ( @MOTORISTA, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
+                sql = new MySqlCommand("INSERT INTO acessovtr ( MOTORISTA, PREFIXO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA, fk_id_ES)" +
+                    " values ( @MOTORISTA, @PREFIXO, @MARCA, @MODELO, @EMPLACAMENTO, @CIDADE, @COR, @DATA_ENTRADA, @HORA_ENTRADA, @fk_id_ES )", con.con);  // inclusão de dados no BD pessoa
 
-                sql.Parameters.AddWithValue("@MOTORISTA", dados.MOTORISTA1);                
+                sql.Parameters.AddWithValue("@MOTORISTA", dados.MOTORISTA1);
+                sql.Parameters.AddWithValue("@PREFIXO", dados.Prefixo);
                 sql.Parameters.AddWithValue("@MARCA", dados.MARCAControleAcesso1);
                 sql.Parameters.AddWithValue("@MODELO", dados.MODELOControleAcesso1);
                 sql.Parameters.AddWithValue("@EMPLACAMENTO", dados.EMPLACAMENTOControleAcesso1);
@@ -798,6 +799,68 @@ namespace SistemaMysql.DAO
                 throw;
             }
         }
+
+        public DataTable PesquisarRE(Pessoas dados)
+        {
+            try                                                                                                                // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from acesso where  RE LIKE @RE", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+                sql.Parameters.AddWithValue("@RE", dados.REControleAcesso1 + "%");                                          // % necessário para busca aproximada funcionar
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DataTable PesquisarRG(Pessoas dados)
+        {
+            try                                                                                                                // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from acesso where  RG LIKE @RG", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+                sql.Parameters.AddWithValue("@RG", dados.TXBRGControleAcesso1 + "%");                                       // % necessário para busca aproximada funcionar
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DataTable PesquisarVTR(Pessoas dados)
+        {
+            try                                                                                                                // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from acessovtr where  PREFIXO LIKE @PREFIXO", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+                sql.Parameters.AddWithValue("@PREFIXO", dados.Prefixo + "%");                                       // % necessário para busca aproximada funcionar
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
 
         public void EditarDadosTmd(Pessoas dados)
         {

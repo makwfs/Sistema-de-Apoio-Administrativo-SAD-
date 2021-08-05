@@ -224,6 +224,7 @@ namespace SistemaMysql.View
             this.PREFIXO.Name = "PREFIXO";
             this.PREFIXO.Size = new System.Drawing.Size(204, 25);
             this.PREFIXO.TabIndex = 4;
+            this.PREFIXO.TextChanged += new System.EventHandler(this.PREFIXO_TextChanged);
             // 
             // label24
             // 
@@ -254,6 +255,7 @@ namespace SistemaMysql.View
             this.RE.Name = "RE";
             this.RE.Size = new System.Drawing.Size(204, 25);
             this.RE.TabIndex = 1;
+            this.RE.TextChanged += new System.EventHandler(this.RE_TextChanged);
             // 
             // RG
             // 
@@ -261,6 +263,7 @@ namespace SistemaMysql.View
             this.RG.Name = "RG";
             this.RG.Size = new System.Drawing.Size(204, 25);
             this.RG.TabIndex = 2;
+            this.RG.TextChanged += new System.EventHandler(this.RG_TextChanged);
             // 
             // label1
             // 

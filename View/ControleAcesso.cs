@@ -35,9 +35,7 @@ namespace SistemaMysql.View
             //RECUPERANDO VALORES DO FORM CONTROLE DE ACESSO
             STATUS.Text = Valor;
             
-        }*/
-
-        
+        }*/       
 
 
 
@@ -296,6 +294,12 @@ namespace SistemaMysql.View
                     MessageBox.Show("Informe o Motorista da Viatura!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if(STATUS_VTR.Text != "")
+                {
+                    MessageBox.Show("A Viatura já se encontra no interior!", "                                  ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ReloadForm();
+                    return;
+                }
                 CadastrarEntradaVTR();
                 ReloadForm();
 
@@ -365,7 +369,7 @@ namespace SistemaMysql.View
             {
                 MessageBox.Show("O USUÁRIO NÃO SE ENCONTRA NO INTERIOR DO QUARTEL", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
+            }           
             else
             {
                 EscolhaSaida form = new EscolhaSaida(ID_SAIDA.Text, this);
@@ -457,6 +461,35 @@ namespace SistemaMysql.View
              ReloadForm();
         }
 
+        public void CadastrarSaidaVTR()
+        {
+
+            //MessageBox.Show(" ATÉ AQUI OK!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Pessoas dado = new Pessoas();
+            try
+            {
+
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE acessovtr SET HORA_SAIDA = @HORA_SAIDA WHERE ID = @ID", con.con);   // comando para editar dados no BD
+                sql.Parameters.AddWithValue("@ID", ID_SAIDA.Text);
+                sql.Parameters.AddWithValue("@HORA_SAIDA", HORAATUAL.Text);
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao editar" + ex);
+                con.FecharConexao();
+                return;
+            }
+            SAIDAControleAcesso(dado);
+            ConfirmarSaida form = new ConfirmarSaida();
+            form.Show();
+            ReloadForm();
+        }
+
 
         public void CadastrarEntradaaPe()
         {
@@ -509,6 +542,9 @@ namespace SistemaMysql.View
             form.Show();
             ReloadForm();
         }
+
+
+        
 
 
         private void ControleAcesso_Load(object sender, EventArgs e)
@@ -798,7 +834,22 @@ namespace SistemaMysql.View
                 PLACAVTR.Text = dr.GetString(7);
                 CIDADEVTR.Text = dr.GetString(9);
                 CORVTR.Text = dr.GetString(10);
+                
+                
 
+
+                con.Conectar();
+                sql = new MySqlCommand("SELECT * FROM acessovtr WHERE PREFIXO = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@PREFIXO", MySqlDbType.Int32).Value = PREFIXO.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr2;
+                dr2 = sql.ExecuteReader();
+                dr2.Read();
+
+                STATUS_VTR.Text = dr2.GetString(10);
+                STATUS_VTR_SAIDA.Text = dr2.GetString(11);
 
             }
             catch (Exception)
@@ -909,6 +960,15 @@ namespace SistemaMysql.View
             ID_SAIDA.Text = "";
             HORA_SAIDA.Text = "";
             StatusCartao.Text = "";
+            STATUS_VTR.Text = "";
+            STATUS_VTR_SAIDA.Text = "";
+            PREFIXOVTR.Text = "";
+            MOTORISTAVTR.Text = "";
+            MARCAVTR.Text = "";
+            MODELOVTR.Text = "";
+            PLACAVTR.Text = "";
+            CIDADEVTR.Text = "";
+            CORVTR.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
             DATAVENCIMENTO.BackColor = Color.White; // MUDA A COR DO CAMPO
         }
@@ -939,6 +999,15 @@ namespace SistemaMysql.View
             ID_SAIDA.Text = "";
             HORA_SAIDA.Text = "";
             StatusCartao.Text = "";
+            STATUS_VTR.Text = "";
+            STATUS_VTR_SAIDA.Text = "";
+            PREFIXOVTR.Text = "";
+            MOTORISTAVTR.Text = "";
+            MARCAVTR.Text = "";
+            MODELOVTR.Text = "";
+            PLACAVTR.Text = "";
+            CIDADEVTR.Text = "";
+            CORVTR.Text = "";
             PCFOTO.Image = SistemaMysql.Properties.Resources.police;
             DATAVENCIMENTO.BackColor = Color.White; // MUDA A COR DO CAMPO
 
@@ -949,7 +1018,10 @@ namespace SistemaMysql.View
 
         }
 
-        
+        private void STATUS_SAIDA_VTR_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
