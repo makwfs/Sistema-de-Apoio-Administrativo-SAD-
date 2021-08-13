@@ -54,6 +54,23 @@ namespace SistemaMysql.Model
             }
         }
 
+        public DataTable ListarControleDATA(Pessoas dado)
+        {
+
+            try                                       // Utilizar o try pra caso ocorra o erro ele retorne
+            {
+
+                DataTable dt = new DataTable();
+                dt = dao.ListarControleDATA(dado);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public DataTable ListarControleVTR()
         {
 
@@ -617,6 +634,21 @@ namespace SistemaMysql.Model
             {
                 DataTable dt = new DataTable();
                 dt = dao.PesquisarRE(dados);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public object PesquisarDATA(Pessoas dados)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = dao.PesquisarDATA(dados);
                 return dt;
             }
             catch (Exception)

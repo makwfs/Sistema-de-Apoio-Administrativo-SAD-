@@ -156,6 +156,7 @@ namespace SistemaMysql.View
                 dados.CORControleAcesso1 = CORVTR.Text;
                 dados.DATA1 = DATAATUAL.Text;
                 dados.HORA1 = HORAATUAL.Text;
+                dados.STATUS_VTR1 = "DENTRO";
                 dados.Id = Convert.ToInt32(ID.Text);
 
 
@@ -294,7 +295,7 @@ namespace SistemaMysql.View
                     MessageBox.Show("Informe o Motorista da Viatura!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if(STATUS_VTR.Text != "")
+                if(STATUS_VTR.Text == "DENTRO")
                 {
                     MessageBox.Show("A Viatura já se encontra no interior!", "                                  ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ReloadForm();
@@ -303,7 +304,7 @@ namespace SistemaMysql.View
                 CadastrarEntradaVTR();
                 ReloadForm();
 
-                //MessageBox.Show(" Até aqui OK!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
             else
             {
@@ -834,23 +835,33 @@ namespace SistemaMysql.View
                 PLACAVTR.Text = dr.GetString(7);
                 CIDADEVTR.Text = dr.GetString(9);
                 CORVTR.Text = dr.GetString(10);
-                
-                
 
 
                 con.Conectar();
-                sql = new MySqlCommand("SELECT * FROM acessovtr WHERE PREFIXO = ?", con.con);
+                sql = new MySqlCommand("SELECT MAX(id) FROM acessovtr WHERE PREFIXO = ?", con.con);
                 sql.Parameters.Clear();
                 sql.Parameters.Add("@PREFIXO", MySqlDbType.Int32).Value = PREFIXO.Text;
                 sql.CommandType = CommandType.Text;
-
                 MySqlDataReader dr2;
                 dr2 = sql.ExecuteReader();
                 dr2.Read();
+                IDVTR.Text = dr2.GetString(0);
+               
 
-                STATUS_VTR.Text = dr2.GetString(10);
-                STATUS_VTR_SAIDA.Text = dr2.GetString(11);
 
+                con.Conectar();
+                sql = new MySqlCommand("SELECT * FROM acessovtr WHERE ID = ?", con.con);
+                sql.Parameters.Clear();
+                sql.Parameters.Add("@id", MySqlDbType.Int32).Value = IDVTR.Text;
+                sql.CommandType = CommandType.Text;
+
+                MySqlDataReader dr3;
+                dr3 = sql.ExecuteReader();
+                dr3.Read();
+
+                STATUS_ENTRADA_VTR.Text = dr3.GetString(10);
+                STATUS_VTR_SAIDA.Text = dr3.GetString(11);
+                STATUS_VTR.Text = dr3.GetString(12);
             }
             catch (Exception)
             {
@@ -960,7 +971,7 @@ namespace SistemaMysql.View
             ID_SAIDA.Text = "";
             HORA_SAIDA.Text = "";
             StatusCartao.Text = "";
-            STATUS_VTR.Text = "";
+            STATUS_ENTRADA_VTR.Text = "";
             STATUS_VTR_SAIDA.Text = "";
             PREFIXOVTR.Text = "";
             MOTORISTAVTR.Text = "";
@@ -999,7 +1010,7 @@ namespace SistemaMysql.View
             ID_SAIDA.Text = "";
             HORA_SAIDA.Text = "";
             StatusCartao.Text = "";
-            STATUS_VTR.Text = "";
+            STATUS_ENTRADA_VTR.Text = "";
             STATUS_VTR_SAIDA.Text = "";
             PREFIXOVTR.Text = "";
             MOTORISTAVTR.Text = "";

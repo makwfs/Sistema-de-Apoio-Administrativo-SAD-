@@ -36,29 +36,10 @@ namespace SistemaMysql.View
 
                     if (RowType == "VENCIDO")
                     {
-                        row.DefaultCellStyle.BackColor = Color.Red;
-                        //row.DefaultCellStyle.ForeColor = Color.Green;
-                    }
-                }
-
-                /*foreach (DataGridViewRow row in grid.Rows)
-                {
-                    if (Convert.ToInt32(row.Cells[Index ou nome da coluna com o valor].Value) < 0)
-                    {
-                        // Se for negativo, fica vermelho
-                        row.DefaultCellStyle.BackColor = Color.Red;
+                        row.DefaultCellStyle.BackColor = Color.Red;                        
                     }
                 }
                 
-                    DateTime data1 = row.Cells[9].Value;
-                    DateTime data2 = Convert.ToDateTime(DATAATUAL.Text); 
-
-                 */
-
-
-                //grid.Rows[12].Cells["VENCIMENTO"].Style.BackColor = Color.Red;
-                //grid.CurrentRow.DefaultCellStyle.BackColor = Color.Yellow;
-                // grid.CurrentRow.Cells[0].Style.BackColor = Color.Yellow;
 
             }
             catch (Exception ex)
@@ -67,6 +48,8 @@ namespace SistemaMysql.View
 
             }
         }
+
+       
 
         public void ListarControleVTR()
         {
@@ -81,6 +64,8 @@ namespace SistemaMysql.View
 
             }
         }
+
+        
 
         private void ControleAcessoPesquisar_Load(object sender, EventArgs e)
         {
@@ -130,7 +115,24 @@ namespace SistemaMysql.View
                 try
                 {
                     dado.REControleAcesso1 = RE.Text;
-                    grid.DataSource = model.PesquisarRE(dado);
+
+                    /*grid.DataSource = model.PesquisarRE(dado);
+                    
+
+
+                    foreach (DataGridViewRow row in grid.Rows)
+                    {
+                        string RowType = row.Cells[19].Value.ToString();
+                        grid.Columns[19].Visible = false;
+
+                        if (RowType == "VENCIDO")
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Red;
+                        }
+                    }*/
+
+                    
+
 
                 }
                 catch (Exception ex)
@@ -300,7 +302,70 @@ namespace SistemaMysql.View
             }
         }
 
+        public void PesquisarDATA(Pessoas dado)
+        {
 
+            try
+            {
+                dado.DATA1 = cbDATA.Text;
+                grid.DataSource = model.PesquisarDATA(dado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro com os dados" + ex.Message);
+
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+           
+
+            Pessoas dado = new Pessoas();
+            PesquisarDATA(dado);
+            if (cbDATA.Text == "")      // Listar caso o campo esteja vazio
+            {
+
+                ListarControleDATA(dado);
+                return;
+            }            
+            else if (cmbTipo.Text != "")
+            {
+                try
+                {
+                    dado.Prefixo = cbDATA.Text;
+                    grid.DataSource = model.PesquisarDATA(dado);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro com os dados" + ex.Message);
+
+                }
+            }
+            
+        }
+
+        public void ListarControleDATA(Pessoas dado)
+        {
+            try
+            {
+                grid.DataSource = model.ListarControleDATA(dado); // alimentar o grid 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro com os dados" + ex.Message);
+
+            }
+        }
+
+        private void cbDATA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // MessageBox.Show(" Até Aqui OK!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //ListarControleDATA();
+        }
     }
 
     

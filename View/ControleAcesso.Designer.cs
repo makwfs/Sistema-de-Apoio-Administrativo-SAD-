@@ -119,10 +119,14 @@ namespace SistemaMysql.View
             this.label18 = new System.Windows.Forms.Label();
             this.StatusCartao = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.STATUS_VTR = new System.Windows.Forms.TextBox();
+            this.STATUS_ENTRADA_VTR = new System.Windows.Forms.TextBox();
             this.STATUS_SAIDA_VTR = new System.Windows.Forms.Label();
             this.STATUS_VTR_SAIDA = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.IDVTR = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.STATUS_VTR = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1134,9 +1138,9 @@ namespace SistemaMysql.View
             // 
             this.StatusCartao.Enabled = false;
             this.StatusCartao.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusCartao.Location = new System.Drawing.Point(136, 701);
+            this.StatusCartao.Location = new System.Drawing.Point(190, 702);
             this.StatusCartao.Name = "StatusCartao";
-            this.StatusCartao.Size = new System.Drawing.Size(24, 25);
+            this.StatusCartao.Size = new System.Drawing.Size(81, 25);
             this.StatusCartao.TabIndex = 14;
             this.StatusCartao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.StatusCartao.Visible = false;
@@ -1148,23 +1152,23 @@ namespace SistemaMysql.View
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Nirmala UI", 3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(136, 691);
+            this.label25.Location = new System.Drawing.Point(190, 692);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(36, 5);
             this.label25.TabIndex = 69;
             this.label25.Text = "STATUS_CARTAO";
             this.label25.Visible = false;
             // 
-            // STATUS_VTR
+            // STATUS_ENTRADA_VTR
             // 
-            this.STATUS_VTR.Enabled = false;
-            this.STATUS_VTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STATUS_VTR.Location = new System.Drawing.Point(184, 701);
-            this.STATUS_VTR.Name = "STATUS_VTR";
-            this.STATUS_VTR.Size = new System.Drawing.Size(94, 25);
-            this.STATUS_VTR.TabIndex = 14;
-            this.STATUS_VTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.STATUS_VTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
+            this.STATUS_ENTRADA_VTR.Enabled = false;
+            this.STATUS_ENTRADA_VTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATUS_ENTRADA_VTR.Location = new System.Drawing.Point(833, 708);
+            this.STATUS_ENTRADA_VTR.Name = "STATUS_ENTRADA_VTR";
+            this.STATUS_ENTRADA_VTR.Size = new System.Drawing.Size(94, 25);
+            this.STATUS_ENTRADA_VTR.TabIndex = 14;
+            this.STATUS_ENTRADA_VTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS_ENTRADA_VTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // STATUS_SAIDA_VTR
             // 
@@ -1172,18 +1176,18 @@ namespace SistemaMysql.View
             this.STATUS_SAIDA_VTR.BackColor = System.Drawing.Color.Transparent;
             this.STATUS_SAIDA_VTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATUS_SAIDA_VTR.ForeColor = System.Drawing.Color.White;
-            this.STATUS_SAIDA_VTR.Location = new System.Drawing.Point(160, 679);
+            this.STATUS_SAIDA_VTR.Location = new System.Drawing.Point(831, 686);
             this.STATUS_SAIDA_VTR.Name = "STATUS_SAIDA_VTR";
-            this.STATUS_SAIDA_VTR.Size = new System.Drawing.Size(150, 17);
+            this.STATUS_SAIDA_VTR.Size = new System.Drawing.Size(99, 17);
             this.STATUS_SAIDA_VTR.TabIndex = 69;
-            this.STATUS_SAIDA_VTR.Text = "STATUS_ENTRADA_VTR";
+            this.STATUS_SAIDA_VTR.Text = "ENTRADA_VTR";
             this.STATUS_SAIDA_VTR.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
             // 
             // STATUS_VTR_SAIDA
             // 
             this.STATUS_VTR_SAIDA.Enabled = false;
             this.STATUS_VTR_SAIDA.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STATUS_VTR_SAIDA.Location = new System.Drawing.Point(301, 701);
+            this.STATUS_VTR_SAIDA.Location = new System.Drawing.Point(933, 708);
             this.STATUS_VTR_SAIDA.Name = "STATUS_VTR_SAIDA";
             this.STATUS_VTR_SAIDA.Size = new System.Drawing.Size(94, 25);
             this.STATUS_VTR_SAIDA.TabIndex = 14;
@@ -1196,12 +1200,60 @@ namespace SistemaMysql.View
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(298, 679);
+            this.label31.Location = new System.Drawing.Point(940, 686);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(128, 17);
+            this.label31.Size = new System.Drawing.Size(77, 17);
             this.label31.TabIndex = 69;
-            this.label31.Text = "STATUS_SAIDA_VTR";
+            this.label31.Text = "SAIDA_VTR";
             this.label31.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
+            // 
+            // IDVTR
+            // 
+            this.IDVTR.Enabled = false;
+            this.IDVTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDVTR.Location = new System.Drawing.Point(1039, 708);
+            this.IDVTR.Name = "IDVTR";
+            this.IDVTR.Size = new System.Drawing.Size(35, 25);
+            this.IDVTR.TabIndex = 14;
+            this.IDVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IDVTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(1030, 686);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(52, 17);
+            this.label32.TabIndex = 69;
+            this.label32.Text = "ID_VTR";
+            this.label32.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
+            // 
+            // STATUS_VTR
+            // 
+            this.STATUS_VTR.Enabled = false;
+            this.STATUS_VTR.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATUS_VTR.Location = new System.Drawing.Point(1091, 708);
+            this.STATUS_VTR.Name = "STATUS_VTR";
+            this.STATUS_VTR.Size = new System.Drawing.Size(84, 25);
+            this.STATUS_VTR.TabIndex = 14;
+            this.STATUS_VTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS_VTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(1092, 686);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(84, 17);
+            this.label33.TabIndex = 69;
+            this.label33.Text = "STATUS_VTR";
+            this.label33.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
             // 
             // ControleAcesso
             // 
@@ -1214,6 +1266,8 @@ namespace SistemaMysql.View
             this.Controls.Add(this.button2);
             this.Controls.Add(this.HORAATUAL);
             this.Controls.Add(this.DATAATUAL);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.STATUS_SAIDA_VTR);
             this.Controls.Add(this.label25);
@@ -1230,8 +1284,10 @@ namespace SistemaMysql.View
             this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.btnSAIDA);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.STATUS_VTR_SAIDA);
             this.Controls.Add(this.STATUS_VTR);
+            this.Controls.Add(this.IDVTR);
+            this.Controls.Add(this.STATUS_VTR_SAIDA);
+            this.Controls.Add(this.STATUS_ENTRADA_VTR);
             this.Controls.Add(this.StatusCartao);
             this.Controls.Add(this.ID_SAIDA);
             this.Controls.Add(this.HORA_SAIDA);
@@ -1362,9 +1418,13 @@ namespace SistemaMysql.View
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox StatusCartao;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox STATUS_VTR;
+        private System.Windows.Forms.TextBox STATUS_ENTRADA_VTR;
         private System.Windows.Forms.Label STATUS_SAIDA_VTR;
         private System.Windows.Forms.TextBox STATUS_VTR_SAIDA;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox IDVTR;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox STATUS_VTR;
+        private System.Windows.Forms.Label label33;
     }
 }
