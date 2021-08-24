@@ -16,11 +16,18 @@ namespace SistemaMysql.View
     public partial class ControleAcessoPesquisar : Form
     {
         Model.Model model = new Model.Model();
-        
+       
         public ControleAcessoPesquisar()
         {
             InitializeComponent();
         }
+
+        //Arrastar janela
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         public void ListarControle()
         {
@@ -67,10 +74,12 @@ namespace SistemaMysql.View
 
         
 
+
         private void ControleAcessoPesquisar_Load(object sender, EventArgs e)
         {
             ListarControle();
             PREFIXO.Enabled = false;
+            cbDATA.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
 
         }      
@@ -92,7 +101,7 @@ namespace SistemaMysql.View
             }
             if (cmbTipo.Text == "ACESSO VTR")
             {
-                ListarControleVTR();
+                ListarControleVTR();                
                 PREFIXO.Enabled = true;
             }
             else if (cmbTipo.Text == "TODOS")
@@ -318,22 +327,49 @@ namespace SistemaMysql.View
             }
         }
 
+        public void PesquisarDATAVTR(Pessoas dado)
+        {
+
+            try
+            {
+                dado.DATA1 = cbDATA.Text;
+                grid.DataSource = model.PesquisarDATAVTR(dado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro com os dados" + ex.Message);
+
+            }
+        }
+
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
            
 
             Pessoas dado = new Pessoas();
             PesquisarDATA(dado);
-            if (cbDATA.Text == "")      // Listar caso o campo esteja vazio
+            if (cmbTipo.Text == "ACESSO VTR")      
             {
-
-                ListarControleDATA(dado);
-                return;
-            }            
-            else if (cmbTipo.Text != "")
-            {
+                PesquisarDATAVTR(dado);
                 try
                 {
+                    dado.Prefixo = cbDATA.Text;
+                    grid.DataSource = model.PesquisarDATAVTR(dado);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro com os dados" + ex.Message);
+
+                }
+            }            
+            else if (cmbTipo.Text == "ACESSO PESSOAS")
+            {
+                PesquisarDATA(dado);
+                try
+                {
+                    
                     dado.Prefixo = cbDATA.Text;
                     grid.DataSource = model.PesquisarDATA(dado);
 
@@ -361,10 +397,33 @@ namespace SistemaMysql.View
             }
         }
 
-        private void cbDATA_KeyPress(object sender, KeyPressEventArgs e)
+        
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
-            // MessageBox.Show(" Até Aqui OK!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //ListarControleDATA();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label16_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 

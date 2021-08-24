@@ -260,7 +260,7 @@ namespace SistemaMysql.DAO
             try                                                                                                               // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from acessovtr", con.con);                                                    // comando para buscar dados no BD
+                sql = new MySqlCommand("select id, MOTORISTA, PREFIXO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, DATA_SAIDA, HORA_ENTRADA, HORA_SAIDA from acessovtr", con.con);                                                    // comando para buscar dados no BD
 
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
@@ -855,6 +855,27 @@ namespace SistemaMysql.DAO
                 con.Conectar();
                 sql = new MySqlCommand("select id, POSTO, NOME, RE, RG, UNIDADE, CIA, SEÇÃO," +
                     "CARTÃO, VENCIMENTO, MARCA, MODELO, COR, EMPLACAMENTO, CIDADE, HORA_ENTRADA, HORA_SAIDA, DATA_ENTRADA, DATA_SAIDA,STATUS_CARTÃO from acesso where  DATA_ENTRADA LIKE @DATA_ENTRADA", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+
+                sql.Parameters.AddWithValue("@DATA_ENTRADA", dados.DATA1 + "%");                                          // % necessário para busca aproximada funcionar
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DataTable PesquisarDATAVTR(Pessoas dados)
+        {
+            try                                                                                                                // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select id, MOTORISTA, PREFIXO, MARCA, MODELO, EMPLACAMENTO, CIDADE, COR, DATA_ENTRADA, HORA_ENTRADA from acessovtr where  DATA_ENTRADA LIKE @DATA_ENTRADA", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
 
                 sql.Parameters.AddWithValue("@DATA_ENTRADA", dados.DATA1 + "%");                                          // % necessário para busca aproximada funcionar
                 MySqlDataAdapter da = new MySqlDataAdapter();

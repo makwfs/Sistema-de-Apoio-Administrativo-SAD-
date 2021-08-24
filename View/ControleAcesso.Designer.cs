@@ -1168,6 +1168,7 @@ namespace SistemaMysql.View
             this.STATUS_ENTRADA_VTR.Size = new System.Drawing.Size(94, 25);
             this.STATUS_ENTRADA_VTR.TabIndex = 14;
             this.STATUS_ENTRADA_VTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS_ENTRADA_VTR.Visible = false;
             this.STATUS_ENTRADA_VTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // STATUS_SAIDA_VTR
@@ -1181,6 +1182,7 @@ namespace SistemaMysql.View
             this.STATUS_SAIDA_VTR.Size = new System.Drawing.Size(99, 17);
             this.STATUS_SAIDA_VTR.TabIndex = 69;
             this.STATUS_SAIDA_VTR.Text = "ENTRADA_VTR";
+            this.STATUS_SAIDA_VTR.Visible = false;
             this.STATUS_SAIDA_VTR.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
             // 
             // STATUS_VTR_SAIDA
@@ -1192,6 +1194,7 @@ namespace SistemaMysql.View
             this.STATUS_VTR_SAIDA.Size = new System.Drawing.Size(94, 25);
             this.STATUS_VTR_SAIDA.TabIndex = 14;
             this.STATUS_VTR_SAIDA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS_VTR_SAIDA.Visible = false;
             this.STATUS_VTR_SAIDA.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // label31
@@ -1205,6 +1208,7 @@ namespace SistemaMysql.View
             this.label31.Size = new System.Drawing.Size(77, 17);
             this.label31.TabIndex = 69;
             this.label31.Text = "SAIDA_VTR";
+            this.label31.Visible = false;
             this.label31.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
             // 
             // IDVTR
@@ -1216,6 +1220,7 @@ namespace SistemaMysql.View
             this.IDVTR.Size = new System.Drawing.Size(35, 25);
             this.IDVTR.TabIndex = 14;
             this.IDVTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IDVTR.Visible = false;
             this.IDVTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // label32
@@ -1229,6 +1234,7 @@ namespace SistemaMysql.View
             this.label32.Size = new System.Drawing.Size(52, 17);
             this.label32.TabIndex = 69;
             this.label32.Text = "ID_VTR";
+            this.label32.Visible = false;
             this.label32.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
             // 
             // STATUS_VTR
@@ -1240,6 +1246,7 @@ namespace SistemaMysql.View
             this.STATUS_VTR.Size = new System.Drawing.Size(84, 25);
             this.STATUS_VTR.TabIndex = 14;
             this.STATUS_VTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.STATUS_VTR.Visible = false;
             this.STATUS_VTR.TextChanged += new System.EventHandler(this.STATUS_TextChanged);
             // 
             // label33
@@ -1253,6 +1260,7 @@ namespace SistemaMysql.View
             this.label33.Size = new System.Drawing.Size(84, 17);
             this.label33.TabIndex = 69;
             this.label33.Text = "STATUS_VTR";
+            this.label33.Visible = false;
             this.label33.Click += new System.EventHandler(this.STATUS_SAIDA_VTR_Click);
             // 
             // ControleAcesso

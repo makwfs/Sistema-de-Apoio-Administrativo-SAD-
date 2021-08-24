@@ -658,6 +658,21 @@ namespace SistemaMysql.Model
             }
         }
 
+        public object PesquisarDATAVTR(Pessoas dados)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = dao.PesquisarDATAVTR(dados);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public object PesquisarRG(Pessoas dados)
         {
             try
